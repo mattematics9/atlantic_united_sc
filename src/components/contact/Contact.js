@@ -17,7 +17,7 @@ const Contact = () => {
     <Box
       id="contact"
       sx={{
-        py: { xs: 4, md: 15 },
+        py: { xs: 13, md: 15 },
         px: { xs: 2, md: 0 },
         color: "black",
         overflowX: "auto",

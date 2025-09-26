@@ -10,6 +10,7 @@ import Programs from './components/programs/Programs';
 import Register from './components/register/Register';
 import LeagueLogos from './components/league_logos/LeagueLogos';
 import CssBaseline from '@mui/material/CssBaseline';
+import PreTravel from './components/programs/PreTravel'
 
 
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/programs' element={ <Programs/> }/>  
             <Route path='/resources' element={ <Resources/> }/>    
             <Route path='/register' element={ <Register/> }/>    
+            <Route path='/programs/pre-travel' element={ <PreTravel/> }/>    
           </Routes>
         <Footer/>
       </BrowserRouter>

@@ -32,6 +32,7 @@ export default function SocialMedia() {
           id="icon-facebook-anchor"
           sx={(theme) => ({
             color: "#1877f2",
+            padding: "2px",
             fontSize: { xs: "28px", sm: "32px", md: "36px" },
             "&:hover": { opacity: 0.8 },
             '&:focus, &:active': {
@@ -57,6 +58,7 @@ export default function SocialMedia() {
           id="icon-instagram-anchor"
           sx={(theme) => ({
             color: "#e1306c",
+            padding: "2px",
             fontSize: { xs: "28px", sm: "32px", md: "36px" },
             "&:hover": { opacity: 0.8 },
             '&:focus, &:active': {

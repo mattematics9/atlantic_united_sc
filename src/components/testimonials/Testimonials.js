@@ -37,13 +37,13 @@ const testimonials = [
   },
 ];
 
-const Testimonials = () => {
-  const [current, setCurrent] = useState(0);
-  const [fade, setFade] = useState(true);
-  const intervalRef = useRef(null);
-  const resumeTimeoutRef = useRef(null);
+  const Testimonials = () => {
+    const [current, setCurrent] = useState(0);
+    const [fade, setFade] = useState(true);
+    const intervalRef = useRef(null);
+    const resumeTimeoutRef = useRef(null);
 
-  useEffect(() => {
+    useEffect(() => {
     startAutoPlay();
     return () => {
       stopAutoPlay();
@@ -89,6 +89,8 @@ const Testimonials = () => {
     changeSlide(newIndex);
   };
 
+  
+
   return (
     <Box
       id="testimonials"
@@ -129,7 +131,7 @@ const Testimonials = () => {
         }}
       >
         {/* Inner container restricts arrow positioning to card */}
-        <Box sx={{ position: "relative", maxWidth: 600, maxWidth: { xs: 350, sm: 500, md: 700, lg: 900 }, width: "100%" }}>
+        <Box sx={{ position: "relative", maxWidth: { xs: 350, sm: 500, md: 700, lg: 900 }, width: "100%" }}>
           {/* Left Arrow */}
           <IconButton
             onClick={handlePrev}

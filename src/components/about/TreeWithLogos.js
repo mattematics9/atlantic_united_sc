@@ -8,7 +8,7 @@ import LGNLogo from "../../images/logos/lgn-logo-no-whitespace.png";
 import MiddleCountryLogo from "../../images/logos/middle-country-logo.avif";
 import ThreeVillageLogo from "../../images/logos/three-village-logo-no-white-space.png";
 import AtlanticUnitedLogo from "../../images/logos/atlantic-united-logo-no-white-space.webp";
-import huddle from "../../images/huddle.png";
+import huddle2 from "../../images/huddle2.png";
 
 const TreeWithLogos = () => {
   useEffect(() => {
@@ -27,10 +27,10 @@ const TreeWithLogos = () => {
       .select("#tree-with-logos")
       .append("svg")
       .attr("preserveAspectRatio", "xMidYMid meet")
-      .attr("viewBox", "0 0 1200 500")
+      .attr("viewBox", "0 0 1200 600")
       .classed("tree-diagram-content", true);
 
-    const graph = svg.append("g").attr("transform", "translate(50,100)");
+    const graph = svg.append("g").attr("transform", "translate(50,150)");
 
     const stratify = d3
       .stratify()
@@ -87,9 +87,8 @@ const TreeWithLogos = () => {
         sx={{
           position: "relative",
           backgroundImage: {
-            md: `radial-gradient(rgba(0,0,31,0), rgba(0,0,31,.1), rgba(0,0,31,.3), rgba(0,0,31,.8), rgba(0,0,31,1)),
-                 linear-gradient(rgba(0,0,31,1),rgba(0,0,31,.8), rgba(0,0,31,.0), rgba(0,0,31,0), rgba(0,0,31,.7), rgba(0,0,31,.8),rgba(0,0,31,1), rgba(0,0,31,1)),
-                 url(${huddle})`,
+            md: `radial-gradient(rgba(0,0,31,0),rgba(0,0,31,0),rgba(0,0,31,0), rgba(0,0,31,.1), rgba(0,0,31,.3),rgba(0,0,31,1), rgba(0,0,31,1), rgba(0,0,31,1)),
+                 url(${huddle2})`,
             xs: "none", // remove on small screens
           },
           backgroundPosition: "center 150px",
@@ -191,9 +190,7 @@ const TreeWithLogos = () => {
         sx={{
           display: { xs: "block", md: "none" },
           height: "500px",
-          backgroundImage: `radial-gradient(rgba(0,0,31,0), rgba(0,0,31,.1), rgba(0,0,31,.3), rgba(0,0,31,.4), rgba(0,0,31,1)),
-                            linear-gradient(rgba(0,0,31,1),rgba(0,0,31,.8), rgba(0,0,31,0),rgba(0,0,31,0),rgba(0,0,31,0), rgba(0,0,31,0), rgba(0,0,31,.6), rgba(0,0,31,.7),rgba(0,0,31,.9), rgba(0,0,31,1)),
-                            url(${huddle})`,
+          backgroundImage: `url(${huddle2})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -205,111 +202,3 @@ const TreeWithLogos = () => {
 
 export default TreeWithLogos;
 
-
-
-
-
-
-// import React, { useEffect } from "react";
-// import * as d3 from "d3";
-// import LGNLogo from '../../images/logos/lgn-logo-no-whitespace.png'
-// import MiddleCountryLogo from '../../images/logos/middle-country-logo.avif'
-// import ThreeVillageLogo from '../../images/logos/three-village-logo-no-white-space.png'
-// import AtlanticUnitedLogo from '../../images/logos/atlantic-united-logo-no-white-space.webp'
-// import { Link } from "react-router-dom";
-
-// const TreeWithLogos = () => {
-//   useEffect(() => {
-//     const dims = { height: 300, width: 1100 };
-//     const data = [
-//       { name: "Portal", parent: "", level: "one", logo: AtlanticUnitedLogo },
-//       { name: "Physical Therapy", parent: "Portal", level: "two", logo: ThreeVillageLogo },
-//       { name: "Dental", parent: "Portal", level: "two", logo: LGNLogo },
-//       { name: "Eye Care", parent: "Portal", level: "two", logo: MiddleCountryLogo }
-//     ];
-
-//     // ✅ Clear container before appending new svg
-//     d3.select("#tree-with-logos").selectAll("*").remove();
-
-//     const svg = d3
-//       .select("#tree-with-logos")
-//       .append("svg")
-//       .attr("preserveAspectRatio", "xMidYMid meet")
-//       .attr("viewBox", "0 0 1200 500")
-//       .classed("tree-diagram-content", true);
-
-//     const graph = svg.append("g").attr("transform", "translate(50, 100)");
-
-//     const stratify = d3
-//       .stratify()
-//       .id((d) => d.name)
-//       .parentId((d) => d.parent);
-
-//     const tree = d3.tree().size([dims.width, dims.height]);
-
-//     const rootNode = stratify(data);
-//     const treeData = tree(rootNode);
-
-//     const nodes = graph.selectAll(".node").data(treeData.descendants());
-//     const links = graph.selectAll(".link").data(treeData.links());
-
-//     // Draw links
-//     links
-//       .enter()
-//       .append("path")
-//       .attr("className", "link")
-//       .attr("fill", "none")
-//       .attr("stroke", "white")
-//       .attr("stroke-width", 2)
-//       .attr(
-//         "d",
-//         d3
-//           .linkVertical()
-//           .x((d) => d.x)
-//           .y((d) => d.y)
-//       );
-
-//     // Draw nodes with logos
-//     const enterNodes = nodes
-//       .enter()
-//       .append("g")
-//       .attr("className", "node")
-//       .attr("transform", (d) => `translate(${d.x},${d.y})`);
-
-//     // const nodeSize = 200; // diameter of logos
-//     // const nodeSize = Math.max(200, dims.width * 0.05); // 5% of width, min 50px
-//     const screenWidth = window.innerWidth;
-//     const nodeSize = screenWidth < 600 ? 300 : 200; // bigger on mobile
-
-
-//     enterNodes
-//       .append("image")
-//       .attr("xlink:href", (d) => d.data.logo)
-//       .attr("x", -nodeSize / 2)
-//       .attr("y", -nodeSize / 2)
-//       .attr("width", nodeSize)
-//       .attr("height", nodeSize)
-//       // .attr("clip-path", "circle(30px at center)"); // circular logos
-//   }, []);
-
-//   return <div id="tree-with-logos-about-us-titles-container">
-//             <div id="about-us">
-//                 <h4 className="center">ABOUT US</h4>
-//                 <p>Founded in 2025, Atlantic United Soccer Club brings together the proud traditions of three long-standing Long Island programs—LGN Soccer Club, Stony Brook Soccer Club, and Middle Country Soccer Club. Our travel teams compete at the highest levels of youth soccer nationwide, while we also provide a full range of programs designed to support players of all ages, skill levels, and interests.  <Link to='/programs' id="about-us-see-our-programs-link">SEE OUR PROGRAMS</Link></p>
-//             </div>
-//             <div id='titles' className="center">
-//                 <div id="trophy-icon-container"><ion-icon name="trophy-outline"></ion-icon></div>
-//                 <div id='titles-list'>
-//                   <p>2 NATIONAL CHAMPIONSHIPS</p>
-//                   <p>6 REGIONAL CHAMPIONSHIPS</p>
-//                   <p>22 NY CHAMPIONSHIPS</p>
-//                   <p>#1 RANKED TEAMS IN THE NATION</p>
-//                 </div>
-//             </div>
-//             <div id="tree-with-logos">
-
-//             </div>
-//         </div>;
-// };
-
-// export default TreeWithLogos;
