@@ -33,7 +33,7 @@ export default function SocialMedia() {
           sx={(theme) => ({
             color: "#1877f2",
             padding: "2px",
-            fontSize: { xs: "28px", sm: "32px", md: "36px" },
+            fontSize: { xs: "35px", md: "41px" },
             "&:hover": { opacity: 0.8 },
             '&:focus, &:active': {
               backgroundColor: 'transparent',
@@ -57,9 +57,9 @@ export default function SocialMedia() {
         <IconButton
           id="icon-instagram-anchor"
           sx={(theme) => ({
-            color: "#e1306c",
+            color: "#1ba0ffff",
             padding: "2px",
-            fontSize: { xs: "28px", sm: "32px", md: "36px" },
+            fontSize: { xs: "35px", md: "41px" },
             "&:hover": { opacity: 0.8 },
             '&:focus, &:active': {
               backgroundColor: 'transparent',

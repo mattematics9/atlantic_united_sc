@@ -8,7 +8,7 @@ import LGNLogo from "../../images/logos/lgn-logo-no-whitespace.png";
 import MiddleCountryLogo from "../../images/logos/middle-country-logo.avif";
 import ThreeVillageLogo from "../../images/logos/three-village-logo-no-white-space.png";
 import AtlanticUnitedLogo from "../../images/logos/atlantic-united-logo-no-white-space.webp";
-import huddle2 from "../../images/huddle2.png";
+import huddle from "../../images/huddle.png";
 
 const TreeWithLogos = () => {
   useEffect(() => {
@@ -88,7 +88,7 @@ const TreeWithLogos = () => {
           position: "relative",
           backgroundImage: {
             md: `radial-gradient(rgba(0,0,31,0),rgba(0,0,31,0),rgba(0,0,31,0), rgba(0,0,31,.1), rgba(0,0,31,.3),rgba(0,0,31,1), rgba(0,0,31,1), rgba(0,0,31,1)),
-                 url(${huddle2})`,
+                 url(${huddle})`,
             xs: "none", // remove on small screens
           },
           backgroundPosition: "center 150px",
@@ -190,7 +190,7 @@ const TreeWithLogos = () => {
         sx={{
           display: { xs: "block", md: "none" },
           height: "500px",
-          backgroundImage: `url(${huddle2})`,
+          backgroundImage: `url(${huddle})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
