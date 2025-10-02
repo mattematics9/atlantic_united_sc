@@ -24,7 +24,7 @@ export default function Navbar() {
   const isActive = (p) => pathname === p || (p === '/' && pathname === '/');
 
   const drawer = (
-    <Box sx={{ width: 240, bgcolor: 'rgb(255,252,252)', height: '100%' }}>
+    <Box sx={{ width: 240, bgcolor: 'rgba(248, 251, 255, 1)', height: '100%' }}>
       <List>
         {pages.map((p) => (
           <ListItem key={p.path} disablePadding>
@@ -33,8 +33,8 @@ export default function Navbar() {
               to={p.path}
               onClick={toggleMobile}
               sx={{
-                '&:hover': { bgcolor: 'rgb(243,243,255)' },
-                bgcolor: isActive(p.path) ? 'rgb(248,248,255)' : 'inherit',
+                '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' },
+                bgcolor: isActive(p.path) ? 'rgba(238, 245, 255, 1)' : 'inherit',
                 borderLeft: isActive(p.path) ? '3px solid rgb(0,0,40)' : 'none',
                 borderRight: isActive(p.path) ? '3px solid rgb(0,0,40)' : 'none',
               }}
@@ -49,7 +49,7 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar position="fixed" sx={{ bgcolor: 'white', color: 'black', zIndex: 998 }}>
+      <AppBar position="fixed" sx={{ bgcolor: 'rgba(248, 251, 255, 1)', color: 'black', zIndex: 998 }}>
         <Toolbar
           disableGutters
           sx={{
@@ -109,14 +109,14 @@ export default function Navbar() {
                   mx: 0.25,          // small gap between items
 
                   // Typography/colors to match your CSS
-                  fontWeight: 500,
+                  fontWeight: 550,
                   color: 'black',
                   textDecoration: 'none',
 
                   // Hover + active styles ported from your CSS
-                  '&:hover': { bgcolor: 'rgb(248,248,255)' }, // desktop hover
+                  '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' }, // desktop hover
                   ...(isActive(p.path) && {
-                    bgcolor: 'rgb(248,248,255)',
+                    bgcolor: 'rgba(244, 249, 255, 1)',
                     borderLeft: '1px solid rgb(0,0,40)',
                     borderRight: '1px solid rgb(0,0,40)',
                   }),

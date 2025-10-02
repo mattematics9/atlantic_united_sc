@@ -33,7 +33,7 @@ const ProgramsCards = () => {
   return (
     <Box
       id="all-programs-cards"
-      sx={{ backgroundColor: "rgba(249, 249, 249, 1)", py: 4}}
+      sx={{ backgroundColor: "rgba(249, 250, 255, 1)", py: 4}}
     >
       <Grid container spacing={4} justifyContent='center'>
         {programs.map((program) => (
