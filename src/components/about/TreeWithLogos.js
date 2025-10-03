@@ -88,6 +88,7 @@ const TreeWithLogos = () => {
           position: "relative",
           backgroundImage: {
             md: `radial-gradient(rgba(0,0,31,0),rgba(0,0,31,0),rgba(0,0,31,0), rgba(0,0,31,.1), rgba(0,0,31,.3),rgba(0,0,31,1), rgba(0,0,31,1), rgba(0,0,31,1)),
+                 linear-gradient(rgba(0,0,31,0),rgba(0,0,31,0),rgba(0,0,31,0), rgba(0,0,31,.1), rgba(0,0,31,.3),rgba(0,0,31,.7), rgba(0,0,31,1), rgba(0,0,31,1)),
                  url(${huddle})`,
             xs: "none", // remove on small screens
           },
