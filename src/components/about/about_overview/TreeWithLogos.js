@@ -4,11 +4,11 @@ import { useEffect } from "react";
 import * as d3 from "d3";
 
 // Logos
-import LGNLogo from "../../images/logos/lgn-logo-no-whitespace.png";
-import MiddleCountryLogo from "../../images/logos/middle-country-logo.avif";
-import ThreeVillageLogo from "../../images/logos/three-village-logo-no-white-space.png";
-import AtlanticUnitedLogo from "../../images/logos/atlantic-united-logo-no-white-space.webp";
-import huddle from "../../images/huddle.png";
+import LGNLogo from "../../../images/logos/lgn-logo-no-whitespace.png";
+import MiddleCountryLogo from "../../../images/logos/middle-country-logo.avif";
+import ThreeVillageLogo from "../../../images/logos/three-village-logo-no-white-space.png";
+import AtlanticUnitedLogo from "../../../images/logos/atlantic-united-logo-no-white-space.webp";
+import huddle from "../../../images/huddle.png";
 
 const TreeWithLogos = () => {
   useEffect(() => {

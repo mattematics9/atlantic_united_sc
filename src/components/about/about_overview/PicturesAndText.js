@@ -2,9 +2,9 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 
 // Import images so bundlers resolve them correctly (fixes “background not displayed”)
-import force3 from "../../images/force3.png";
-import stonyBrookPlayers from "../../images/stony-brook-university-players.png";
-import wildlingsCelebration from "../../images/wildlings_celebration_national_league.jpg";
+import force3 from "../../../images/force3.png";
+import stonyBrookPlayers from "../../../images/stony-brook-university-players.png";
+import wildlingsCelebration from "../../../images/wildlings_celebration_national_league.jpg";
 
 /**
  * This mirrors the original Materialize layout exactly:

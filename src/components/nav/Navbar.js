@@ -20,9 +20,10 @@ const pages = [
 ];
 
 const aboutMenuItems = [
-  { label: 'History', path: '/about/history' },
+  { label: 'History', path: '/history' },
   { label: 'Programs', path: '/programs' },
-  { label: 'Fields', path: '/about/fields' },
+  { label: 'Fields', path: '/fields' },
+  { label: 'Testimonials', path: '/testimonials' },
 ];
 
 const programMenuItems = [
