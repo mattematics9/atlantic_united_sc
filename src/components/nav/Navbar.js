@@ -26,10 +26,10 @@ const aboutMenuItems = [
 ];
 
 const programMenuItems = [
-  { label: 'Grassroots', path: '/programs/grassroots' },
-  { label: 'Intramural', path: '/programs/intramural' },
-  { label: 'Pre-Travel Academy', path: '/programs/pre-travel-academy' },
   { label: 'Travel Academy', path: '/programs/travel-academy' },
+  { label: 'Pre-Travel Academy', path: '/programs/pre-travel-academy' },
+  { label: 'Intramural', path: '/programs/intramural' },
+  { label: 'Grassroots', path: '/programs/grassroots' }
 ];
 
 export default function Navbar() {
