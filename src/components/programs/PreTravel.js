@@ -28,6 +28,7 @@ let theme = createTheme({
   palette: {
     mode: "light",
     primary: { main: "#0b5fff" }, // Blue
+    // primary: { main: "rgba(0,0,31)" }, // Blue
     secondary: { main: "#e21d2b" }, // Red
   },
   typography: {
@@ -141,9 +142,9 @@ function ImageCarousel({ images = [], interval = 5000, height = 360, rounded = 1
 function ClubTabs() {
   const [tab, setTab] = React.useState(0);
   const clubs = [
-    { name: "LGN", location: "Selden, NY" },
-    { name: "Three Village", location: "Stony Brook, NY" },
-    { name: "Middle Country", location: "Centereach, NY" },
+    { name: "LGN", location: "Selden, NY", contact: "Dave Hickman", email: "davidhickman886@yahoo.com" },
+    { name: "Three Village", location: "Stony Brook, NY", contact: "Leigh Pilkington", email: "trainasap@yahoo.com" },
+    { name: "Middle Country", location: "Centereach, NY", contact: "Middle Country players looking to join the Pre-Travel Academy will register through LGN or Three Village", email: "See LGN or Three Village Contacts" },
   ];
 
   return (
@@ -163,10 +164,12 @@ function ClubTabs() {
       <Card sx={{ mt: 2, mb: 3 }}>
         <CardContent>
           <Typography variant="h6" color="primary" gutterBottom>
-            {clubs[tab].name} Pre-Travel Academy Location
+            Atlantic United at {clubs[tab].name} - Pre-Travel Academy
           </Typography>
           <Typography variant="body1">
-            {clubs[tab].location}
+            Location: {clubs[tab].location}<br/>
+            Contact: {clubs[tab].contact}<br/>
+            Email: {clubs[tab].email}
           </Typography>
           <Divider sx={{ my: 2 }} />
           <Typography variant="body2" color="text.secondary">
@@ -203,7 +206,7 @@ export default function AtlanticUnitedPreTravelAcademy({ images }) {
         <Container maxWidth="lg">
           {/* Header */}
           <Stack spacing={2} alignItems="center" textAlign="center" sx={{ mb: 4, mt: 6 }}>
-            <Chip label="Atlantic United" color="secondary" sx={{ fontWeight: 500, fontSize: '30px', padding: '20px' }} />
+            <Chip label="Atlantic United"  sx={{ fontWeight: 500, fontSize: '30px', padding: '25px', backgroundColor: 'rgba(0,0,31)', color: 'white' }} />
             <Typography variant="h2" component="h1">
               Pre-Travel Academy Program
             </Typography>
@@ -212,11 +215,31 @@ export default function AtlanticUnitedPreTravelAcademy({ images }) {
             </Typography>
           </Stack>
 
+          {/* Pathway Banner */}
+          {/* <Box sx={{ mt: 4, p: { xs: 3, md: 4 }, borderRadius: 3, background: (t) => `linear-gradient(90deg, ${t.palette.primary.main} 0%, ${t.palette.secondary.main} 100%)`, color: "common.white" }}> */}
+          <Box sx={{ mt: 4, p: { xs: 3, md: 4 }, borderRadius: 3, background: (t) => `linear-gradient(90deg, rgba(0,0,31,1) 0%, ${t.palette.secondary.main} 100%)`, color: "common.white" }}>
+            <Grid container spacing={2} alignItems="center">
+              <Grid item xs={12} md={9}>
+                <Typography variant="h5" sx={{ fontWeight: 700 }}>Pathway to Travel Teams</Typography>
+                <Typography variant="body1" sx={{ opacity: 0.95 }}>
+                  The Pre-Travel Academy is the direct preparation track for Atlantic United travel teams.
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Stack direction={{ xs: "column", md: "row" }} spacing={1}>
+                  <Chip label="Academy" sx={{ bgcolor: "rgba(255,255,255,.16)", color: "white", borderColor: "white" }} variant="outlined" />
+                  <Chip label="Advanced Training" sx={{ bgcolor: "rgba(255,255,255,.16)", color: "white", borderColor: "white" }} variant="outlined" />
+                  <Chip label="Travel Teams" sx={{ bgcolor: "rgba(255,255,255,.16)", color: "white", borderColor: "white" }} variant="outlined" />
+                </Stack>
+              </Grid>
+            </Grid>
+          </Box>
+
           {/* About & Highlights */}
-          <Grid container spacing={4} sx={{ mt: 7 }}>
+          <Grid container spacing={4} sx={{ mt: 7, justifyContent: "center" }}>
 
             {/* Club Tabs */}
-            <Grid item xs={12} md={5} sx={{ display: "flex", justifyContent: "center" }}>
+            <Grid item xs={12} md={5}>
               <ClubTabs />
             </Grid>
 
@@ -230,7 +253,7 @@ export default function AtlanticUnitedPreTravelAcademy({ images }) {
                     About the Atlantic United Pre-Travel Academy Program
                   </Typography>
                   <Typography variant="body1" sx={{ mb: 2 }}>
-                    We’re excited to open our Academy to players who are ready for a fun, skill-focused step beyond intramurals. At this age, the focus is on building basic techniques—such as dribbling, passing, controlling the ball, and scoring—while keeping the sessions enjoyable and developmentally appropriate. Players will also learn the values of teamwork, confidence, and creativity on the field. We aim to create an environment where every child feels supported, learns to love the game, and develops the foundation for future success.
+                    A fun, skill-focused step beyond intramurals. At this age, the focus is on building basic techniques—such as dribbling, passing, controlling the ball, and scoring—while keeping the sessions enjoyable and developmentally appropriate. Players will also learn the values of teamwork, confidence, and creativity on the field. We aim to create an environment where every child feels supported, learns to love the game, and develops the foundation for future success.
                   </Typography>
 
                   <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
@@ -279,25 +302,6 @@ export default function AtlanticUnitedPreTravelAcademy({ images }) {
               </Card>
             </Grid>
           </Grid>
-
-          {/* Pathway Banner */}
-          <Box sx={{ mt: 4, p: { xs: 3, md: 4 }, borderRadius: 3, background: (t) => `linear-gradient(90deg, ${t.palette.primary.main} 0%, ${t.palette.secondary.main} 100%)`, color: "common.white" }}>
-            <Grid container spacing={2} alignItems="center">
-              <Grid item xs={12} md={9}>
-                <Typography variant="h5" sx={{ fontWeight: 700 }}>Pathway to Travel Teams</Typography>
-                <Typography variant="body1" sx={{ opacity: 0.95 }}>
-                  This Academy is the direct preparation track for Atlantic United travel teams.
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Stack direction={{ xs: "column", md: "row" }} spacing={1}>
-                  <Chip label="Academy" sx={{ bgcolor: "rgba(255,255,255,.16)", color: "white", borderColor: "white" }} variant="outlined" />
-                  <Chip label="Advanced Training" sx={{ bgcolor: "rgba(255,255,255,.16)", color: "white", borderColor: "white" }} variant="outlined" />
-                  <Chip label="Travel Teams" sx={{ bgcolor: "rgba(255,255,255,.16)", color: "white", borderColor: "white" }} variant="outlined" />
-                </Stack>
-              </Grid>
-            </Grid>
-          </Box>
 
           {/* Footer Note */}
           <Stack spacing={1} sx={{ mt: 4 }}>

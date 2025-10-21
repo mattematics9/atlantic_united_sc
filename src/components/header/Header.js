@@ -1,7 +1,5 @@
 import React from "react";
-import { Box, Typography, Button, Container } from "@mui/material";
-import { Link } from "react-router-dom";
-import wildlingsCelebrationNationalLeague from '../../images/wildlings_celebration_national_league.jpg'
+import { Box, Typography, Container } from "@mui/material";
 import atlanticUnitedLogo from '../../images/logos/atlantic-united-logo-no-white-space.webp'
 
 const Header = () => {

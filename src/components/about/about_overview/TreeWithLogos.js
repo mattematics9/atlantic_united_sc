@@ -188,10 +188,10 @@ const TreeWithLogos = () => {
 
       {/* Now we Play */}
       <Box
-        id="now-we-play"
         sx={{
           display: { xs: "block", md: "none" },
           height: 250,
+          // eslint-disable-next-line 
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

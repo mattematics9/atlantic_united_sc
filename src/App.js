@@ -11,6 +11,7 @@ import Register from './components/register/Register';
 import LeagueLogos from './components/league_logos/LeagueLogos';
 import CssBaseline from '@mui/material/CssBaseline';
 import PreTravel from './components/programs/PreTravel'
+import Travel from './components/programs/Travel'
 import Testimonials from './components/testimonials/Testimonials';
 import Fields from './components/about/fields/Fields'
 
@@ -34,6 +35,7 @@ function App() {
             <Route path='/testimonials' element={ <Testimonials/> }/>    
             <Route path='/fields' element={ <Fields/> }/>    
             <Route path='/programs/pre-travel-academy' element={ <PreTravel/> }/>    
+            <Route path='/programs/travel-academy' element={ <Travel/> }/>    
           </Routes>
         <Footer/>
       </BrowserRouter>

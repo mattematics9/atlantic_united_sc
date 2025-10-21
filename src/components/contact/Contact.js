@@ -63,6 +63,11 @@ const Contact = () => {
           scrollButtons="auto"
           sx={{
             mb: 4,
+            display: "flex",
+            justifyContent: "center", // ✅ centers tabs
+            "& .MuiTabs-flexContainer": {
+              justifyContent: "center", // ✅ ensures actual tab labels are centered
+            },
             "& .MuiTab-root": {
               fontSize: { xs: "9px", sm: "11px", md: "14px", lg: "18px", xl: "25px" },
               color: "red",
