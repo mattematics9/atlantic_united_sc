@@ -1,12 +1,14 @@
 import { Box } from "@mui/material";
 import PicturesAndText from "./PicturesAndText";
-import TreeWithLogos from "./TreeWithLogos";
+import Huddle from "./Huddle";
+import NowWePlay from "./NowWePlay";
 
 const About = () => {
   return (
     <Box sx={{ pt: "40px" }}>
       <PicturesAndText />
-      <TreeWithLogos />
+      <Huddle />
+      <NowWePlay />
     </Box>
   );
 };

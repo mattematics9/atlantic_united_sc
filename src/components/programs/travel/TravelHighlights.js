@@ -17,9 +17,9 @@ import PublicIcon from "@mui/icons-material/Public";
 import StarIcon from "@mui/icons-material/Star";
 
 //Images
-import wildlingsCelebration from '../../images/wildlings_celebration_nationals.png'
-import wildlingsTraining from '../../images/wildlings-training.jpg'
-import forceCelebration from '../../images/force.jpg'
+import wildlingsCelebration from '../../../images/wildlings_celebration_nationals.png'
+import wildlingsTraining from '../../../images/wildlings-training.jpg'
+import forceCelebration from '../../../images/force.jpg'
 
 const theme = createTheme({
   palette: {
@@ -50,7 +50,7 @@ const defaultImages = {
 
 
 
-export default function TravelAcademy({ images = defaultImages }) {
+export default function TravelHighlights({ images = defaultImages }) {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>

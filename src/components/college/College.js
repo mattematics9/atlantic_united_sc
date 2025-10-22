@@ -16,6 +16,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import SportsIcon from "@mui/icons-material/Sports";
 import Universities from "./Universities";
+import CallToAction from '../call_to_action/CallToAction'
 
 const features = [
   {
@@ -102,7 +103,7 @@ const FeatureCard = ({ title, text, icon }) => (
 const College = () => {
   return (
     <Box id="college-page">
-    
+
       <Universities/>
 
       {/* Features Section */}
@@ -124,27 +125,7 @@ const College = () => {
       </Box>
 
       {/* Call to Action */}
-      <Box sx={{ backgroundColor: "#f1f1f1", py: 8, textAlign: "center" }}>
-        <Container>
-          <Typography variant="h4" gutterBottom>
-            Ready to Start Your College Soccer Journey?
-          </Typography>
-          <Button
-            component={RouterLink}
-            to="/contact"
-            variant="contained"
-            color="error"
-            size="large"
-            sx={{
-              mt: 3,
-              transition: "transform 0.3s, opacity 0.3s",
-              "&:hover": { opacity: 0.85, transform: "scale(1.05)" }
-            }}
-          >
-            Contact Us
-          </Button>
-        </Container>
-      </Box>
+      <CallToAction/>
     </Box>
   );
 };

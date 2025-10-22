@@ -29,7 +29,7 @@ const theme = createTheme({
 
 
 
-export default function Header() {
+export default function CallToAction() {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>

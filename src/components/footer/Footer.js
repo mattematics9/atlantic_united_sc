@@ -5,23 +5,6 @@ import { Box, Typography, Link } from '@mui/material';
 export default function Footer() {
   return (
     <Box id="footer">
-      {/* Top bar */}
-      <Box
-        id="footer-1"
-        sx={{
-          p: '50px',
-          bgcolor: 'rgb(0, 0, 32)',
-          color: 'white',
-          textAlign: 'center',
-        }}
-      >
-        <Typography component="h6" variant="h6" sx={{ m: 0 }}>
-          Atlantic United Soccer Club
-        </Typography>
-        <Typography component="h6" variant="h6" sx={{ m: 0 }}>
-          "NOW WE PLAY"
-        </Typography>
-      </Box>
 
       {/* Bottom nav bar */}
       <Box

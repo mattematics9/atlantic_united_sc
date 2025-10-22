@@ -11,7 +11,7 @@ import Programs from './components/programs/Programs';
 import Register from './components/register/Register';
 import LeagueLogos from './components/league_logos/LeagueLogos';
 import PreTravel from './components/programs/PreTravel'
-import Travel from './components/programs/Travel'
+import Travel from './components/programs/travel/Travel'
 import Testimonials from './components/testimonials/Testimonials';
 import Fields from './components/about/fields/Fields'
 import College from './components/college/College';
