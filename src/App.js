@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CssBaseline from '@mui/material/CssBaseline';
 import Navbar from "./components/nav/Navbar";
 import Home from './components/Home';
 import Footer from './components/footer/Footer';
@@ -9,11 +10,11 @@ import Resources from './components/resources/Resources';
 import Programs from './components/programs/Programs';
 import Register from './components/register/Register';
 import LeagueLogos from './components/league_logos/LeagueLogos';
-import CssBaseline from '@mui/material/CssBaseline';
 import PreTravel from './components/programs/PreTravel'
 import Travel from './components/programs/Travel'
 import Testimonials from './components/testimonials/Testimonials';
 import Fields from './components/about/fields/Fields'
+import College from './components/college/College';
 
 
 
@@ -36,6 +37,7 @@ function App() {
             <Route path='/fields' element={ <Fields/> }/>    
             <Route path='/programs/pre-travel-academy' element={ <PreTravel/> }/>    
             <Route path='/programs/travel-academy' element={ <Travel/> }/>    
+            <Route path='/college' element={ <College/> }/>    
           </Routes>
         <Footer/>
       </BrowserRouter>

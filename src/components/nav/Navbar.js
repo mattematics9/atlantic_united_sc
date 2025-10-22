@@ -23,6 +23,7 @@ const aboutMenuItems = [
   { label: 'Programs', path: '/programs' },
   { label: 'Fields', path: '/fields' },
   { label: 'Testimonials', path: '/testimonials' },
+  { label: 'College', path: '/college' },
 ];
 
 const programMenuItems = [

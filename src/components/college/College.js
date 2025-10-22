@@ -15,6 +15,7 @@ import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 import SchoolIcon from "@mui/icons-material/School";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import SportsIcon from "@mui/icons-material/Sports";
+import Universities from "./Universities";
 
 const features = [
   {
@@ -101,33 +102,8 @@ const FeatureCard = ({ title, text, icon }) => (
 const College = () => {
   return (
     <Box id="college-page">
-      {/* Hero Section */}
-      <Box sx={{ backgroundColor: "white", py: 8, textAlign: "center" }}>
-        <Container
-          sx={{
-            border: "2px dotted red",
-            borderRadius: 2,
-            p: 4,
-            backgroundColor: "#fdfdfd"
-          }}
-        >
-          <Typography variant="h3" gutterBottom>
-            College Pathway
-          </Typography>
-          <Box
-            sx={{
-              width: 80,
-              height: 2,
-              backgroundColor: "#d32a2a",
-              margin: "10px auto"
-            }}
-          />
-          <Typography variant="h6" color="text.secondary">
-            Helping student-athletes achieve their dreams through dedication,
-            opportunity, and exposure.
-          </Typography>
-        </Container>
-      </Box>
+    
+      <Universities/>
 
       {/* Features Section */}
       <Box sx={{ py: 6, backgroundColor: "rgb(0, 0, 31)", color: "white" }}>

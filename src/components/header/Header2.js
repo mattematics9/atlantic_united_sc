@@ -29,7 +29,7 @@ import EDPLogo from '../../images/logos/edp-logo.png'
 import LIJSLlogo from '../../images/logos/lijsl-logo.png'
 
 //Images
-import wildlingsCelebration from '../../images/wildlings_celebration_national_league.jpg'
+import wildlingsCelebration from '../../images/wildlings_celebration_nationals.png'
 import wildlingsTraining from '../../images/wildlings-training.jpg'
 import forceCelebration from '../../images/force.jpg'
 
@@ -93,7 +93,7 @@ const Stat = ({ icon, label, value, chipColor = "primary" }) => (
   </Paper>
 );
 
-export default function TravelAcademy({ images = defaultImages, leagueLogos = defaultLeagueLogos }) {
+export default function Header({ images = defaultImages, leagueLogos = defaultLeagueLogos }) {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
@@ -118,7 +118,7 @@ export default function TravelAcademy({ images = defaultImages, leagueLogos = de
                 inset: 0,
                 width: "100%",
                 filter: "grayscale(20%) contrast(115%)",
-                transform: "scale(1.05)", // 👈 shifts image down
+                transform: "translateY(70px) scale(1.05)", // 👈 shifts image down
                 objectFit: "cover",
             }}
             // sx={{

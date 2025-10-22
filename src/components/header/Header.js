@@ -1,105 +1,94 @@
 import React from "react";
-import { Box, Typography, Container } from "@mui/material";
-import atlanticUnitedLogo from '../../images/logos/atlantic-united-logo-no-white-space.webp'
+import {
+  Box,
+  Container,
+  Typography,
+  Stack,
+  Button,
+  ThemeProvider,
+  createTheme,
+} from "@mui/material";
 
-const Header = () => {
+//Images
+import wildlingsCelebration from '../../images/wildlings_celebration_nationals.png'
+
+const theme = createTheme({
+  palette: {
+    primary: { main: "#0D47A1" }, // Atlantic Blue
+    secondary: { main: "#C62828" }, // Atlantic Red
+    background: { default: "#0a0d14" },
+  },
+  shape: { borderRadius: 16 },
+  typography: {
+    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
+    h1: { fontWeight: 800 },
+    h2: { fontWeight: 800 },
+    h3: { fontWeight: 700 },
+    button: { fontWeight: 700, textTransform: "none" },
+  },
+});
+
+
+
+export default function Header() {
   return (
-    <Box
-      id="header"
-      sx={{
-        backgroundColor: 'rgba(0,0,31)',
-        // backgroundImage: {
-        //   xs: `radial-gradient(rgba(0,0,31,0), rgba(0,0,31,0.3), rgba(0,0,31,0.8), rgba(0,0,31,1)),
-        //         url(${wildlingsCelebrationNationalLeague})`,
-        //   sm: `radial-gradient(rgba(0,0,31,0), rgba(0,0,31,0.3), rgba(0,0,31,0.8), rgba(0,0,31,1)),
-        //         url(${wildlingsCelebrationNationalLeague})`,
-        // },
-        // backgroundSize: "cover",
-        // backgroundPosition: "center 0px",
-        // backgroundRepeat: "no-repeat",
-        height: { xs: "420px", sm: "500px", md: "608px" },
-        pt: { xs: "130px", sm: "150px" },
-        "@media (max-width:450px)": {
-          // backgroundImage: `radial-gradient(rgba(0,0,31,0), rgba(0,0,31,0), rgba(0,0,31,0.3), rgba(0,0,31,0.7), rgba(0,0,31,1)),
-          //                   linear-gradient(rgba(0,0,31,0), rgba(0,0,31,0), rgba(0,0,31,0), rgba(0,0,31,0), rgba(0,0,31,0.5), rgba(0,0,31,0.8), rgba(0,0,31,1)),
-          //                   url(${wildlingsCelebrationNationalLeague})`,
-          height: "100vh",
-          pt: "230px",
-        }
-      }}
-    >
-      <Container id="header-content">
-        <Typography
-          id="header-atlantic-united-text"
-          variant="h2"
+    <ThemeProvider theme={theme}>
+      <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
+        {/* HERO */}
+        <Box
           sx={{
-            color: "white",
-            textAlign: "center",
-            fontSize: { xs: "37px", sm: "40px", md: "70px" },
-            fontStyle: "italic",
-            fontWeight: "300",
-            m: "5px",
+            position: "relative",
+            minHeight: { xs: 420, md: 560 },
+            display: "grid",
+            alignItems: "center",
+            overflow: "hidden",
           }}
+          role="banner"
+          aria-label="Atlantic United Travel Academy hero section"
         >
-          ATLANTIC UNITED
-        </Typography>
-        <Typography
-          id="header-soccer-club-text"
-          variant="h2"
-          sx={{
-            color: "white",
-            textAlign: "center",
-            fontSize: { xs: "37px", sm: "40px", md: "70px" },
-            fontStyle: "italic",
-            fontWeight: "300",
-            m: "5px",
-          }}
-        >
-          SOCCER CLUB
-        </Typography>
-        
-        <Box textAlign="center">
           <Box
             component="img"
-            src={atlanticUnitedLogo}
-            alt="Atlantic United Logo"
+            src={wildlingsCelebration}
+            alt="Atlantic United players in action"
             sx={{
-              width: {xs: '150px', md: '200px'},
-              display: 'inline-block'
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                filter: "grayscale(20%) contrast(115%)",
+                transform: "translateY(70px) scale(1.05)", // 👈 shifts image down
+                objectFit: "cover",
             }}
           />
+          <Box
+            sx={{
+              position: "absolute",
+              inset: 0,
+              background:
+                "linear-gradient(120deg, rgba(0,0,31,.9) 0%, rgba(198,40,40,0.75) 100%)",
+            }}
+          />
+
+          <Container sx={{ position: "relative", zIndex: 1, py: {xs: 7, sm: 10} }}>
+            <Stack spacing={3} maxWidth={880} sx={{mt: 8}}>
+              <Typography variant="h2" component="h1" gutterBottom sx={{fontSize: {xs: "40px", sm: "40px", lg: "60px"}}}>
+                ATLANTIC UNITED<br/>SOCCER CLUB
+              </Typography>
+              <Typography variant="h6" sx={{ display: {xs: "none", sm: "block"}, opacity: 0.95, lineHeight: 1.6 }}>
+                Atlantic United travel teams compete at the highest levels of youth soccer nationwide, while we also provide a full range of programs designed to support players of all ages, skill levels, and interests.
+              </Typography>
+              <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+                <Button size="large" variant="contained" color="secondary">
+                  See Our Programs
+                </Button>
+                <Button size="large" variant="outlined" color="inherit">
+                  Contact Us
+                </Button>
+              </Stack>
+            </Stack>
+          </Container>
         </Box>
 
-        {/* <Box textAlign="center">
-          <Button
-            id="register-now-btn"
-            component={Link}
-            to="/register"
-            sx={{
-              borderStyle: "solid",
-              borderWidth: 1,
-              borderRadius: "80px",
-              mt: "20px",
-              mr: "20px",
-              fontSize: { xs: "15px", sm: "22px" },
-              backgroundColor: { xs: "transparent", sm: "red" },
-              borderColor: { xs: "white", sm: "red" },
-              color: "white",
-              "&:hover": {
-                opacity: 0.8,
-                backgroundColor: { sm: "red", xs: "transparent" },
-              },
-            }}
-          >
-            REGISTER NOW
-          </Button>
-        </Box> */}
-
-      </Container>
-    </Box>
+      </Box>
+    </ThemeProvider>
   );
-};
-
-export default Header;
-
-
+}
