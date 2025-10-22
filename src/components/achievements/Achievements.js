@@ -58,7 +58,7 @@ const Stat = ({ icon, label, value, chipColor = "primary" }) => (
 export default function Achievements() {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
+      <Box id="achievements" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
 
         {/* ACHIEVEMENTS STRIP */}
         <Container sx={{ py: 6 }}>

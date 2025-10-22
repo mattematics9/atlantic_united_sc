@@ -3,14 +3,18 @@ import Contact from './contact/Contact'
 import Achievements from './achievements/Achievements'
 import Leagues from './leagues/Leagues'
 import CallToAction from './call_to_action/CallToAction'
-import About from './about/about_overview/About'
+import PicturesAndText from './about/about_overview/PicturesAndText'
+import Huddle from './about/about_overview/Huddle'
+import NowWePlay from './about/about_overview/NowWePlay'
 
 const Home = () => {
   return (
     <>
        <Header/> 
        <Achievements/>
-       <About/>
+       <PicturesAndText/>
+       <Huddle/>
+       <NowWePlay/>
        <Leagues/>
        <CallToAction/>
        <Contact/>

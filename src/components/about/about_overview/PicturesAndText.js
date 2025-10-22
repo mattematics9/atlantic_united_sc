@@ -17,7 +17,7 @@ import wildlingsCelebration from "../../../images/wildlings_celebration_national
  * We use raw media queries (992/993 & 600/601) to match Materialize’s breakpoints,
  * instead of MUI’s default (600/900/1200), so behavior is identical.
  */
-const PicturesAndTextMUI = () => {
+const PicturesAndText = () => {
   // Materialize-like breakpoints
   const upTo992 = "@media (max-width: 992px)";
   const from993 = "@media (min-width: 993px)";
@@ -212,6 +212,6 @@ const PicturesAndTextMUI = () => {
   );
 };
 
-export default PicturesAndTextMUI;
+export default PicturesAndText;
 
 

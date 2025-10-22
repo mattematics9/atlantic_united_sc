@@ -1,5 +1,4 @@
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
 import {
   Box,
   Container,
@@ -7,7 +6,6 @@ import {
   Grid,
   Card,
   CardContent,
-  Button
 } from "@mui/material";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import GroupIcon from "@mui/icons-material/Group";

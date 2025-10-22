@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Box,
   Container,
@@ -98,10 +99,10 @@ export default function TravelHeader() {
                 intelligent, and relentlessly competitive. 
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
-                <Button size="large" variant="contained" color="secondary">
+                <Button component={Link} to="https://system.gotsport.com/programs/D45748060?reg_role=player" target="_blank" size="large" variant="contained" color="secondary">
                   Join Our Travel Program
                 </Button>
-                <Button size="large" variant="outlined" color="inherit">
+                <Button href="#achievements" size="large" variant="outlined" color="inherit">
                   See More
                 </Button>
               </Stack>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Box,
   Container,
@@ -77,10 +78,10 @@ export default function Header() {
                 Atlantic United travel teams compete at the highest levels of youth soccer nationwide, while we also provide a full range of programs designed to support players of all ages, skill levels, and interests.
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
-                <Button size="large" variant="contained" color="secondary">
+                <Button size="large" variant="contained" color="secondary" component={Link} to="/programs">
                   See Our Programs
                 </Button>
-                <Button size="large" variant="outlined" color="inherit">
+                <Button size="large" variant="outlined" color="inherit" component={Link} to="/contact">
                   Contact Us
                 </Button>
               </Stack>

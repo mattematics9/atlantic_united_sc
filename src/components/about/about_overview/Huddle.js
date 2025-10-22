@@ -111,8 +111,8 @@ const Huddle = () => {
           <Typography sx={{ fontSize: { xs: "18px", md: "24px" }, fontStyle: "italic" }}>
             90% college placement track record
           </Typography>
-          <Button component={Link} to='/college' sx={{fontSize: '20px', color: 'rgba(174, 220, 255, 1)', '&:hover': {opacity: '.8'}}}>
-            MORE ON COLLEGE RECRUITMENT
+          <Button component={Link} to='/college' sx={{fontSize: '20px', color: 'rgba(183, 213, 255, 1)', '&:hover': {opacity: '.8'}}}>
+            *MORE ON COLLEGE RECRUITMENT*
           </Button>
         </Box>
 

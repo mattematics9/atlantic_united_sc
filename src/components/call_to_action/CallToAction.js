@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Box,
   Container,
@@ -56,10 +57,10 @@ export default function CallToAction() {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Stack direction={{ xs: "column", sm: "row", md: "column" }} spacing={2}>
-                  <Button size="large" variant="contained" color="secondary">
+                  <Button size="large" variant="contained" color="secondary" component={Link} to="/programs">
                     See Our Programs
                   </Button>
-                  <Button size="large" variant="outlined" color="white">
+                  <Button size="large" variant="outlined" color="white" component={Link} to="/contact">
                     Contact Us
                   </Button>
                 </Stack>

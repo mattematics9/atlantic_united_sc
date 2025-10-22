@@ -37,7 +37,7 @@ export default function Footer() {
         <Link href="/contact">CONTACT</Link>
         <Link href="/register">REGISTER</Link>
       </Box>
-      <Box sx={{ py: 6, textAlign: "center", opacity: 0.6 }}>
+      <Box sx={{ py: 6, textAlign: "center", color: 'white', backgroundColor: 'black' }}>
         <Typography variant="caption">
           © {new Date().getFullYear()} Atlantic United Soccer Club • All Rights Reserved
         </Typography>

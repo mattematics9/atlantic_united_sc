@@ -8,7 +8,7 @@ export const programs = [
     description: "Offers advanced training and competition, helping players maximize their potential on and off the field.",
     registerUrl:
       "https://system.gotsport.com/programs/D45748060?reg_role=player",
-    learnMoreUrl: "/programs/travel",
+    learnMoreUrl: "/programs/travel-academy",
     modal: null // no modal needed
   },
   {
@@ -17,7 +17,7 @@ export const programs = [
     grade: "Grades 1 - 2",
     image: require("../../images/stony-brook-pre-travel.png"),
     description: "Prepares players for higher levels of play, bridging the gap between recreational and competitive soccer.",
-    learnMoreUrl: "/programs/pre-travel",
+    learnMoreUrl: "/programs/pre-travel-academy",
     modal: [
       {
         club: "Three Village Soccer Club",
