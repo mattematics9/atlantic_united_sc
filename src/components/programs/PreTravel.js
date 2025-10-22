@@ -206,7 +206,7 @@ export default function AtlanticUnitedPreTravelAcademy({ images }) {
         <Container maxWidth="lg">
           {/* Header */}
           <Stack spacing={2} alignItems="center" textAlign="center" sx={{ mb: 4, mt: 6 }}>
-            <Chip label="Atlantic United"  sx={{ fontWeight: 500, fontSize: '30px', padding: '25px', backgroundColor: 'rgba(0,0,31)', color: 'white' }} />
+            {/* <Chip label="Atlantic United"  sx={{ fontWeight: 500, fontSize: '30px', padding: '25px', backgroundColor: 'rgba(0,0,31)', color: 'white' }} /> */}
             <Typography variant="h2" component="h1">
               Pre-Travel Academy Program
             </Typography>

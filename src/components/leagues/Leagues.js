@@ -58,7 +58,7 @@ export default function Leagues({ leagueLogos = defaultLeagueLogos }) {
             <Chip icon={<PublicIcon />} color="primary" label="Elite Competition Platform" />
             <Typography variant="h3">Compete at the Highest Level</Typography>
             <Typography variant="body1" sx={{ maxWidth: 800, opacity: 0.9 }}>
-              Our teams battle weekly in the nation’s premier youth leagues.
+              Atlantic United travel teams compete at the highest levels of youth soccer nationwide, while we also enter teams into leagues that support players of all ages, skill levels, and interests.
             </Typography>
           </Stack>
           <Grid container spacing={3} justifyContent="center" alignItems="center">
