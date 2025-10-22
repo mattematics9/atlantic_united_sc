@@ -114,17 +114,25 @@ export default function TravelAcademy({ images = defaultImages, leagueLogos = de
             src={images.hero}
             alt="Atlantic United players in action"
             sx={{
-              position: "absolute",
-              inset: 0,
-              width: "100%",
-            //   height: "100%",
-            //   objectFit: "cover",
-              filter: "grayscale(20%) contrast(115%)",
-              transform: "scale(1.05)",
-              backgroundSize: "cover",
-              backgroundPosition: "center 0px",
-              backgroundRepeat: "no-repeat",
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                filter: "grayscale(20%) contrast(115%)",
+                transform: "translateY(70px) scale(1.05)", // 👈 shifts image down
+                objectFit: "cover",
             }}
+            // sx={{
+            //   position: "absolute",
+            //   inset: 0,
+            //   width: "100%",
+            // //   height: "100%",
+            // //   objectFit: "cover",
+            //   filter: "grayscale(20%) contrast(115%)",
+            //   transform: "scale(1.05)",
+            //   backgroundSize: "cover",
+            //   backgroundPosition: "center 0px",
+            //   backgroundRepeat: "no-repeat",
+            // }}
           />
           <Box
             sx={{
@@ -136,23 +144,22 @@ export default function TravelAcademy({ images = defaultImages, leagueLogos = de
             }}
           />
 
-          <Container sx={{ position: "relative", zIndex: 1, py: 10 }}>
+          <Container sx={{ position: "relative", zIndex: 1, py: {xs: 7, sm: 10} }}>
             <Stack spacing={3} maxWidth={880} sx={{mt: 8}}>
               <Chip
                 icon={<SportsSoccerIcon />}
                 color="secondary"
                 label="Atlantic United • Travel Academy"
-                sx={{ bgcolor: "#fff", color: "#C62828", fontWeight: 800 }}
+                // sx={{ bgcolor: "#fff", color: "#C62828", fontWeight: 800 }}
+                sx={{ bgcolor: "transparent", color: "white", fontWeight: 800, border: "1px solid white", padding: '20px' }}
               />
-              <Typography variant="h2" component="h1" gutterBottom>
+              <Typography variant="h2" component="h1" gutterBottom sx={{fontSize: {xs: "40px", sm: "40px", lg: "60px"}}}>
                 Elite Player Pathway. National Stage.
               </Typography>
-              <Typography variant="h6" sx={{ opacity: 0.95, lineHeight: 1.6 }}>
+              <Typography variant="h6" sx={{ display: {xs: "none", sm: "block"}, opacity: 0.95, lineHeight: 1.6 }}>
                 The Atlantic United Travel Academy is a high-performance environment
                 designed to develop complete soccer players—technically sharp, tactically
-                intelligent, and relentlessly competitive. From MLS NEXT to the
-                National League, we prepare our athletes to develop and win today and succeed at
-                the college and professional levels tomorrow.
+                intelligent, and relentlessly competitive. 
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
                 <Button size="large" variant="contained" color="secondary">
