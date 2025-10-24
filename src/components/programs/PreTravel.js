@@ -253,7 +253,7 @@ export default function AtlanticUnitedPreTravelAcademy({ images }) {
                     About the Atlantic United Pre-Travel Academy Program
                   </Typography>
                   <Typography variant="body1" sx={{ mb: 2 }}>
-                    A fun, skill-focused step beyond intramurals. At this age, the focus is on building basic techniques—such as dribbling, passing, controlling the ball, and scoring—while keeping the sessions enjoyable and developmentally appropriate. Players will also learn the values of teamwork, confidence, and creativity on the field. We aim to create an environment where every child feels supported, learns to love the game, and develops the foundation for future success.
+                    A fun, skill-focused step beyond intramurals. At this age, the focus is on building basic techniques - such as dribbling, passing, controlling the ball, and scoring - while keeping the sessions enjoyable and developmentally appropriate. Players will also learn the values of teamwork, confidence, and creativity on the field. We aim to create an environment where every child feels supported, learns to love the game, and develops the foundation for future success.
                   </Typography>
 
                   <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>

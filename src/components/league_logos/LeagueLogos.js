@@ -1,7 +1,7 @@
 // LeagueLogosMUI.jsx
 import React from 'react';
 import { Box, Link as MUILink } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MLSNextLogo from '../../images/logos/mls-next-logo.png';
 import GAAspireLogo from '../../images/logos/girls-aspire-logos/girls-aspire-logo-9.png';
 
@@ -10,8 +10,9 @@ export default function LeagueLogosMUI() {
     <Box id="league-logos">
       {/* MLS Next Logo */}
       <MUILink
-        component={RouterLink}
-        to="/"
+        component={Link}
+        to="https://www.mlssoccer.com/mlsnext/"
+        target="_blank"
         underline="none"
         sx={{ display: 'inline-block' }}
       >
@@ -35,8 +36,9 @@ export default function LeagueLogosMUI() {
 
       {/* GA Aspire Logo */}
       <MUILink
-        component={RouterLink}
-        to="/"
+        component={Link}
+        to="https://girlsacademyleague.com/aspire/"
+        target="_blank"
         underline="none"
         sx={{ display: 'inline-block' }}
       >

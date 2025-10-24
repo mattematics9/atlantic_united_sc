@@ -95,7 +95,7 @@ export default function TravelHeader() {
               </Typography>
               <Typography variant="h6" sx={{ display: {xs: "none", sm: "block"}, opacity: 0.95, lineHeight: 1.6 }}>
                 The Atlantic United Travel Academy is a high-performance environment
-                designed to develop complete soccer players—technically sharp, tactically
+                designed to develop complete soccer players - technically sharp, tactically
                 intelligent, and relentlessly competitive. 
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>

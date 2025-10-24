@@ -95,8 +95,8 @@ const testimonials = [
     <Box
       id="testimonials"
       sx={{
-        backgroundColor: "rgb(0,0,31)",
-        py: { xs: 8, md: 15 },
+        background: "linear-gradient( rgba(0, 0, 0,1), rgba(0, 19, 146, 0.8), rgba(0, 0, 0,1))",
+        py: { xs: 13, md: 15 },
         textAlign: "center",
       }}
     >

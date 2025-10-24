@@ -68,7 +68,7 @@ export default function TravelHighlights({ images = defaultImages }) {
             {
               title: "Relentless Game Model",
               text:
-                "Aggressive pressing, quick transitions, and purposeful possession—our identity travels with every team.",
+                "Aggressive pressing, quick transitions, and purposeful possession - our identity travels with every team.",
               img: images.match1,
               icon: <PublicIcon />,
             },
