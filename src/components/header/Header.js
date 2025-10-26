@@ -12,8 +12,7 @@ import {
 
 //Images
 import wildlingsCelebration from '../../images/wildlings_celebration_nationals.png'
-import test from '../../images/test2.png'
-import atlanticUnitedLogo from '../../images/logos/atlantic-united-logo-no-white-space.webp'
+import LeagueLogos from "./LeagueLogos";
 
 const theme = createTheme({
   palette: {
@@ -38,7 +37,7 @@ export default function Header() {
     <ThemeProvider theme={theme}>
         <Box
             sx={{
-                pt: {xs: '120px'},
+                pt: {xs: '190px', sm: '170px'},
                 pb: {xs: '100px'},
                 color: "#e9eef6",
                 backgroundImage: {
@@ -59,7 +58,7 @@ export default function Header() {
                         Soccer Club
                     </Typography>
                 </Grid>
-                <Grid size={{xs: 12, md: 5}} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'inherit'}}}>
+                {/* <Grid size={{xs: 12, md: 5}} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'inherit'}}}>
                     <Box
                         component="img"
                         src={atlanticUnitedLogo}
@@ -70,10 +69,13 @@ export default function Header() {
                             height: "auto",
                         }}
                     />
+                </Grid> */}
+                <Grid size={{xs: 12, md: 5}} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'inherit'}}}>
+                    <LeagueLogos/>
                 </Grid>
             </Grid>
 
-            <Box sx={{mt: '20px', fontStyle: 'italic'}}>
+            <Box sx={{display: {xs: 'none', sm: 'block'}, mt: '20px', fontStyle: 'italic'}}>
                 <Typography variant="h6" sx={{pl: {xs: '20px', sm: '40px', md: '100px', lg: '140px'}, pr: {xs: '20px', sm: '70px', md: '100px', lg: '140px'}}}>
                     From aspiring young players to elite athletes, Atlantic United provides a home for every soccer enthusiast. We offer a comprehensive range of programs designed for all ages and skill levels, ensuring every player has the opportunity to grow, develop, and pursue their passion for the game. 
                 </Typography>

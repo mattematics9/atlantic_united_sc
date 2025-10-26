@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import MLSNextLogo from '../../images/logos/mls-next-logo.png';
 import GAAspireLogo from '../../images/logos/girls-aspire-logos/girls-aspire-logo-9.png';
 
-export default function LeagueLogosMUI() {
+export default function LeagueLogos() {
   return (
-    <Box id="league-logos">
+    <Box id="league-logos-header" sx={{display: 'flex', alignItems: 'center'}}>
       {/* MLS Next Logo */}
       <MUILink
         component={Link}
@@ -20,16 +20,9 @@ export default function LeagueLogosMUI() {
           component="img"
           src={MLSNextLogo}
           alt="MLS Next Logo"
-          sx={(theme) => ({
-            position: 'fixed',
-            top: 0,
-            left: '15px',
+          sx={() => ({
             zIndex: 999,
-            width: '85px',
-            mt: '10px',
-            [theme.breakpoints.down('md')]: { left: '40%' },  // <= 992px 
-            [theme.breakpoints.down(750)]: { width: '70px', left: '39%' }, // <= 600px
-            [theme.breakpoints.down(550)]: { width: '60px', left: '36%' },    // <= 450px
+            width: {xs: '65px', md: '85px'}
           })}
         />
       </MUILink>
@@ -40,23 +33,15 @@ export default function LeagueLogosMUI() {
         to="https://girlsacademyleague.com/aspire/"
         target="_blank"
         underline="none"
-        sx={{ display: 'inline-block' }}
+        sx={{  }}
       >
         <Box
           component="img"
           src={GAAspireLogo}
           alt="GA Aspire Logo"
-          sx={(theme) => ({
-            position: 'fixed',
-            top: 0,
-            left: '80px',
+          sx={() => ({
             zIndex: 999,
-            width: '70px',
-            ml: '20px',
-            mt: '0px',
-            [theme.breakpoints.down('md')]: { left: '48%' },   // <= 992px
-            [theme.breakpoints.down(750)]: { width: '60px' }, // <= 600px
-            [theme.breakpoints.down(550)]: { width: '53px', left: '47%' },    // <= 450px
+            width: {xs: '55px', md: '70px'},
           })}
         />
       </MUILink>

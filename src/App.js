@@ -9,7 +9,7 @@ import Contact from './components/contact/Contact';
 import Resources from './components/resources/Resources';
 import Programs from './components/programs/Programs';
 import Register from './components/register/Register';
-import LeagueLogos from './components/league_logos/LeagueLogos';
+import Logo from './components/logo/Logo'
 import PreTravel from './components/programs/PreTravel'
 import Travel from './components/programs/travel/Travel'
 import Testimonials from './components/testimonials/Testimonials';
@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <CssBaseline />
       <BrowserRouter>
-        <LeagueLogos/>
+        <Logo/>
         <SocialMedia/>
         <Navbar/>
           <Routes>
