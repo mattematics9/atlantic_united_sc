@@ -36,7 +36,6 @@ export default function Universities() {
         <Box sx={{
           py: 8,
           background:
-            // "linear-gradient(90deg, rgba(13,71,161,0.15), rgba(198,40,40,0.15))",
             "linear-gradient(90deg, rgba(13,71,161,0.15), rgba(255, 0, 0, 0.35))",
         }}>
           <Container>

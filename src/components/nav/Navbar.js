@@ -97,7 +97,7 @@ export default function Navbar() {
             aria-expanded={mobileAboutOpen ? 'true' : 'false'}
             aria-controls="mobile-about-collapse"
           >
-            <ListItemText primary="ABOUT" primaryTypographyProps={{ fontWeight: 600 }} />
+            <ListItemText primary="ABOUT" primaryTypographyProps={{ fontWeight: 500 }} />
             {mobileAboutOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </ListItemButton>
         </ListItem>
@@ -139,7 +139,7 @@ export default function Navbar() {
             aria-expanded={mobileProgramsOpen ? 'true' : 'false'}
             aria-controls="mobile-programs-collapse"
           >
-            <ListItemText primary="PROGRAMS" primaryTypographyProps={{ fontWeight: 600 }} />
+            <ListItemText primary="PROGRAMS" primaryTypographyProps={{ fontWeight: 500 }} />
             {mobileProgramsOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </ListItemButton>
         </ListItem>

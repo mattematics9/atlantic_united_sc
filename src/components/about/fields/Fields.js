@@ -212,7 +212,7 @@ export default function FieldsPage({ fields = FieldsData }) {
   }, [fields, query]);
 
   return (
-    <Container maxWidth="lg" sx={{ py: { xs: 15 } }}>
+    <Container maxWidth="lg" sx={{ py: {xs: '140px', sm: '180px'} }}>
       <Stack spacing={4}>
         {/* Centered Heading */}
         <Stack alignItems="center" textAlign="center" spacing={0.5}>

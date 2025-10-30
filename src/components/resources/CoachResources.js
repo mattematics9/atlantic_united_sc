@@ -16,6 +16,9 @@ const Heading1 = ({ children }) => (
 const Heading2 = ({ children }) => (
   <Typography variant="h5" gutterBottom sx={{ mt: 2 }}>{children}</Typography>
 );
+const Heading3 = ({ children }) => (
+  <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>{children}</Typography>
+);
 const Subhead = ({ children }) => (
   <Typography sx={{ fontSize: "13pt", fontWeight: 700, mt: 1.5, mb: 1 }}>{children}</Typography>
 );
@@ -84,23 +87,19 @@ export default function CoachResourcesExact() {
 
           <Heading2>(4) MLS Next Academy Registration: these steps are only for players playing in the MLS Next league (top teams U13-19).</Heading2>
 
-          <Subhead>Checklist Summary:</Subhead>
-          <P>-LeagueApps - Roster<br/>
-          -Ankored - Compliance<br/>
-          -Impact – Concussion<br/>
-          -AI Scout – Player Performance AI App</P>
-
+          <Heading3>LeagueApps (roster) / Ankored (compliance) / Impact (concussion)</Heading3>
           <P>
-            (1) Watch the following video and follow the registration steps: {" "}
+            Watch this video for step by step instructions: {" "}
             <Link href="https://support.leagueapps.com/hc/en-us/articles/33461325022615-MLS-NEXT-Players-Under-the-Age-of-18-Registration" target="_blank" rel="noopener noreferrer">
               https://support.leagueapps.com/hc/en-us/articles/33461325022615-MLS-NEXT-Players-Under-the-Age-of-18-Registration
             </Link>
           </P>
 
-          <P>(2) Click the invite link for your team to join LeagueApps: &lt;Insert Link Here&gt;</P>
-          <P>(3) Use the code: stonybrooklakegrovelongisland-paid (this brings the cost of player pass to $0)</P>
+          <P>a) Need the LeagueApps registration link specific to your team.</P>
+          <P>b) Use this discount code at checkout: stonybrooklakegrovelongisland-paid (this brings the cost of player pass to $0)</P>
+          <P>c) Note about uploading a photo:  The correct location to upload a photo in leagueapps: Profiles - My Family Account - Actions - Edit - Choose Photo - Click Edit button on the bottom.</P>
 
-          <P>(4) Concussion Baseline Test:</P>
+          <P>d) Impact Concussion Baseline Test</P>
           <P>
             As part of your participation in the MLS Academy Division, you are required to complete a concussion baseline test through Impact Applications before being eligible to compete in any games.
           </P>
@@ -114,17 +113,15 @@ export default function CoachResourcesExact() {
           -Device Compatibility: Desktop, Laptop, or iPad (no phones)<br/>
           -Testing Environment: Choose a quiet space free from distractions, Allow 25–45 minutes to complete, Only take the test when you can fully focus</P>
           <P>
-            Once you’ve completed the test, you must download your certificate of completion and upload it to your LeagueApps/Ankored account. Please download the certificate first and print. You must have record of this test.
+            Once you’ve completed the test, you must download your certificate of completion and upload it to your LeagueApps/Ankored account. Please download the certificate. You must have record of this test.
           </P>
-          <P>(5) Sign all required waivers.</P>
-
-          <P>(6) AI Scout: A digital platform that analyzes your training and match footage. It helps you gain insights into your strengths, weaknesses, and areas to focus on as you grow as a player.</P>
+          <P>e) If you are 18 years old or turning 18 this season, you must also complete SafeSport compliance training. If you already completed SafeSport when doing the GotSport registration, then you need to just upload your certificate.</P>
+          <Heading3>AI Scout: A digital platform that analyzes your training and match footage. It helps you gain insights into your strengths, weaknesses, and areas to focus on as you grow as a player.</Heading3>
           <P>a) Download the app from the app store.<br/>
           b) Fill in the personal information.<br/>
           c) Select MLS from the top menu.<br/>
           d) Select MLS NXT test by age group.<br/>
           e) Complete the five steps and submit.</P>
-          <P>(7) If you are 18 years old or turning 18 this season, you must also complete SafeSport compliance training. If you already completed SafeSport when doing the GotSport registration, then you need to just upload your certificate.</P>
         </AccordionDetails>
       </Accordion>
 

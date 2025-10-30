@@ -8,8 +8,7 @@ import CollegeServices from "./CollegeServices";
 
 const College = () => {
   return (
-    <Box id="college-page">
-
+    <Box id="college-page" sx={{pt: '50px'}}>
       <Universities/>
       <CollegeServices/>
       <CallToAction/>

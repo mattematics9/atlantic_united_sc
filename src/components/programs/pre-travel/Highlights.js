@@ -18,9 +18,8 @@ import StarIcon from "@mui/icons-material/Star";
 
 //Images
 import antEnergy from '../../../images/ant-energy.jpg'
+import tsunami from '../../../images/tsunami3.png'
 import rampage from '../../../images/rampage.jpeg'
-import wildlingsRegionals from '../../../images/wildlings_regionals_2023.jpg'
-
 
 const theme = createTheme({
   palette: {
@@ -44,39 +43,39 @@ const defaultImages = {
   img2:
     rampage,
   img3:
-    wildlingsRegionals,
+    tsunami,
 };
 
 
 
-export default function TravelHighlights({ images = defaultImages }) {
+export default function Highlights({ images = defaultImages }) {
   return (
     <ThemeProvider theme={theme}>
-      <Box id="travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
+      <Box id="pre-travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
 
         {/* HIGHLIGHTS / IMAGES */}
         <Container sx={{ py: 8 }}>
           <Grid container spacing={4} justifyContent={'center'}>
             {[{
-              title: "Relentlessly Competitive",
+              title: "Ages and Stages",
               text:
-                "History of championships and success at the local, state, regional, and national levels.",
+                "Emphasizes movement, coordination, and simple ball-mastery activities to match each child’s stage.",
               img: images.img1,
-              icon: <StarIcon />,
-            },
-            {
-              title: "Proven Player Development",
-              text:
-                "Track record of elevating players on and off the field - developing character, skills, and understanding of the game.",
-              img: images.img2,
               icon: <SportsSoccerIcon />,
             },
             {
-              title: "Superior Game Model",
+              title: "Fun, Active, Inclusive.",
               text:
-                "Purposeful possession, aggressive pressing, quick transitions - intensity present throughout every team",
-              img: images.img3,
+                "Sessions are designed so every child can engage, feel supported, and grow confidently at their own pace.",
+              img: images.img2,
               icon: <PublicIcon />,
+            },
+            {
+              title: "Pathway to Travel Teams",
+              text:
+                "The Pre-Travel Academy is the direct preparation track for Atlantic United travel teams.",
+              img: images.img3,
+              icon: <StarIcon />,
             }].map((card) => (
               <Grid item xs={12} md={4} key={card.title}>
                 <Card
@@ -92,7 +91,7 @@ export default function TravelHighlights({ images = defaultImages }) {
                   <CardMedia component="img" height="180" image={card.img} alt={card.title} />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 1 }}>
-                      <Chip icon={card.icon} color="secondary" label="Travel Academy Standard" size="small" />
+                      <Chip icon={card.icon} color="secondary" label="Pre-Travel Academy Standard" size="small" />
                     </Stack>
                     <Typography variant="h5" gutterBottom>
                       {card.title}

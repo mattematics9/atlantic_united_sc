@@ -7,18 +7,13 @@ export default function SocialMedia() {
   return (
     <Box
       id="social-media-icons"
-      sx={(theme) => ({
+      sx={() => ({
         position: "fixed",
-        top: "5px",
+        top: {xs: "13px", sm: "9px"},
         right: "5px",
         display: "flex",
         gap: 0,
-        zIndex: 999,
-        [theme.breakpoints.down("sm")]: {
-          top: "5px",
-          right: "5px",
-          gap: 0, // tighter spacing on small screens
-        },
+        zIndex: 999
       })}
     >
       {/* Facebook */}
@@ -56,7 +51,7 @@ export default function SocialMedia() {
       >
         <IconButton
           id="icon-instagram-anchor"
-          sx={(theme) => ({
+          sx={() => ({
             color: "#1ba0ffff",
             padding: "2px",
             fontSize: { xs: "35px", md: "41px" },

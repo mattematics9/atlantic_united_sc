@@ -10,7 +10,7 @@ import Resources from './components/resources/Resources';
 import Programs from './components/programs/Programs';
 import Register from './components/register/Register';
 import Logo from './components/logo/Logo'
-import PreTravel from './components/programs/PreTravel'
+import PreTravel from './components/programs/pre-travel/PreTravel'
 import Travel from './components/programs/travel/Travel'
 import Testimonials from './components/testimonials/Testimonials';
 import Fields from './components/about/fields/Fields'

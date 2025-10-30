@@ -96,7 +96,7 @@ const testimonials = [
       id="testimonials"
       sx={{
         background: "linear-gradient( rgba(0, 0, 0,1), rgba(0, 19, 146, 0.8), rgba(0, 0, 0,1))",
-        py: { xs: 13, md: 15 },
+        py: { xs: '150px', md: '180px' },
         textAlign: "center",
       }}
     >

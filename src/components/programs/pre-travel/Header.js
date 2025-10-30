@@ -12,8 +12,7 @@ import {
 } from "@mui/material";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 
-import wildlingsCelebration1 from '../../../images/wildlings_celebration_national_league.jpg'
-import wildlingsCelebration2 from '../../../images/wildlings_celebration_national_league-3.png'
+import stonyBrookPreTravel from '../../../images/stony-brook-pre-travel.png'
 
 const theme = createTheme({
   palette: {
@@ -33,7 +32,7 @@ const theme = createTheme({
 
 
 
-export default function TravelHeader() {
+export default function Header() {
   return (
     <ThemeProvider theme={theme}>
         <Box
@@ -42,9 +41,9 @@ export default function TravelHeader() {
                 pb: {xs: '100px'},
                 color: "#e9eef6",
                 backgroundImage: {
-                    xs: `linear-gradient(120deg, rgba(0, 0, 49, 0.95) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsCelebration2})`,
-                    md: `linear-gradient(120deg, rgba(0, 0, 49, 0.95) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsCelebration1})`
+                    xs: `linear-gradient(120deg, rgba(0, 0, 49, 0.95) 0%, rgba(255, 0, 0, 0.5) 100%), url(${stonyBrookPreTravel})`,
                 },
+                backgroundPosition: {xs: 'center'},
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}
@@ -55,22 +54,20 @@ export default function TravelHeader() {
               <Chip
                 icon={<SportsSoccerIcon />}
                 color="secondary"
-                label="Atlantic United • Travel Academy"
+                label="Atlantic United • Pre-Travel Academy"
                 sx={{ bgcolor: "transparent", color: "white", fontWeight: 800, border: "1px solid white", padding: '20px' }}
               />
               <Typography variant="h2" component="h1" gutterBottom sx={{fontSize: {xs: "32px", sm: "40px", lg: "60px"}}}>
-                Elite Player Pathway. National Stage.
+                Bridge the gap between intramural and travel.
               </Typography>
               <Typography variant="h6" sx={{ fontSize: {xs: '17px'}, opacity: 0.95, lineHeight: 1.6 }}>
-                The Atlantic United Travel Academy is a high-performance environment
-                designed to develop complete soccer players - technically sharp, tactically
-                intelligent, and relentlessly competitive. 
+                The Atlantic United Pre-Travel Academy is a fun, skill-focused bridge to travel soccer from intramurals for 1st & 2nd graders.
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
                 <Button component={Link} to="https://system.gotsport.com/programs/D45748060?reg_role=player" target="_blank" size="large" variant="contained" color="secondary">
-                  Join Our Travel Program
+                  Join Our Pre-Travel Program
                 </Button>
-                <Button href="#travel-highlights" size="large" variant="outlined" color="inherit">
+                <Button href="#pre-travel-highlights" size="large" variant="outlined" color="inherit">
                   See More
                 </Button>
               </Stack>

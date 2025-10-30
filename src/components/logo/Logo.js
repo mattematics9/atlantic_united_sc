@@ -21,7 +21,7 @@ export default function Logo() {
             top: '0px',
             left: {xs: '42%', sm: '45%', md: '0px'},
             zIndex: 999,
-            width: {xs: '65px', sm: '90px', md: '135px'}
+            width: {xs: '65px', sm: '90px', md: '125px'}
           })}
         />
       </MUILink>

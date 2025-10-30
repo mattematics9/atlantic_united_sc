@@ -5,7 +5,7 @@ import NowWePlay from "./NowWePlay";
 
 const About = () => {
   return (
-    <Box sx={{ pt: "40px" }}>
+    <Box sx={{ pt: "65px" }}>
       <PicturesAndText />
       <Huddle />
       <NowWePlay />
