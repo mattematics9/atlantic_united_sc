@@ -17,14 +17,14 @@ import PublicIcon from "@mui/icons-material/Public";
 import StarIcon from "@mui/icons-material/Star";
 
 //Images
-import tsunami from '../../../images/tsunami3.png'
-
+import threeVillageIntramural1 from '../../../images/three_village_intramural_1.jpg'
+import threeVillageIntramural2 from '../../../images/three_village_intramural_2.png'
+import threeVillageIntramural3 from '../../../images/three_village_intramural_3.jpg'
 
 const theme = createTheme({
   palette: {
     primary: { main: "#0D47A1" }, // Atlantic Blue
     secondary: { main: "#C62828" }, // Atlantic Red
-    // background: { default: "#0a0d14" },
     background: { default: "#000716ff" },
   },
   shape: { borderRadius: 16 },
@@ -39,11 +39,11 @@ const theme = createTheme({
 
 const defaultImages = {
   img1:
-    tsunami,
+    threeVillageIntramural1,
   img2:
-    tsunami,
+    threeVillageIntramural3,
   img3:
-    tsunami,
+    threeVillageIntramural2
 };
 
 
@@ -51,31 +51,31 @@ const defaultImages = {
 export default function Highlights({ images = defaultImages }) {
   return (
     <ThemeProvider theme={theme}>
-      <Box id="pre-travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
+      <Box id="travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
 
         {/* HIGHLIGHTS / IMAGES */}
-        <Container sx={{ py: 8 }}>
+        <Container sx={{ py: {xs: 6, sm: 8 }}}>
           <Grid container spacing={4} justifyContent={'center'}>
             {[{
-              title: "Ages and Stages",
+              title: "Have Fun",
               text:
-                "Emphasizes movement, coordination, and simple ball-mastery activities to match each child’s stage.",
+                "An environment where kids cannot wait to return to each week.",
               img: images.img1,
+              icon: <StarIcon />,
+            },
+            {
+              title: "Friends and Mentors",
+              text:
+                "Create friendships with teammates and mentors to look up to.",
+              img: images.img2,
               icon: <SportsSoccerIcon />,
             },
             {
-              title: "Fun, Active, Inclusive.",
+              title: "Love to play",
               text:
-                "Sessions are designed so every child can engage, feel supported, and grow confidently at their own pace.",
-              img: images.img2,
-              icon: <PublicIcon />,
-            },
-            {
-              title: "Pathway to Travel Teams",
-              text:
-                "The Pre-Travel Academy is the direct preparation track for Atlantic United travel teams.",
+                "Spark a love for the game that can last a lifetime.",
               img: images.img3,
-              icon: <StarIcon />,
+              icon: <PublicIcon />,
             }].map((card) => (
               <Grid item xs={12} md={4} key={card.title}>
                 <Card
@@ -91,7 +91,7 @@ export default function Highlights({ images = defaultImages }) {
                   <CardMedia component="img" height="180" image={card.img} alt={card.title} />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 1 }}>
-                      <Chip icon={card.icon} color="secondary" label="Pre-Travel Academy Standard" size="small" />
+                      <Chip icon={card.icon} color="secondary" label="Intramural" size="small" />
                     </Stack>
                     <Typography variant="h5" gutterBottom>
                       {card.title}

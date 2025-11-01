@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
 
+
 //Logos
 import MLSNextLogo from '../../images/logos/mls-next-logo.png'
 import GAAspireLogo from '../../images/logos/girls-aspire-logos/girls-aspire-logo-9.png'
@@ -50,15 +51,23 @@ const defaultLeagueLogos = {
 export default function Leagues({ leagueLogos = defaultLeagueLogos }) {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
-
+      {/* <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}> */}
+      <Box sx={{ 
+        color: "black",
+        bgColor: "#dbdbdbff",
+        py: {xs: 2, sm: 8}
+        // bgcolor: "background.default",
+        // backgroundImage: `linear-gradient(-120deg, rgba(0, 0, 49, 0.95) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsPractice})`,
+        // backgroundSize: 'cover',
+        // backgroundRepeat: 'no-repeat'
+      }}>
         {/* COMPETITIONS / LEAGUES */}
         <Container sx={{ py: 8 }}>
           <Stack spacing={2} alignItems="center" textAlign="center" sx={{ mb: 4 }}>
             <Chip icon={<PublicIcon />} color="primary" label="Elite Competition Platform" />
-            <Typography variant="h3">Compete at the Highest Level</Typography>
+            <Typography variant="h3">Teams of every level</Typography>
             <Typography variant="body1" sx={{ maxWidth: 800, opacity: 0.9 }}>
-              Atlantic United travel teams compete at the highest levels of youth soccer nationwide, while we also enter teams into leagues that support players of all ages, skill levels, and interests.
+              Atlantic United forms travel teams for every level, catering to all players of variaying ages, skill levels, and interests.
             </Typography>
           </Stack>
           <Grid container spacing={3} justifyContent="center" alignItems="center">
@@ -96,7 +105,7 @@ export default function Leagues({ leagueLogos = defaultLeagueLogos }) {
                     sx={{
                         width: 140,
                         height: 100,
-                        bgcolor: "#fff",
+                        bgcolor: "#edededff",
                         img: {
                         objectFit: "contain",
                         width: "100%",
@@ -106,7 +115,7 @@ export default function Leagues({ leagueLogos = defaultLeagueLogos }) {
                     }}
                   />
 
-                  <Typography variant="body2" sx={{ mt: 1.5, opacity: 0.9, color: 'white' }}>
+                  <Typography variant="body2" sx={{ mt: 1.5, opacity: 0.9, color: 'black' }}>
                     {l.name}
                   </Typography>
                 </Paper>

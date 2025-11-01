@@ -14,8 +14,8 @@ const Home = () => {
        <Achievements/>
        <PicturesAndText/>
        <Huddle/>
-       <NowWePlay/>
        <Leagues/>
+       <NowWePlay/>
        <CallToAction/>
        <Contact/>
     </>

@@ -9,7 +9,7 @@ import CallToAction from "../../call_to_action/CallToAction";
 import About from "./About";
 import Contacts from "./Contacts";
 
-export default function TravelAcademy() {
+export default function Intramural() {
   return (
       <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
         <Header/>

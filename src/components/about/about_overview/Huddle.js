@@ -164,12 +164,27 @@ const Huddle = () => {
             <Box
                 sx={{
                     height: "500px",
-                    backgroundImage: `url(${huddle})`,
+                    backgroundImage: `linear-gradient(45deg, rgba(0, 0, 49, 0.3) 0%, rgba(255, 0, 0, 0.3) 100%), url(${huddle})`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
                 }}
             >
+                <Typography component="p" 
+                    sx={{ 
+                        display: {xs: 'block', sm: 'none'},
+                        fontSize: "40px", 
+                        border: "2px dotted white",
+                        padding: 2,
+                        backgroundColor: 'transparent',
+                        color: 'white',
+                        fontStyle: 'italic'
+                    }}>
+                        "NOW WE PLAY"
+                </Typography>
             </Box>
       </Box>
 

@@ -10,7 +10,8 @@ import {
   Grid,
 } from "@mui/material";
 
-import wildlingsCelebration from '../../images/wildlings_celebration_nationals.png'
+import wildlingsCelebration1 from '../../images/wildlings_celebration_national_league.jpg'
+import wildlingsCelebration2 from '../../images/test3.png'
 import LeagueLogos from "./LeagueLogos";
 
 const theme = createTheme({
@@ -40,7 +41,9 @@ export default function Header() {
                 pb: {xs: '140px'},
                 color: "#e9eef6",
                 backgroundImage: {
-                    xs: `linear-gradient(-120deg, rgba(0, 0, 49, 0.95) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsCelebration})`,
+                    xs: `linear-gradient(45deg, rgba(0, 0, 49, 0.95) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsCelebration2})`,
+                    sm: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsCelebration1})`
+
                 },
                 backgroundPosition: "center 65px",
                 backgroundSize: "cover",
@@ -68,11 +71,11 @@ export default function Header() {
             </Box>
 
             <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{mt: '35px', pl: {xs: '20px'}, pr: {xs: '20px'}, display: 'flex', justifyContent: 'center'}}>
-                <Button size="large" variant="contained" color="secondary" component={Link} to="/programs">
-                    See Our Programs
-                </Button>
-                <Button size="large" variant="outlined" color="inherit" component={Link} to="/contact">
+                <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" },}} size="large" variant="outlined" color="inherit" component={Link} to="/contact">
                     Contact Us
+                </Button>
+                <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" },}} size="large" variant="contained" color="secondary" component={Link} to="/programs">
+                    See Our Programs
                 </Button>
             </Stack>
 

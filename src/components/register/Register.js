@@ -1,9 +1,9 @@
-import ProgramsCards from '../programs/ProgramsCards'
+import ProgramsCards from '../programs/overview/Cards'
 import { Box } from '@mui/material'
 
 const Register = () => {
   return (
-    <Box id='register' sx={{pt: '70px', backgroundColor: "rgba(249, 249, 249, 1)"}}>
+    <Box id='register' sx={{pt: '65px', backgroundColor: "rgba(249, 249, 249, 1)"}}>
       <ProgramsCards/>
     </Box>
   )

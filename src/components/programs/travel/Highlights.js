@@ -19,14 +19,14 @@ import StarIcon from "@mui/icons-material/Star";
 //Images
 import antEnergy from '../../../images/ant-energy.jpg'
 import rampage from '../../../images/rampage.jpeg'
-import wildlingsRegionals from '../../../images/wildlings_regionals_2023.jpg'
+import wildlings from '../../../images/wildlings_regionals_2023.jpg'
 
 
 const theme = createTheme({
   palette: {
     primary: { main: "#0D47A1" }, // Atlantic Blue
     secondary: { main: "#C62828" }, // Atlantic Red
-    background: { default: "#0a0d14" },
+    background: { default: "#000716ff" },
   },
   shape: { borderRadius: 16 },
   typography: {
@@ -40,25 +40,25 @@ const theme = createTheme({
 
 const defaultImages = {
   img1:
-    antEnergy,
+    wildlings,
   img2:
-    rampage,
+    antEnergy,
   img3:
-    wildlingsRegionals,
+    rampage
 };
 
 
 
-export default function TravelHighlights({ images = defaultImages }) {
+export default function Highlights({ images = defaultImages }) {
   return (
     <ThemeProvider theme={theme}>
       <Box id="travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
 
         {/* HIGHLIGHTS / IMAGES */}
-        <Container sx={{ py: 8 }}>
+        <Container sx={{ py: {xs: 6, sm: 8 }}}>
           <Grid container spacing={4} justifyContent={'center'}>
             {[{
-              title: "Relentlessly Competitive",
+              title: "History of Success",
               text:
                 "History of championships and success at the local, state, regional, and national levels.",
               img: images.img1,
@@ -92,7 +92,7 @@ export default function TravelHighlights({ images = defaultImages }) {
                   <CardMedia component="img" height="180" image={card.img} alt={card.title} />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 1 }}>
-                      <Chip icon={card.icon} color="secondary" label="Travel Academy Standard" size="small" />
+                      <Chip icon={card.icon} color="secondary" label="Travel Academy" size="small" />
                     </Stack>
                     <Typography variant="h5" gutterBottom>
                       {card.title}

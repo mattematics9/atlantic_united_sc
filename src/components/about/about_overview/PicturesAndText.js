@@ -4,7 +4,8 @@ import { Box, Typography } from "@mui/material";
 // Import images so bundlers resolve them correctly (fixes “background not displayed”)
 import force3 from "../../../images/force3.png";
 import stonyBrookPlayers from "../../../images/stony-brook-university-players.png";
-import wildlingsCelebration from "../../../images/wildlings_celebration_national_league.jpg";
+import wildlingsCelebrate1 from "../../../images/wildlings_celebration_national_league.jpg";
+import wildlingsCelebrate2 from "../../../images/wildlings_celebration_nationals.png";
 
 /**
  * This mirrors the original Materialize layout exactly:
@@ -103,8 +104,8 @@ const PicturesAndText = () => {
               <Box
                 id="creating-unforgettable-moments-pic"
                 sx={{
-                  backgroundImage: `url(${wildlingsCelebration})`,
-                  backgroundPosition: "center",
+                  backgroundImage: {xs: `url(${wildlingsCelebrate1})`, sm: `url(${wildlingsCelebrate2})` },
+                  backgroundPosition: "center 0px",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                   height: 250,

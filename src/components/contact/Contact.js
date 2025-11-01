@@ -17,7 +17,7 @@ const Contact = () => {
     <Box
       id="contact"
       sx={{
-        py: { xs: 13, md: 15 },
+        py: { xs: 7, md: 15 },
         px: { xs: 2, md: 0 },
         color: "black",
         overflowX: "auto",
@@ -56,7 +56,6 @@ const Contact = () => {
         <Tabs
           value={value}
           onChange={handleChange}
-          centered
           textColor="error"
           indicatorColor="error"
           variant="scrollable"

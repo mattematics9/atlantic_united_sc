@@ -48,24 +48,25 @@ function Feature({ label }) {
 
   return (
     <ThemeProvider theme={theme}>
-        <Box id='about-pre-travel'>
+        <Box id="about-intramural">
             <Card sx={{ p: { xs: 1, md: 2 } }}>
                 <CardContent>
-                    <Typography variant="h5" color="primary" gutterBottom sx={{textAlign: 'center', my: '20px'}}>
-                    About Pre-Travel Academy
+                    <Typography variant="h4" color="primary" gutterBottom sx={{textAlign: 'center', my: '20px'}}>
+                    About Intramural
                     </Typography>
                     <Typography variant="body1" sx={{ mb: 2 }}>
-                    A fun, skill-focused step beyond intramurals. At this age, the focus is on building basic techniques - such as dribbling, passing, controlling the ball, and scoring - while keeping the sessions enjoyable and developmentally appropriate. Players will also learn the values of teamwork, confidence, and creativity on the field. We aim to create an environment where every child feels supported, learns to love the game, and develops the foundation for future success.
+                    A fun-focused initial step into soccer. At this age, the focus is on cultivating a player's love and interest of the game while demonstrating basic foundational skills - such as dribbling, passing, controlling the ball, and scoring.  The games are enjoyable and developmentally appropriate, and take place at consitent times and closeby locations to maximize time and community interaction.  Players will also learn the values of teamwork, confidence, and creativity on the field. We aim to create an environment where every child feels supported, learns to love the game, and develops the foundation for future success.
                     </Typography>
 
-                    <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap justifyContent={"center"}>
+                    <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap justifyContent={'center'}>
+                        <Feature label="Fun" />
+                        <Feature label="Love for Soccer" />
+                        <Feature label="Friendships" />
                         <Feature label="Dribbling" />
                         <Feature label="Passing" />
-                        <Feature label="Ball Control" />
-                        <Feature label="Finishing" />
-                        <Feature label="Teamwork" />
-                        <Feature label="Confidence" />
-                        <Feature label="Creativity" />
+                        <Feature label="Shooting" />
+                        <Feature label="Defending" />
+                        <Feature label="Natural Creativity" />
                     </Stack>
                 </CardContent>
             </Card>

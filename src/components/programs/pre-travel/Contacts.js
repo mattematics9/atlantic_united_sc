@@ -4,11 +4,9 @@ import {
   Box,
   Card,
   CardContent,
-  Chip,
   Container,
   Divider,
   Grid,
-  Stack,
   Tab,
   Tabs,
   Typography,
@@ -19,7 +17,6 @@ import {
 let theme = createTheme({
   palette: {
     mode: "light",
-    // primary: { main: "#0b5fff" }, // Blue
     primary: { main: "#002c7dff" }, // Blue
     secondary: { main: "#e21d2b" }, // Red
   },
@@ -60,7 +57,8 @@ function ClubTabs() {
         onChange={(e, v) => setTab(v)}
         textColor="primary"
         indicatorColor="secondary"
-        variant="fullWidth" 
+        variant="scrollable"
+        scrollButtons="auto"
         sx={{ borderRadius: 1, boxShadow: 1, bgcolor: "background.paper" }}
       >
         {clubs.map((c) => (
@@ -69,8 +67,8 @@ function ClubTabs() {
       </Tabs>
       <Card sx={{ mt: 2, mb: 3 }}>
         <CardContent>
-          <Typography variant="h6" gutterBottom sx={{my: '30px', textAlign: 'center', color: "#002c7dff"}}>
-            Atlantic United at {clubs[tab].name} - Pre-Travel Academy
+          <Typography variant="h4" gutterBottom sx={{ mt: '30px', textAlign: 'center', color: "#002c7dff"}}>
+            Atlantic United at {clubs[tab].name}
           </Typography>
           <Typography variant="body1">
             Location: {clubs[tab].location}<br/>
@@ -79,7 +77,7 @@ function ClubTabs() {
           </Typography>
           <Divider sx={{ my: 2 }} />
           <Typography variant="body2" color="text.secondary">
-            Each child is enouraged to train within their town while following the unified curriculum that spans across all community clubs under the Atlantic United umbrella.
+            Each family is enouraged to participate within their town while following the united unified curriculum that spans across all community clubs operating under the Atlantic United umbrella.          
           </Typography>
         </CardContent>
       </Card>
@@ -88,14 +86,20 @@ function ClubTabs() {
 }
 
 // ---- MAIN COMPONENT ----
-export default function Register({ images }) {
+export default function Contacts({ images }) {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{
         background: (t) => `linear-gradient(90deg, rgba(0,0,31,1) 0%, ${t.palette.secondary.main} 100%)`, color: "common.white",
-        py: { xs: 10 },
+        py: { xs: 5, sm: 10 },
       }}>
         <Container maxWidth="lg">
+          <Typography variant="h3" gutterBottom sx={{ my: '30px', textAlign: 'center', color: "white"}}>
+            Pre-Travel Academy Contacts
+          </Typography>
+          <Typography variant="body1" sx={{ my: '30px', color: "white"}}>
+            Choose a club/location that is convenient for you geographically.  Atlantic United Pre-Travel Academy operates out of LGN (Selden) and Three Village (Stony Brook).  Middle Country families will choose either LGN or Three Village.
+          </Typography>
           {/* Register Tabs */}
           <Grid container spacing={4} sx={{ justifyContent: "center" }}>
             <Grid item xs={12} md={5}>

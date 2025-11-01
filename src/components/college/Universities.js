@@ -34,17 +34,17 @@ export default function Universities() {
       <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
 
         <Box sx={{
-          py: 8,
+          py: {xs: 5, sm: 8},
           background:
             "linear-gradient(90deg, rgba(13,71,161,0.15), rgba(255, 0, 0, 0.35))",
         }}>
           <Container>
-            <Grid container spacing={4} alignItems="center">
+            <Grid container spacing={4} alignItems="center" sx={{display: 'flex', justifyContent: 'center'}}>
               <Grid item xs={12} md={6}>
-                <Typography variant="h3" gutterBottom sx={{mt: '50px'}}>
+                <Typography variant="h3" gutterBottom sx={{fontSize: {xs: '33px', sm: '50px'}, textAlign: 'center', my: {xs: '30px', sm: '60px'}}}>
                   Pathway to College Soccer
                 </Typography>
-                <Typography variant="body1" sx={{ opacity: 0.95, mb: 2 }}>
+                <Typography variant="body1" sx={{ opacity: 0.95, mb: 4 }}>
                   Our graduates consistently earn roster spots at elite NCAA programs
                   and beyond. With dedicated recruiting support, showcase exposure,
                   and relationships nationwide, Atlantic United players take the next
@@ -52,7 +52,7 @@ export default function Universities() {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} sx={{display: 'flex', justifyContent: 'center'}}>
                   {[
                     "https://via.placeholder.com/120x120?text=U1",
                     "https://via.placeholder.com/120x120?text=U2",

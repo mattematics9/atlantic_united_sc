@@ -16,7 +16,7 @@ const theme = createTheme({
   palette: {
     primary: { main: "#0D47A1" }, // Atlantic Blue
     secondary: { main: "#C62828" }, // Atlantic Red
-    background: { default: "#0a0d14" },
+    background: { default: "#00091dff" },
   },
   shape: { borderRadius: 16 },
   typography: {
@@ -57,10 +57,10 @@ export default function CallToAction() {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Stack direction={{ xs: "column", sm: "row", md: "column" }} spacing={2}>
-                  <Button size="large" variant="contained" color="secondary" component={Link} to="/programs">
+                  <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" },}} size="large" variant="contained" color="secondary" component={Link} to="/programs">
                     See Our Programs
                   </Button>
-                  <Button size="large" variant="outlined" color="white" component={Link} to="/contact">
+                  <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" },}} size="large" variant="outlined" color="white" component={Link} to="/contact">
                     Contact Us
                   </Button>
                 </Stack>

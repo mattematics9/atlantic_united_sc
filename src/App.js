@@ -7,7 +7,7 @@ import About from './components/about/about_overview/About';
 import SocialMedia from './components/social_media/SocialMedia';
 import Contact from './components/contact/Contact';
 import Resources from './components/resources/Resources';
-import Programs from './components/programs/Programs';
+import Programs from './components/programs/overview/Overview';
 import Register from './components/register/Register';
 import Logo from './components/logo/Logo'
 import PreTravel from './components/programs/pre-travel/PreTravel'
@@ -15,6 +15,7 @@ import Travel from './components/programs/travel/Travel'
 import Testimonials from './components/testimonials/Testimonials';
 import Fields from './components/about/fields/Fields'
 import College from './components/college/College';
+import Intramural from './components/programs/intramural/Intramural';
 
 
 
@@ -37,6 +38,7 @@ function App() {
             <Route path='/fields' element={ <Fields/> }/>    
             <Route path='/programs/pre-travel-academy' element={ <PreTravel/> }/>    
             <Route path='/programs/travel-academy' element={ <Travel/> }/>    
+            <Route path='/programs/intramural' element={ <Intramural/> }/>    
             <Route path='/college' element={ <College/> }/>    
           </Routes>
         <Footer/>
