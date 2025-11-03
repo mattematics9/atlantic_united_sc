@@ -47,20 +47,22 @@ const Huddle = () => {
                     variant="h4"
                     align="center"
                     sx={{
-                    mt: "30px",
-                    "&::after": {
-                        display: "block",
-                        height: "2px",
-                        backgroundColor: "red",
-                        content: '" "',
-                        width: "80px",
-                        margin: "10px auto"
-                    },
+                        mt: "30px",
+                        "&::after": {
+                            display: "block",
+                            height: "2px",
+                            backgroundColor: "red",
+                            content: '" "',
+                            width: "80px",
+                            margin: "10px auto"
+                        },
+                        color: "#002c7dff",
+                        fontWeight: 600
                     }}
                 >
                     ABOUT US
                 </Typography>
-                <Typography sx={{ mt: 3, mb: 3, fontSize: "18px", fontStyle: "italic" }}>
+                <Typography sx={{ mt: 3, mb: 3, fontSize: "18px", fontStyle: "italic", fontWeight: 600 }}>
                     Atlantic United Soccer Club brings together the proud
                     traditions of three long-standing Long Island programs - LGN Soccer Club,
                     Stony Brook Soccer Club, and Middle Country Soccer Club. Our travel
@@ -93,6 +95,7 @@ const Huddle = () => {
                     align="center"
                     sx={{
                     fontStyle: "italic",
+                    fontWeight: 600,
                     mt: "30px",
                     "&::after": {
                         display: "block",
@@ -106,10 +109,10 @@ const Huddle = () => {
                 >
                     PATHWAY TO COLLEGE SOCCER
                 </Typography>
-                <Typography sx={{ fontSize: "24px", fontStyle: "italic" }}>
+                <Typography sx={{ fontSize: "24px", fontStyle: "italic", fontWeight: 600 }}>
                     90% college placement track record
                 </Typography>
-                <Button component={Link} to='/college' sx={{fontSize: '20px', color: 'rgba(183, 213, 255, 1)', '&:hover': {opacity: '.8'}}}>
+                <Button component={Link} to='/college' sx={{fontSize: '20px', fontWeight: 600, color: 'rgba(183, 213, 255, 1)', '&:hover': {opacity: '.8'}}}>
                     *MORE ON COLLEGE RECRUITMENT*
                 </Button>
             </Box>
@@ -141,11 +144,12 @@ const Huddle = () => {
                         width: "80px",
                         margin: "10px auto"
                     },
+                    fontWeight: 600
                     }}
                 >
                     ABOUT US
                 </Typography>
-                <Typography sx={{ mt: 3, mb: 3, fontSize: "18px", fontStyle: "italic" }}>
+                <Typography sx={{ mt: 3, mb: 3, fontSize: "18px", fontWeight: 600, fontStyle: "italic" }}>
                     Atlantic United Soccer Club brings together the proud
                     traditions of three long-standing Long Island programs - LGN Soccer Club,
                     Stony Brook Soccer Club, and Middle Country Soccer Club. Our travel
@@ -154,7 +158,7 @@ const Huddle = () => {
                     all ages, skill levels, and interests.{" "}
                 </Typography>
                 <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                    <Button component={Link} to='/programs' sx={{fontSize: '20px', '&:hover': {opacity: .8}}}>
+                    <Button component={Link} to='/programs' sx={{fontSize: '20px', fontWeight: 600, '&:hover': {opacity: .8}}}>
                     SEE OUR PROGRAMS
                     </Button>
                 </Box>

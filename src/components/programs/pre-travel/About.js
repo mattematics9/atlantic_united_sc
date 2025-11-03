@@ -51,7 +51,19 @@ function Feature({ label }) {
         <Box id='about-pre-travel'>
             <Card sx={{ p: { xs: 1, md: 2 } }}>
                 <CardContent>
-                    <Typography variant="h5" color="primary" gutterBottom sx={{textAlign: 'center', my: '20px'}}>
+                    <Typography variant="h4" color="primary" gutterBottom 
+                      sx={{
+                        textAlign: 'center', 
+                        my: '20px',
+                        "&::after": {
+                            display: "block",
+                            height: "2px",
+                            backgroundColor: "red",
+                            content: '" "',
+                            width: "80px",
+                            margin: "10px auto"
+                        },
+                      }}>
                     About Pre-Travel Academy
                     </Typography>
                     <Typography variant="body1" sx={{ mb: 2 }}>

@@ -27,6 +27,7 @@ const NowWePlay = () => {
           sx={{ 
             display: {xs: 'none', sm: 'block'},
             fontSize: "inherit", 
+            fontWeight: 600,
             border: "1px dotted white",
             padding: 2,
             backgroundColor: 'transparent',

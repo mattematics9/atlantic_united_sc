@@ -52,10 +52,10 @@ export default function Header() {
         >
             <Grid container spacing={2} sx={{display: 'flex', alignItems: 'center'}}>
                 <Grid size={{xs: 12, md: 7}} sx={{pl:{sm: '0px', md:'100px', lg: '150px'}}}>
-                    <Typography variant="h2" sx={{fontSize: {xs: '40px', md: '50px', lg: '60px'}, display: 'flex', justifyContent: 'center', fontStyle: 'italic'}}>
+                    <Typography variant="h2" sx={{fontSize: {xs: '40px', md: '50px', lg: '60px'}, display: 'flex', justifyContent: 'center'}}>
                         Atlantic United
                     </Typography>
-                    <Typography variant="h2" sx={{fontSize: {xs: '40px', md: '50px', lg: '60px'}, display: 'flex', justifyContent: 'center', fontStyle: 'italic'}}>
+                    <Typography variant="h2" sx={{fontSize: {xs: '40px', md: '50px', lg: '60px'}, display: 'flex', justifyContent: 'center'}}>
                         Soccer Club
                     </Typography>
                 </Grid>
@@ -64,7 +64,7 @@ export default function Header() {
                 </Grid>
             </Grid>
 
-            <Box sx={{display: {xs: 'none', sm: 'block'}, mt: '20px', fontStyle: 'italic'}}>
+            <Box sx={{display: {xs: 'none', sm: 'block'}, mt: '20px'}}>
                 <Typography variant="h6" sx={{pl: {xs: '20px', sm: '40px', md: '100px', lg: '140px'}, pr: {xs: '20px', sm: '70px', md: '100px', lg: '140px'}}}>
                     From aspiring young players to elite athletes, Atlantic United provides a home for every soccer enthusiast. We offer a comprehensive range of programs designed for all ages and skill levels, ensuring every player has the opportunity to grow, develop, and pursue their passion for the game. 
                 </Typography>
