@@ -72,7 +72,7 @@ const Huddle = () => {
                 </Typography>
                 <Box sx={{display: 'flex', justifyContent: 'center'}}>
                     <Button component={Link} to='/programs' sx={{fontSize: '20px', '&:hover': {textDecoration: 'underline'}}}>
-                    SEE OUR PROGRAMS
+                        MORE ABOUT US
                     </Button>
                 </Box>
             </Paper>
@@ -158,8 +158,8 @@ const Huddle = () => {
                     all ages, skill levels, and interests.{" "}
                 </Typography>
                 <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                    <Button component={Link} to='/programs' sx={{fontSize: '20px', fontWeight: 600, '&:hover': {opacity: .8}}}>
-                    SEE OUR PROGRAMS
+                    <Button component={Link} to='/about' sx={{fontSize: '20px', fontWeight: 600, '&:hover': {opacity: .8}}}>
+                        MORE ABOUT US
                     </Button>
                 </Box>
             </Paper>
@@ -177,7 +177,7 @@ const Huddle = () => {
                     justifyContent: 'center'
                 }}
             >
-                <Typography component="p" 
+                {/* <Typography component="p" 
                     sx={{ 
                         display: {xs: 'block', sm: 'none'},
                         fontSize: "40px", 
@@ -188,7 +188,7 @@ const Huddle = () => {
                         fontStyle: 'italic'
                     }}>
                         "NOW WE PLAY"
-                </Typography>
+                </Typography> */}
             </Box>
       </Box>
 

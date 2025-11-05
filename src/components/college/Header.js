@@ -3,8 +3,6 @@ import {
   Box,
   Typography,
   Grid,
-  Avatar,
-  Paper,
   ThemeProvider,
   createTheme,
   Container
@@ -34,38 +32,36 @@ const theme = createTheme({
 export default function Universities() {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
+      <Box sx={{ bgcolor: "rgba(244, 244, 244, 1)", color: "#000f26ff" }}>
         <Box>
-            <Grid container spacing={0} alignItems="center">
-              <Grid size={{xs: 12, md: 6}} sx={{mt: '50px'}}>
+            <Grid container>
+              <Grid size={{xs: 12, md: 6}} sx={{py: '70px', px: '5px'}}>
                 <Container>
-                    <Typography variant="h2" component="h1" gutterBottom sx={{fontSize: {xs: "32px", sm: "40px", lg: "60px"}}}>
-                        Pathway to College Soccer
+                    <Typography variant="h2" component="h1" gutterBottom 
+                        sx={{
+                            color: "#002c7dff", 
+                            textAlign: 'center', 
+                            fontSize: {xs: "32px", sm: "40px", lg: "60px"},
+                            "&::after": {
+                                display: "block",
+                                height: "2px",
+                                backgroundColor: "red",
+                                content: '" "',
+                                width: "80px",
+                                margin: "10px auto"
+                            }
+                        }}>
+                            Pathway to College Soccer
                     </Typography>
                     <Typography variant="h6" sx={{ fontSize: {xs: '17px'}, opacity: 0.95, lineHeight: 1.6 }}>
                         Our graduates consistently earn roster spots at elite NCAA programs and beyond. With dedicated recruiting support, showcase exposure, and relationships nationwide, Atlantic United players take the next step prepared and confident.
                     </Typography>
                 </Container>
-                {/* <Chip
-                    icon={<School />}
-                    color="secondary"
-                    label="Student Athletes"
-                    sx={{ display: {xs: 'none', sm: 'inherit'}, bgcolor: "transparent", color: "white", fontWeight: 800, border: "1px solid white", padding: '20px' }}
-                />
-                <Typography variant="h3" gutterBottom sx={{fontSize: {xs: '33px', sm: '50px'}, textAlign: 'center', my: {xs: '30px', sm: '60px'}}}>
-                  Pathway to College Soccer
-                </Typography>
-                <Typography variant="body1" sx={{ opacity: 0.95, m: 4 }}>
-                  Our graduates consistently earn roster spots at elite NCAA programs
-                  and beyond. With dedicated recruiting support, showcase exposure,
-                  and relationships nationwide, Atlantic United players take the next
-                  step prepared and confident.
-                </Typography> */}
               </Grid>
-              <Grid size={{xs: 12, md: 3}}>
+              <Grid size={{xs: 6, md: 3}}>
                 <Box 
                     sx={{
-                        height: '350px',
+                        height: {xs: '300px', sm: '430px'},
                         backgroundImage: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.5) 100%), url(${brendan})`,
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
@@ -73,10 +69,10 @@ export default function Universities() {
                     }}>
                 </Box>
               </Grid>
-              <Grid size={{xs: 12, md: 3}}>
+              <Grid size={{xs: 6, md: 3}}>
                 <Box 
                     sx={{
-                        height: '350px',
+                        height: {xs: '300px', sm: '430px'},
                         backgroundImage: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.5) 100%), url(${alyse})`,
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
@@ -84,7 +80,7 @@ export default function Universities() {
                     }}>
                 </Box>
               </Grid>
-              <Grid size={{xs: 12, md: 6}}>
+              {/* <Grid size={{xs: 12, md: 6}}>
                 <Grid container spacing={2} sx={{display: 'flex', justifyContent: 'center'}}>
                   {[
                     "https://via.placeholder.com/120x120?text=U1",
@@ -104,7 +100,7 @@ export default function Universities() {
                     </Grid>
                   ))}
                 </Grid>
-              </Grid>
+              </Grid> */}
             </Grid>
         </Box>
 

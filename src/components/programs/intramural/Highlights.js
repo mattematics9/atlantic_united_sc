@@ -90,13 +90,13 @@ export default function Highlights({ images = defaultImages }) {
                 >
                   <CardMedia component="img" height="180" image={card.img} alt={card.title} />
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 1 }}>
-                      <Chip icon={card.icon} color="secondary" label="Intramural" size="small" />
-                    </Stack>
-                    <Typography variant="h5" gutterBottom>
+                    <Typography variant="h5" gutterBottom sx={{textAlign: 'center'}}>
                       {card.title}
                     </Typography>
                     <Typography variant="body1" sx={{ maxWidth: '320px', opacity: 0.9 }}>{card.text}</Typography>
+                    <Stack direction="row" spacing={1.5} alignItems="center" justifyContent="center" sx={{ mt: 2 }}>
+                      <Chip icon={card.icon} color="secondary" label="Intramural" size="small" />
+                    </Stack>
                   </CardContent>
                 </Card>
               </Grid>

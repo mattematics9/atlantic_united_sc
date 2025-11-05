@@ -63,22 +63,22 @@ export default function Achievements() {
         <Box sx={{ py: 6 }}>
           <Grid container spacing={3} justifyContent='center'>
             <Grid item xs={12} md={3} sx={{maxWidth: '350px'}}>
-              <Stat icon={<StarIcon />} label="National Ranking" value="#1 Ranked Teams in the Nation"/>
+              <Stat icon={<StarIcon />} label="National Stage" value="#1 Ranked Teams in the Nation"/>
             </Grid>
             <Grid item xs={12} md={3} sx={{maxWidth: '350px'}}>
-              <Stat icon={<EmojiEventsIcon />} label="National Champions" value="3 National Champions" chipColor="secondary"/>
+              <Stat icon={<EmojiEventsIcon />} label="National Stage" value="3 National Champions" chipColor="secondary"/>
             </Grid>
             <Grid item xs={12} md={3} sx={{maxWidth: '350px'}}>
-              <Stat icon={<EmojiEventsIcon />} label="National Finalists" value="8 National Finalists"/>
+              <Stat icon={<EmojiEventsIcon />} label="National Stage" value="8 National Finalists"/>
             </Grid>
             <Grid item xs={12} md={3} sx={{maxWidth: '350px'}}>
-              <Stat icon={<EmojiEventsIcon />} label="Regional Champions" value="11 Regional Champions" chipColor="secondary"/>
+              <Stat icon={<EmojiEventsIcon />} label="Eastern Regionals" value="11 Regional Champions" chipColor="secondary"/>
             </Grid>
             <Grid item xs={12} md={3} sx={{maxWidth: '350px'}}>
-              <Stat icon={<EmojiEventsIcon />} label="State Champions" value="22 NY State Champions"/>
+              <Stat icon={<EmojiEventsIcon />} label="State Dominance" value="22 NY State Champions"/>
             </Grid>
             <Grid item xs={12} md={3} sx={{maxWidth: '350px'}}>
-              <Stat icon={<EmojiEventsIcon />} label="State Finalists" value="11 NY State Finalists" chipColor="secondary"/>
+              <Stat icon={<EmojiEventsIcon />} label="State Dominance" value="11 NY State Finalists" chipColor="secondary"/>
             </Grid>
           </Grid>
         </Box>

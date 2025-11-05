@@ -1,5 +1,5 @@
 import Header from './header/Header'
-import Contact from './contact/Contact'
+import ContactTabs from './contact/ContactTabs'
 import Achievements from './achievements/Achievements'
 import Leagues from './leagues/Leagues'
 import CallToAction from './call_to_action/CallToAction'
@@ -14,10 +14,10 @@ const Home = () => {
        <Achievements/>
        <PicturesAndText/>
        <Huddle/>
+       <CallToAction/>
        <Leagues/>
        <NowWePlay/>
-       <CallToAction/>
-       <Contact/>
+       <ContactTabs/>
     </>
   )
 }

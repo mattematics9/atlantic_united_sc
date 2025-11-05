@@ -21,6 +21,7 @@ const PreTravelContacts = () => {
           mb: 4,
           p: 2,
           border: "1px dotted #00001c",
+          color: 'rgba(0, 6, 58, 1)'
         }}
       >
         PRE-TRAVEL ACADEMY CONTACTS

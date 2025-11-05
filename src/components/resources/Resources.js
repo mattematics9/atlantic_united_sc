@@ -4,7 +4,10 @@ import { Box } from '@mui/material'
 
 const Resources = () => {
   return (
-    <Box id='resources' sx={{pt: {md: "100px", xs: "50px"}, pb: "40px"}}>
+    <Box id='resources' sx={{
+      pt: {xs: "100px"}, 
+      pb: "40px"
+    }}>
         <CoachResources/>
     </Box>
   )

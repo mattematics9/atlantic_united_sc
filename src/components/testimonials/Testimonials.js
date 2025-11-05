@@ -12,7 +12,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 // Images
-import field from "../../images/field.jpg"
+import field from "../../images/ward_melville_hs2.png";
 import AndrewTinari from "../../images/andrew-tinari-2.png";
 import Telma from "../../images/telma2.png";
 import Jillian from "../../images/jillian.jpg";
@@ -97,7 +97,8 @@ const testimonials = [
         backgroundImage: `linear-gradient(120deg, rgba(0, 0, 49, 0.9) 0%, rgba(255, 0, 0, 0.4) 100%), url(${field})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        py: { xs: '150px', md: '180px' },
+        pt: { xs: '150px', md: '180px' },
+        pb: '30px',
         textAlign: "center",
       }}
     >

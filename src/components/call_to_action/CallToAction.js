@@ -16,7 +16,7 @@ const theme = createTheme({
   palette: {
     primary: { main: "#0D47A1" }, // Atlantic Blue
     secondary: { main: "#C62828" }, // Atlantic Red
-    background: { default: "#00091dff" },
+    background: { default: "rgba(0,0,31,1)" },
   },
   shape: { borderRadius: 16 },
   typography: {

@@ -1,18 +1,18 @@
 import React from 'react'
 import { Box, Typography } from "@mui/material";
-import wildlingsNewWarmups from '../../../images/wildlings-new-warmups-cropped.jpeg';
+import wildlingsVsHotaStartersFront1 from '../../../images/test5.png'
 
 const NowWePlay = () => {
   return (
       <Box
         sx={{
           display: { xs: "block", md: "none" },
-          height: {xs: '200px', sm: '400px', md: '550px'},
+          height: {xs: '330px', sm: '400px', md: '550px'},
           // eslint-disable-next-line 
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          backgroundImage: `linear-gradient( 90deg, rgba(0, 0, 49, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsNewWarmups})`,
+          backgroundImage: `linear-gradient( 90deg, rgba(0, 0, 49, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsVsHotaStartersFront1})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
@@ -25,7 +25,7 @@ const NowWePlay = () => {
       >
         <Typography component="p" 
           sx={{ 
-            display: {xs: 'none', sm: 'block'},
+            // display: {xs: 'none', sm: 'block'},
             fontSize: "inherit", 
             fontWeight: 600,
             border: "1px dotted white",

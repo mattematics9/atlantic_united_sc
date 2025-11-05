@@ -64,10 +64,10 @@ export default function Leagues({ leagueLogos = defaultLeagueLogos }) {
         {/* COMPETITIONS / LEAGUES */}
         <Container sx={{ py: 8 }}>
           <Stack spacing={2} alignItems="center" textAlign="center" sx={{ mb: 4 }}>
-            <Chip icon={<PublicIcon />} color="primary" label="Elite Competition Platform" />
-            <Typography variant="h3">Teams of every level</Typography>
+            <Chip icon={<PublicIcon />} color="primary" label="Multi-League" />
+            <Typography variant="h3">Teams Across Many Leagues</Typography>
             <Typography variant="body1" sx={{ maxWidth: 800, opacity: 0.9 }}>
-              Atlantic United forms travel teams for every level, catering to all players of variaying ages, skill levels, and interests.
+              Atlantic United forms travel teams for every level and league, catering to all players of variaying ages, skill levels, and interests.
             </Typography>
           </Stack>
           <Grid container spacing={3} justifyContent="center" alignItems="center">

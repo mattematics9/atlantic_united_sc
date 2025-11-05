@@ -6,8 +6,8 @@ import {
   createTheme,
 } from "@mui/material";
 
-import wildlingsVsHotaStartersFront from '../../../images/wildlings_vs_hota_state_cup_finals_starters_front.png'
-import { rgb } from "d3";
+import wildlingsVsHotaStartersFront1 from '../../../images/wildlings_vs_hota_state_cup_finals_starters_front.png'
+import wildlingsVsHotaStartersFront2 from '../../../images/test5.png'
 
 const theme = createTheme({
   palette: {
@@ -33,24 +33,32 @@ export default function Header() {
         <Box
             sx={{
                 pt: {xs: '130px'},
-                pb: {xs: '100px;'},
+                pb: {xs: '130px;'},
                 color: "#e9eef6",
                 backgroundImage: {
-                    xs: `linear-gradient(45deg, rgba(0, 0, 49, 0.7) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsVsHotaStartersFront})`,
+                    xs: `linear-gradient(45deg, rgba(0, 0, 49, 0.7) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsVsHotaStartersFront1})`,
+                    lg: `linear-gradient(45deg, rgba(0, 0, 49, 0.7) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsVsHotaStartersFront2})`
+
                 },
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}
         >
-            <Box container sx={{mb: {xs: '50px', sm: '70px'}}}>
+            <Box container sx={{mb: {xs: '50px', sm: '0px'}}}>
                 <Typography variant="h2" 
                     sx={{
-                        border: '1px solid white', 
                         p: '10px', 
                         fontSize: {xs: '40px', md: '50px', lg: '60px'}, 
                         textAlign: 'center',
-                        background: 'linear-gradient(45deg, rgba(0, 0, 49, 0.2) 0%, rgba(0, 0, 49, 0.2) 100%)'
+                        "&::after": {
+                            display: "block",
+                            height: "2px",
+                            backgroundColor: "rgba(146, 184, 255, 0.7)",
+                            content: '" "',
+                            width: "80px",
+                            margin: "10px auto"
+                        }
                     }}>
                         PROGRAMS OVERVIEW
                 </Typography>

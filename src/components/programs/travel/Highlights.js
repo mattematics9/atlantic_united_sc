@@ -17,9 +17,9 @@ import PublicIcon from "@mui/icons-material/Public";
 import StarIcon from "@mui/icons-material/Star";
 
 //Images
-import antEnergy from '../../../images/ant-energy.jpg'
-import rampage from '../../../images/rampage.jpeg'
-import wildlings from '../../../images/wildlings_regionals_2023.jpg'
+import caso from '../../../images/caso2.png'
+import force from '../../../images/force_espn_wwos.jpg'
+import force2 from '../../../images/force_training.png'
 
 
 const theme = createTheme({
@@ -38,18 +38,11 @@ const theme = createTheme({
   },
 });
 
-const defaultImages = {
-  img1:
-    wildlings,
-  img2:
-    antEnergy,
-  img3:
-    rampage
-};
 
 
 
-export default function Highlights({ images = defaultImages }) {
+
+export default function Highlights() {
   return (
     <ThemeProvider theme={theme}>
       <Box id="travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
@@ -61,21 +54,21 @@ export default function Highlights({ images = defaultImages }) {
               title: "History of Success",
               text:
                 "History of championships and success at the local, state, regional, and national levels.",
-              img: images.img1,
+              img: force,
               icon: <StarIcon />,
             },
             {
               title: "Proven Player Development",
               text:
                 "Track record of elevating players on and off the field - developing character, skills, and understanding of the game.",
-              img: images.img2,
+              img: caso,
               icon: <SportsSoccerIcon />,
             },
             {
-              title: "Superior Game Model",
+              title: "Training Intensity",
               text:
-                "Purposeful possession, aggressive pressing, quick transitions - intensity present throughout every team",
-              img: images.img3,
+                "Pushing players to their limits to help them obtain their goals.  Intensity present throughout every session.",
+              img: force2,
               icon: <PublicIcon />,
             }].map((card) => (
               <Grid item xs={12} md={4} key={card.title}>
@@ -89,7 +82,7 @@ export default function Highlights({ images = defaultImages }) {
                     color: 'white',
                   }}
                 >
-                  <CardMedia component="img" height="180" image={card.img} alt={card.title} />
+                  <CardMedia component="img" height="165px" image={card.img} alt={card.title} />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography variant="h5" gutterBottom sx={{textAlign: 'center'}}>
                       {card.title}
