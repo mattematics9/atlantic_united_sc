@@ -88,9 +88,9 @@ export default function Highlights() {
                       {card.title}
                     </Typography>
                     <Typography variant="body1" sx={{ maxWidth: '320px', opacity: 0.9 }}>{card.text}</Typography>
-                    <Stack direction="row" spacing={1.5} alignItems="center" justifyContent="center" sx={{ my: 2 }}>
+                    {/* <Stack direction="row" spacing={1.5} alignItems="center" justifyContent="center" sx={{ my: 2 }}>
                       <Chip icon={card.icon} color="secondary" label="Travel Feature" size="small" />
-                    </Stack>
+                    </Stack> */}
                   </CardContent>
                 </Card>
               </Grid>

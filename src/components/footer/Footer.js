@@ -7,7 +7,7 @@ export default function Footer() {
     <Box id="footer">
 
       {/* Bottom nav bar */}
-      <Box
+      {/* <Box
         id="footer-2"
         sx={{
           bgcolor: 'rgb(236, 236, 236)',
@@ -36,8 +36,8 @@ export default function Footer() {
         <Link href="/programs">PROGRAMS</Link>
         <Link href="/contact">CONTACT</Link>
         <Link href="/register">REGISTER</Link>
-      </Box>
-      <Box sx={{ py: 6, textAlign: "center", color: 'white', backgroundColor: 'black' }}>
+      </Box> */}
+      <Box sx={{ py: 6, textAlign: "center", color: 'white', backgroundColor: "rgba(2, 0, 24, 1)" }}>
         <Typography variant="caption">
           © {new Date().getFullYear()} Atlantic United Soccer Club • All Rights Reserved
         </Typography>

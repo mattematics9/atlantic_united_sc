@@ -39,7 +39,7 @@ export default function Universities() {
                 <Container>
                     <Typography variant="h2" component="h1" gutterBottom 
                         sx={{
-                            color: "#002c7dff", 
+                            color: "#00054aff", 
                             textAlign: 'center', 
                             fontSize: {xs: "32px", sm: "40px", lg: "60px"},
                             "&::after": {
@@ -62,7 +62,7 @@ export default function Universities() {
                 <Box 
                     sx={{
                         height: {xs: '300px', sm: '430px'},
-                        backgroundImage: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.5) 100%), url(${brendan})`,
+                        backgroundImage: `linear-gradient(120deg, rgba(255, 0, 0, 0.2) 0%, rgba(255, 0, 0, 0.4) 100%), url(${brendan})`,
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: 'center'
@@ -73,7 +73,7 @@ export default function Universities() {
                 <Box 
                     sx={{
                         height: {xs: '300px', sm: '430px'},
-                        backgroundImage: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.5) 100%), url(${alyse})`,
+                        backgroundImage: `linear-gradient(120deg, rgba(0, 0, 49, 0.3) 0%, rgba(255, 0, 0, 0.4) 100%), url(${alyse})`,
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: 'center'

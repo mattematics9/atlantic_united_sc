@@ -4,7 +4,7 @@ export const programs = [
     id: "travel",
     title: "Travel Academy",
     grade: "Grades 3 - 12",
-    image: require("../../../images/wildlings_cones.png"),
+    image: require('../../../images/tsunami4.png'),
     description: "Offers advanced training and competition, helping players maximize their potential on and off the field.",
     registerUrl:
       "https://system.gotsport.com/programs/D45748060?reg_role=player",

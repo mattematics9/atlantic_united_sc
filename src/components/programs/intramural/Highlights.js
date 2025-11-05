@@ -71,9 +71,9 @@ export default function Highlights({ images = defaultImages }) {
               icon: <SportsSoccerIcon />,
             },
             {
-              title: "Love to play",
+              title: "Fundamentals",
               text:
-                "Spark a love for the game that can last a lifetime.",
+                "Learn basic techniques and rules in an easygoing environment",
               img: images.img3,
               icon: <PublicIcon />,
             }].map((card) => (

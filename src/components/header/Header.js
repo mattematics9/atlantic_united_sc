@@ -41,8 +41,8 @@ export default function Header() {
                 pb: {xs: '140px'},
                 color: "#e9eef6",
                 backgroundImage: {
-                    xs: `linear-gradient(45deg, rgba(0, 0, 49, 0.95) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsCelebration2})`,
-                    sm: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsCelebration1})`
+                    xs: `linear-gradient(45deg, rgba(0, 0, 49, 0.85) 0%, rgba(255, 0, 0, 0.4) 100%), url(${wildlingsCelebration2})`,
+                    sm: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.4) 100%), url(${wildlingsCelebration1})`
 
                 },
                 backgroundPosition: "center 65px",

@@ -8,6 +8,11 @@ import {
 
 import wildlingsVsHotaStartersFront1 from '../../../images/wildlings_vs_hota_state_cup_finals_starters_front.png'
 import wildlingsVsHotaStartersFront2 from '../../../images/test5.png'
+import test from '../../../images/test7.png'
+import test2 from '../../../images/test8.png'
+import brandon from '../../../images/brandon-lopez.png'
+import dylan from '../../../images/dylan2.png'
+import force from '../../../images/test9.png'
 
 const theme = createTheme({
   palette: {
@@ -32,12 +37,12 @@ export default function Header() {
     <ThemeProvider theme={theme}>
         <Box
             sx={{
-                pt: {xs: '130px'},
+                pt: {xs: '170px'},
                 pb: {xs: '130px;'},
                 color: "#e9eef6",
                 backgroundImage: {
-                    xs: `linear-gradient(45deg, rgba(0, 0, 49, 0.7) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsVsHotaStartersFront1})`,
-                    lg: `linear-gradient(45deg, rgba(0, 0, 49, 0.7) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsVsHotaStartersFront2})`
+                    xs: `linear-gradient(120deg, rgba(255, 0, 0, 0.4) 0%, rgba(255, 0, 0, 0.4) 100%), url(${force})`,
+                    sm: `linear-gradient(45deg, rgba(0, 0, 49, 0.7) 0%, rgba(255, 0, 0, 0.3) 100%), url(${test})`
 
                 },
                 backgroundPosition: "center",
@@ -45,7 +50,7 @@ export default function Header() {
                 backgroundRepeat: "no-repeat",
             }}
         >
-            <Box container sx={{mb: {xs: '50px', sm: '0px'}}}>
+            <Box container>
                 <Typography variant="h2" 
                     sx={{
                         p: '10px', 
@@ -54,7 +59,7 @@ export default function Header() {
                         "&::after": {
                             display: "block",
                             height: "2px",
-                            backgroundColor: "rgba(146, 184, 255, 0.7)",
+                            backgroundColor: "rgba(255, 255, 255, 0.7)",
                             content: '" "',
                             width: "80px",
                             margin: "10px auto"
@@ -64,7 +69,7 @@ export default function Header() {
                 </Typography>
             </Box>
 
-            <Box sx={{ mt: '20px'}}>
+            <Box sx={{mt: '30px'}}>
                 <Typography variant="body1" 
                     sx={{
                         fontSize: {xs: '16px', sm: '20px'}, 

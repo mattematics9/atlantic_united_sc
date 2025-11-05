@@ -58,7 +58,7 @@ export default function Header() {
                 sx={{ bgcolor: "transparent", color: "white", fontWeight: 800, border: "1px solid white", padding: '20px' }}
               />
               <Typography variant="h2" component="h1" gutterBottom sx={{fontSize: {xs: "32px", sm: "40px", lg: "60px"}}}>
-                Have Fun. Make Friends.  <br/>Love to play.  
+                Fun. <br/> Friends.  <br/>Fundamentals.  
               </Typography>
               <Typography variant="h6" sx={{ fontSize: {xs: '17px'}, opacity: 0.95, lineHeight: 1.6 }}>
                 The Atlantic United Intramural program is a fun-focused program that helps players spark their love and understanding of soccer.   

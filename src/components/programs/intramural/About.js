@@ -69,17 +69,6 @@ function Feature({ label }) {
                     <Typography variant="body1" sx={{ mb: 2 }}>
                     A fun-focused initial step into soccer. At this age, the focus is on cultivating a player's love and interest of the game while demonstrating basic foundational skills - such as dribbling, passing, controlling the ball, and scoring.  The games are enjoyable and developmentally appropriate, and take place at consitent times and closeby locations to maximize time and community interaction.  Players will also learn the values of teamwork, confidence, and creativity on the field. We aim to create an environment where every child feels supported, learns to love the game, and develops the foundation for future success.
                     </Typography>
-
-                    <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap justifyContent={'center'}>
-                        <Feature label="Fun" />
-                        <Feature label="Love for Soccer" />
-                        <Feature label="Friendships" />
-                        <Feature label="Dribbling" />
-                        <Feature label="Passing" />
-                        <Feature label="Shooting" />
-                        <Feature label="Defending" />
-                        <Feature label="Natural Creativity" />
-                    </Stack>
                 </CardContent>
             </Card>
         </Box>

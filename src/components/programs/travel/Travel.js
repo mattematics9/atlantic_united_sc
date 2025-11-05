@@ -19,9 +19,9 @@ export default function TravelAcademy() {
         <NowWePlay/>
         <About/>
         <Highlights/>
-        <Leagues/>
         <CollegeHeader/>
         <CollegeServices/>
+        <Leagues/>
         <CallToAction/>
       </Box>
   );
