@@ -1,13 +1,26 @@
 import { Box } from "@mui/material";
-import PicturesAndText from "./PicturesAndText";
-import Huddle from "./Huddle";
+import PicturesAndText2 from "./PicturesAndText2";
 import NowWePlay from "./NowWePlay";
+import TreeWithLogos from "./TreeWithLogos";
+import UnifyingLongIsland from './UnifyingLongIsland'
+import Philosophy from './Philosophy'
+import ExpertsInSoccerAndEducation from './ExpertsInSoccerAndEducation'
+import Achievements from "../../achievements/Achievements";
+import CollegeHeader from "../../college/Header"
+import CollegeServices from "../../college/CollegeServices";
+import CallToAction from "../../call_to_action/CallToAction";
 
 const About = () => {
   return (
     <Box sx={{ pt: "65px" }}>
-      <PicturesAndText />
-      <Huddle />
+      <UnifyingLongIsland/>
+      <TreeWithLogos/>
+      <PicturesAndText2 />
+      <ExpertsInSoccerAndEducation/>
+      <Achievements/>
+      <CollegeHeader/>
+      <CollegeServices/>
+      <CallToAction/>
       <NowWePlay />
     </Box>
   );
@@ -15,28 +28,3 @@ const About = () => {
 
 export default About;
 
-
-
-
-
-
-
-
-
-
-// import './styles.css'
-// import PicturesAndText from "./PicturesAndText"
-// import TreeWithLogos from "./TreeWithLogos"
-
-// const About = () => {
-//   return (
-//     <div id="about">
-
-//         <PicturesAndText/>
-//         <TreeWithLogos/>
-            
-//     </div>
-//   )
-// }
-
-// export default About

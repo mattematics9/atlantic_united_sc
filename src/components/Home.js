@@ -3,7 +3,7 @@ import ContactTabs from './contact/ContactTabs'
 import Achievements from './achievements/Achievements'
 import Leagues from './leagues/Leagues'
 import CallToAction from './call_to_action/CallToAction'
-import PicturesAndText from './about/about_overview/PicturesAndText'
+import PicturesAndText1 from './about/about_overview/PicturesAndText1'
 import Huddle from './about/about_overview/Huddle'
 import NowWePlay from './about/about_overview/NowWePlay'
 
@@ -12,7 +12,7 @@ const Home = () => {
     <>
        <Header/> 
        <Achievements/>
-       <PicturesAndText/>
+       <PicturesAndText1/>
        <Huddle/>
        <CallToAction/>
        <Leagues/>
