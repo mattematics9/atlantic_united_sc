@@ -91,9 +91,9 @@ const TreeWithLogos = () => {
         // backgroundPosition: "center",
         // backgroundSize: "cover",
         // backgroundRepeat: "no-repeat",
-        pt: { xs: 0, md: "30px" },
-        pb: { xs: 0, md: "30px" },
-        bgcolor: "rgba(244, 244, 244, 1)"
+        pt: { xs: "30px", md: "30px" },
+        pb: { xs: "30px", md: "30px" },
+        bgcolor: "rgba(250, 250, 250, 1)"
       }}
     >
       {/* D3 Tree Mount Point */}

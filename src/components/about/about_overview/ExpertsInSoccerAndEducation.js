@@ -28,10 +28,10 @@ const theme = createTheme({
 });
 
 
-export default function Header() {
+export default function ExpertsInSoccerAndEducation() {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: "rgba(244, 244, 244, 1)", color: "#000f26ff" }}>
+      <Box sx={{ bgcolor: "rgba(246, 246, 255, 1)", color: "#000f26ff" }}>
         <Box>
             <Grid container>
               <Grid size={{xs: 12, md: 5}} sx={{py: '70px', px: '5px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
@@ -41,7 +41,7 @@ export default function Header() {
                         textAlign: 'center', 
                         fontSize: {xs: "32px", sm: "40px", lg: "60px"},
                         border: '1px dotted red',
-                        backgroundColor: 'rgba(240, 240, 240, 1)',
+                        backgroundColor: 'rgba(248, 248, 255, 1)',
                         p: '10px'
                     }}>
                         Experts in Soccer <span style={{color: 'rgba(118, 186, 255, 1)'}}>AND</span> Education

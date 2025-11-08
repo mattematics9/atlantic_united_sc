@@ -2,9 +2,9 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 
 // Import images so bundlers resolve them correctly (fixes “background not displayed”)
-import img1 from "../../../images/huddle4.png";
-import img2 from "../../../images/wildlings_celebration_national_league.jpg";
-import img3 from "../../../images/logan-ruggiero-darren.png"
+// import img1 from "../../../images/clouds3.png"
+import img2 from "../../../images/logan-ruggiero-darren.png";
+import img3 from "../../../images/huddle4.png";
 
 /**
  * This mirrors the original Materialize layout exactly:
@@ -44,10 +44,29 @@ const PicturesAndText2 = () => {
       <Box sx={{ display: "flex", flexWrap: "wrap", margin: 0 }}>
         {/* Left Column: Big Picture (col l6 m12 s12) */}
         <Box sx={colL6_M12_S12}>
-          <Box
+            <Typography variant="h4" color="primary" gutterBottom 
+                sx={{
+                    fontWeight: 600,
+                    textAlign: 'center', 
+                    mt: '50px',
+                    "&::after": {
+                        display: "block",
+                        height: "2px",
+                        backgroundColor: "red",
+                        content: '" "',
+                        width: "80px",
+                        margin: "10px auto",
+                    },
+                }}>
+                History of Titles
+            </Typography>
+            <Typography variant="body1" sx={{ fontSize: '17px', fontWeight: 600, p: '20px' }}>
+                During the 2024-2025 seasonal year Atlantic United produced 4 New York State Champions and 2 New York State Finalists, qualified 4 teams to USYS Regionals, topping the year off with 1 Regional Finalist and 1 team appearance at USYS Nationals.  In the 2023-2024 seasonal year Atlantic United produced 5 New York State Champions and 1 Finalist, had 8 teams qualify for USYS Regionals (most in the Eastern Region), topping the year off with 2 Regional Finalists and 2 team appearances at USYS Nationals, where the club had a team make it the final 4 and earn 1 USYS National Semi-Finalist Title.  In the preceding years, we have captured numerous State, Regional, and National Titles, while consistently producing #1 ranked teams in the Nation, solidifying ourselves as one of the most successful USYS clubs in the country.
+            </Typography>
+          {/* <Box
             id="pictures-and-text-2-col-1-pic-div"
             sx={{
-              backgroundImage: `url(${img3})`,
+              backgroundImage: `url(${img1})`,
               backgroundPosition: "center 0px",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
@@ -62,7 +81,7 @@ const PicturesAndText2 = () => {
               "@media (max-width: 500px)": { height: 400, fontSize: "37px" },
               textAlign: "center",
             }}
-          />
+          /> */}
         </Box>
 
         {/* Right Column (col l6 m12 s12) */}
@@ -78,7 +97,7 @@ const PicturesAndText2 = () => {
             {/* Text left */}
             <Box sx={colL6_M6_S12}>
               <Box
-                id="creating-unforgettable-moments-2-text"
+                id="winning-culture-text"
                 sx={{
                   height: 250,
                   display: "flex",
@@ -93,7 +112,7 @@ const PicturesAndText2 = () => {
                 }}
               >
                 <Typography component="p" sx={{ fontSize: "inherit", m: 0 }}>
-                  CREATING UNFORGETTABLE MOMENTS
+                  WINNING CULTURE
                 </Typography>
               </Box>
             </Box>
@@ -101,9 +120,9 @@ const PicturesAndText2 = () => {
             {/* Photo right */}
             <Box sx={colL6_M6_S12}>
               <Box
-                id="creating-unforgettable-moments-2-pic"
+                id="winning-culture-pic"
                 sx={{
-                  backgroundImage: `url(${img1})`,
+                  backgroundImage: `linear-gradient(rgba(255, 0, 0, 0.15),rgba(255, 0, 0, 0.15)),url(${img2})`,
                   backgroundPosition: "center 0px",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
@@ -125,9 +144,9 @@ const PicturesAndText2 = () => {
             {/* Photo left */}
             <Box sx={colL6_M6_S12}>
               <Box
-                id="developing-elite-players-2-pic"
+                id="achieve-as-a-team-pic"
                 sx={{
-                  backgroundImage: `url(${img2})`,
+                  backgroundImage: `url(${img3})`,
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
@@ -139,7 +158,7 @@ const PicturesAndText2 = () => {
             {/* Text right */}
             <Box sx={colL6_M6_S12}>
               <Box
-                id="developing-elite-players-2-text"
+                id="achieve-as-a-team-text"
                 sx={{
                   height: 250,
                   display: "flex",
@@ -154,7 +173,7 @@ const PicturesAndText2 = () => {
                 }}
               >
                 <Typography component="p" sx={{ fontSize: "inherit", m: 0 }}>
-                  DEVELOPING ELITE PLAYERS
+                  ACHIEVE AS A TEAM
                 </Typography>
               </Box>
             </Box>
@@ -172,7 +191,7 @@ const PicturesAndText2 = () => {
             {/* Text first */}
             <Box sx={colL6_M6_S12}>
               <Box
-                id="developing-elite-players-2-text"
+                id="achieve-as-a-team-text"
                 sx={{
                   height: 250,
                   display: "flex",
@@ -187,7 +206,7 @@ const PicturesAndText2 = () => {
                 }}
               >
                 <Typography component="p" sx={{ fontSize: "inherit", m: 0 }}>
-                  DEVELOPING ELITE PLAYERS
+                  ACHIEVE AS A TEAM
                 </Typography>
               </Box>
             </Box>
@@ -195,9 +214,9 @@ const PicturesAndText2 = () => {
             {/* Photo second */}
             <Box sx={colL6_M6_S12}>
               <Box
-                id="developing-elite-players-2-pic"
+                id="achieve-as-a-team-pic"
                 sx={{
-                  backgroundImage: `url(${img2})`,
+                  backgroundImage: `url(${img3})`,
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",

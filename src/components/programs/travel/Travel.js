@@ -10,6 +10,7 @@ import CallToAction from "../../call_to_action/CallToAction";
 import NowWePlay from "../../about/about_overview/NowWePlay";
 import About from "./About"
 import CollegeHeader from "../../college/Header"
+import StonyBrookUniversityPlayers from "../../college/StonyBrookUniversityPlayers";
 
 export default function TravelAcademy() {
   return (
@@ -21,6 +22,7 @@ export default function TravelAcademy() {
         <Highlights/>
         <CollegeHeader/>
         <CollegeServices/>
+        <StonyBrookUniversityPlayers/>
         <Leagues/>
         <CallToAction/>
       </Box>

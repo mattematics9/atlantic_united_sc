@@ -71,7 +71,7 @@ const Huddle = () => {
                     all ages, skill levels, and interests.{" "}
                 </Typography>
                 <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                    <Button component={Link} to='/programs' sx={{fontSize: '20px', '&:hover': {textDecoration: 'underline'}}}>
+                    <Button component={Link} to='/about' sx={{fontSize: '20px', '&:hover': {textDecoration: 'underline'}}}>
                         MORE ABOUT US
                     </Button>
                 </Box>
