@@ -13,7 +13,7 @@ const NowWePlay = () => {
           flexDirection: "column",
           justifyContent: "center",
         //   backgroundImage: `linear-gradient( 90deg, rgba(0, 0, 49, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsVsHotaStartersFront1})`,
-          backgroundImage: `linear-gradient( 90deg, rgba(255, 0, 0, 0.35) 0%, rgba(255, 0, 0, 0.35) 100%), url(${wildlingsVsHotaStartersFront1})`,
+          backgroundImage: `linear-gradient( 45deg, rgba(255, 0, 0, 0.31) 0%, rgba(255, 0, 0, 0.31) 100%), url(${wildlingsVsHotaStartersFront1})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',

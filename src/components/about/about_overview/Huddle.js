@@ -168,7 +168,8 @@ const Huddle = () => {
             <Box
                 sx={{
                     height: "500px",
-                    backgroundImage: `linear-gradient(45deg, rgba(0, 0, 49, 0.3) 0%, rgba(255, 0, 0, 0.3) 100%), url(${huddle})`,
+                    // backgroundImage: `linear-gradient(45deg, rgba(0, 0, 49, 0.3) 0%, rgba(255, 0, 0, 0.3) 100%), url(${huddle})`,
+                    backgroundImage: `linear-gradient(45deg, rgba(255, 0, 0, 0.15) 0%, rgba(255, 0, 0, 0.15) 100%), url(${huddle})`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
