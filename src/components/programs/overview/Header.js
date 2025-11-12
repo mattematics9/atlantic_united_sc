@@ -65,7 +65,7 @@ export default function Header() {
                             margin: "10px auto"
                         }
                     }}>
-                        PROGRAMS OVERVIEW
+                        Programs Overview
                 </Typography>
             </Box>
 

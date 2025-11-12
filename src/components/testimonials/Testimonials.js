@@ -94,7 +94,7 @@ const testimonials = [
     <Box
       id="testimonials"
       sx={{
-        backgroundImage: `linear-gradient(120deg, rgba(0, 0, 49, 0.9) 0%, rgba(255, 0, 0, 0.4) 100%), url(${field})`,
+        backgroundImage: `linear-gradient(120deg, rgba(0, 2, 128, 0.55), rgba(0,2,128, .55)), url(${field})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         pt: { xs: '150px', md: '180px' },

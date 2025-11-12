@@ -43,17 +43,17 @@ const TravelContacts = () => {
               <TableCell>mlnash73@aol.com, brianellsayed@gmail.com</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Boys U9,U10,U12</TableCell>
+              <TableCell>Boys U9,U10,U11</TableCell>
               <TableCell>Matthew Mannina</TableCell>
               <TableCell>mmlgn9@gmail.com</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Boys U11,U13</TableCell>
+              <TableCell>Boys U12,U13,U14</TableCell>
               <TableCell>Dave Hickman</TableCell>
               <TableCell>davidhickman886@yahoo.com</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Boys U14-U19</TableCell>
+              <TableCell>Boys U15,U16,U17,U18/U19</TableCell>
               <TableCell>Frank Stagnitta</TableCell>
               <TableCell>fstagnittasoccer@gmail.com</TableCell>
             </TableRow>

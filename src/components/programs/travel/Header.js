@@ -44,7 +44,8 @@ export default function Header() {
                 color: "#e9eef6",
                 backgroundImage: {
                     xs: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsCelebration1})`,
-                    sm: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.5) 100%), url(${wildlingsCelebration2})`
+                    sm: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.4) 100%), url(${wildlingsCelebration2})`
+                    // sm: `radial-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.4) 100%), url(${wildlingsCelebration2})`
                 },
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",

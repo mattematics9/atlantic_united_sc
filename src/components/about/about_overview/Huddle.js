@@ -17,7 +17,7 @@ const Huddle = () => {
           position: "relative",
           height: "900px",
           backgroundImage: 
-                `radial-gradient(rgba(0,0,31,0),rgba(0,0,31,0),rgba(0,0,31,0), rgba(0,0,31,.1), rgba(0,0,31,.3),rgba(0,0,31,1), rgba(0,0,31,1), rgba(0,0,31,1)),
+                `radial-gradient(rgba(0,0,31,0),rgba(0,0,31,0),rgba(0,0,31,.1), rgba(0,0,31,.5), rgba(0,0,31,.8),rgba(0,0,31,1), rgba(0,0,31,1), rgba(0,0,31,1)),
                  linear-gradient(rgba(0,0,31,0),rgba(0,0,31,0),rgba(0,0,31,0), rgba(0,0,31,.1), rgba(0,0,31,.3),rgba(0,0,31,.7), rgba(0,0,31,1), rgba(0,0,31,1)),
                  url(${huddle})`,
           backgroundPosition: "center 150px",

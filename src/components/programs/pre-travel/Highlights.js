@@ -17,7 +17,8 @@ import PublicIcon from "@mui/icons-material/Public";
 import StarIcon from "@mui/icons-material/Star";
 
 //Images
-import tsunami from '../../../images/tsunami3.png'
+import img1 from '../../../images/lucas_nate_shane.png'
+import img3 from '../../../images/tsunami3.png'
 
 
 const theme = createTheme({
@@ -38,11 +39,11 @@ const theme = createTheme({
 
 const defaultImages = {
   img1:
-    tsunami,
+    img1,
   img2:
-    tsunami,
+    img1,
   img3:
-    tsunami,
+    img3,
 };
 
 

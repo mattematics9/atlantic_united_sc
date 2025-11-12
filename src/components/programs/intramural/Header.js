@@ -41,7 +41,7 @@ export default function Header() {
                 pb: {xs: '100px'},
                 color: "#e9eef6",
                 backgroundImage: {
-                    xs: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.5) 100%), url(${sharks})`,
+                    xs: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.4) 100%), url(${sharks})`,
                 },
                 backgroundPosition: {xs: 'center 60px'},
                 backgroundSize: "cover",

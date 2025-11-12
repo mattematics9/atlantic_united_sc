@@ -1,5 +1,4 @@
-import { Box, Typography, Paper, Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Box } from "@mui/material";
 import { useEffect } from "react";
 import * as d3 from "d3";
 
@@ -84,16 +83,10 @@ const TreeWithLogos = () => {
       id="tree-with-logos"
       sx={{
         position: "relative",
-        // backgroundImage: {
-        //   xs: `linear-gradient(120deg, rgba(255, 0, 0, 0.4), rgba(0, 0, 120, 0.4)),
-        //        url(${backgroundImage})`
-        // },
-        // backgroundPosition: "center",
-        // backgroundSize: "cover",
-        // backgroundRepeat: "no-repeat",
         pt: { xs: "30px", md: "30px" },
         pb: { xs: "30px", md: "30px" },
-        bgcolor: "rgba(250, 250, 250, 1)"
+        background: "radial-gradient( rgba(255, 255, 255),rgba(9, 9, 65))"
+        // bgcolor: "rgba(250, 250, 250, 1)"
       }}
     >
       {/* D3 Tree Mount Point */}
@@ -109,4 +102,3 @@ const TreeWithLogos = () => {
 };
 
 export default TreeWithLogos;
-

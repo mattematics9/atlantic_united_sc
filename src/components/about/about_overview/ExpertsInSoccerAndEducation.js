@@ -40,18 +40,18 @@ export default function ExpertsInSoccerAndEducation() {
                         color: "#00054aff", 
                         textAlign: 'center', 
                         fontSize: {xs: "32px", sm: "40px", lg: "60px"},
-                        border: '1px dotted red',
-                        backgroundColor: 'rgba(248, 248, 255, 1)',
+                        // border: '1px dotted red',
+                        // backgroundColor: 'rgba(248, 248, 255, 1)',
                         p: '10px'
                     }}>
-                        Experts in Soccer <span style={{color: 'rgba(118, 186, 255, 1)'}}>AND</span> Education
+                        Experts in Soccer and <span style={{color: 'rgba(83, 169, 255, 1)'}}>Education</span>
                 </Typography>
               </Grid>
               <Grid size={{xs: 12, md: 7}}>
                 <Box 
                     sx={{
                         height: {xs: '400px', sm: '550px'},
-                        backgroundImage: `linear-gradient(120deg, rgba(255, 0, 0, 0.2) 0%, rgba(255, 0, 0, 0.4) 100%), url(${wildlingsCones})`,
+                        backgroundImage: `linear-gradient(120deg, rgba(255, 0, 0, 0.3) 0%, rgba(255, 0, 0, 0.4) 100%), url(${wildlingsCones})`,
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: 'center'

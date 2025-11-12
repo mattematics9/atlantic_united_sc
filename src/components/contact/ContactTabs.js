@@ -31,14 +31,14 @@ const ContactTabs = () => {
           sx={{
             fontSize: { xs: "34px", sm: "40px", md: "50px" },
             fontWeight: 600,
-            mb: 6,
+            mb: {xs: 2, sm: 6},
             "&::after": {
               display: "block",
               height: "2px",
               bgcolor: "#d32a2a",
               content: '""',
               width: {xs: "70px", sm: "120px"},
-              margin: "20px auto",
+              margin: "20px auto"
             },
           }}
         >
@@ -74,6 +74,8 @@ const ContactTabs = () => {
             "& .MuiTab-root": {
               fontSize: { xs: "9px", sm: "11px", md: "14px", lg: "18px", xl: "25px" },
               color: "red",
+              minWidth: { xs: "60px", sm: "auto" }, // ✅ allows tab to shrink properly
+              paddingX: { xs: 0.5, sm: 1, md: 2 }, // ✅ less padding on small screens
             },
             "& .Mui-selected": {
               backgroundColor: "rgba(255, 241, 241, 1)",

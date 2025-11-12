@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Typography } from '@mui/material'
 import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material/styles";
 
-import backgroundImage from '../../../images/ward_melville_hs2.png'
+import backgroundImage from '../../../images/caso2.png'
 
 // ---- THEME ----
 let theme = createTheme({
@@ -31,7 +31,7 @@ let theme = createTheme({
 
 theme = responsiveFontSizes(theme);
 
-const UnifyingLongIsland = () => {
+const BuiltOnSuccessOnTheField = () => {
 
   return (
     <ThemeProvider theme={theme}>
@@ -47,13 +47,14 @@ const UnifyingLongIsland = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
+                    pb: {xs: '30px', sm: '0px'}
                 }}
             >
                 <Typography variant="h3" gutterBottom 
                     sx={{
                         textAlign: 'center', 
                     }}>
-                    Unifying Long Island Soccer
+                    A Club Built on Success on the Field
                 </Typography>
             </Box>
         </Box>
@@ -61,4 +62,4 @@ const UnifyingLongIsland = () => {
   )
 }
 
-export default UnifyingLongIsland
+export default BuiltOnSuccessOnTheField
