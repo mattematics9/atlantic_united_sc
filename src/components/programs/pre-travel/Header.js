@@ -58,7 +58,7 @@ export default function Header() {
                 sx={{ bgcolor: "transparent", color: "white", fontWeight: 800, border: "1px solid white", padding: '20px' }}
               />
               <Typography variant="h2" component="h1" gutterBottom sx={{fontSize: {xs: "32px", sm: "40px", lg: "60px"}}}>
-                Bridge the gap between intramural and travel.
+                Bridge the Gap Between Intramural and Travel.
               </Typography>
               <Typography variant="h6" sx={{ fontSize: {xs: '17px'}, opacity: 0.95, lineHeight: 1.6 }}>
                 The Atlantic United Pre-Travel Academy is a fun, skill-focused bridge to travel soccer from intramurals for 1st & 2nd graders.

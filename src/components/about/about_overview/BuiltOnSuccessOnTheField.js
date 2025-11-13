@@ -54,7 +54,7 @@ const BuiltOnSuccessOnTheField = () => {
                     sx={{
                         textAlign: 'center', 
                     }}>
-                    A Club Built on Success on the Field
+                    A Club Built on Success
                 </Typography>
             </Box>
         </Box>

@@ -83,6 +83,18 @@ const FieldsData = /** @type {Field[]} */ ([
     lights: false,
     parking: "Lot and Street",
     notes: ""
+  },
+  {
+    id: "field-8",
+    name: "Stagecoach Elementary School",
+    address: "205 Dare Rd, Selden, NY 11784",
+    town: "Selden",
+    state: "NY",
+    zip: "11784",
+    surface: "Grass",
+    lights: false,
+    parking: "Lot",
+    notes: ""
   }
 ]);
 

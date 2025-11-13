@@ -8,6 +8,7 @@ import Highlights from "./Highlights";
 import CallToAction from "../../call_to_action/CallToAction";
 import About from "./About";
 import Contacts from "./Contacts";
+import IntramuralPrograms from "./IntramuralPrograms";
 
 export default function Intramural() {
   return (
@@ -17,6 +18,7 @@ export default function Intramural() {
         <Highlights/>
         <Contacts/>
         <CallToAction/>
+        <IntramuralPrograms/>
       </Box>
   );
 }

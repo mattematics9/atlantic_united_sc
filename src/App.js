@@ -16,6 +16,7 @@ import Testimonials from './components/testimonials/Testimonials';
 import Fields from './components/about/fields/Fields'
 import College from './components/college/College';
 import Intramural from './components/programs/intramural/Intramural';
+import Grassroots from './components/programs/grassroots/Grassroots';
 
 
 
@@ -39,6 +40,7 @@ function App() {
             <Route path='/programs/pre-travel-academy' element={ <PreTravel/> }/>    
             <Route path='/programs/travel-academy' element={ <Travel/> }/>    
             <Route path='/programs/intramural' element={ <Intramural/> }/>    
+            <Route path='/programs/grassroots' element={ <Grassroots/> }/>    
             <Route path='/college' element={ <College/> }/>    
           </Routes>
         <Footer/>

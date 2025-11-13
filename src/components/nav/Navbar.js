@@ -28,8 +28,7 @@ const aboutMenuItems = [
 const programMenuItems = [
   { label: 'Travel Academy', path: '/programs/travel-academy' },
   { label: 'Pre-Travel Academy', path: '/programs/pre-travel-academy' },
-  { label: 'Intramural', path: '/programs/intramural' },
-  { label: 'Grassroots', path: '/programs/grassroots' }
+  { label: 'Intramural', path: '/programs/intramural' }
 ];
 
 export default function Navbar() {
