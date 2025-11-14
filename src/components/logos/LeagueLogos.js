@@ -3,11 +3,11 @@ import React from 'react';
 import { Box, Link as MUILink } from '@mui/material';
 import { Link } from 'react-router-dom';
 import MLSNextLogo from '../../images/logos/mls-next-logo.png';
-import GAAspireLogo from '../../images/logos/girls-aspire-logos/girls-aspire-logo-9.png';
+import GAAspireLogo from '../../images/logos/girls-aspire-logos/girls-aspire-logo-10.png'
 
 export default function LeagueLogos() {
   return (
-    <Box id="league-logos-header" sx={{display: 'flex', alignItems: 'center'}}>
+    <Box id="league-logos" sx={{display: 'flex', alignItems: 'center'}}>
       {/* MLS Next Logo */}
       <MUILink
         component={Link}
@@ -42,6 +42,7 @@ export default function LeagueLogos() {
           sx={() => ({
             zIndex: 999,
             width: {xs: '55px', md: '70px'},
+            width: {xs: '110px', md: '140px'},
           })}
         />
       </MUILink>

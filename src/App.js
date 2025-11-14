@@ -9,11 +9,11 @@ import Contact from './components/contact/Contact';
 import Resources from './components/resources/Resources';
 import Programs from './components/programs/overview/Overview';
 import Register from './components/register/Register';
-import Logo from './components/logo/Logo'
-import PreTravel from './components/programs/pre-travel/PreTravel'
-import Travel from './components/programs/travel/Travel'
+import AtlanticUnitedLogo from './components/logos/AtlanticUnitedLogo';
+import PreTravel from './components/programs/pre-travel/PreTravel';
+import Travel from './components/programs/travel/Travel';
 import Testimonials from './components/testimonials/Testimonials';
-import Fields from './components/about/fields/Fields'
+import Fields from './components/about/fields/Fields';
 import College from './components/college/College';
 import Intramural from './components/programs/intramural/Intramural';
 import Grassroots from './components/programs/grassroots/Grassroots';
@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <CssBaseline />
       <BrowserRouter>
-        <Logo/>
+        <AtlanticUnitedLogo/>
         <SocialMedia/>
         <Navbar/>
           <Routes>

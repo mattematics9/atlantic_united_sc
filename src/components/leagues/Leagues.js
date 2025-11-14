@@ -16,7 +16,7 @@ import PublicIcon from "@mui/icons-material/Public";
 
 //Logos
 import MLSNextLogo from '../../images/logos/mls-next-logo.png'
-import GAAspireLogo from '../../images/logos/girls-aspire-logos/girls-aspire-logo-9.png'
+import GAAspireLogo from '../../images/logos/girls-aspire-logos/girls-aspire-logo-10.png'
 import NationalLeagueLogo from '../../images/logos/national-league-logo.png'
 import EDPLogo from '../../images/logos/edp-logo.png'
 import LIJSLlogo from '../../images/logos/lijsl-logo.png'

@@ -65,7 +65,7 @@ const Huddle = () => {
                 <Typography sx={{ mt: 3, mb: 3, fontSize: "18px", fontStyle: "italic", fontWeight: 600 }}>
                     Atlantic United Soccer Club brings together the proud
                     traditions of three long-standing Long Island programs - LGN Soccer Club,
-                    Stony Brook Soccer Club, and Middle Country Soccer Club. Our travel
+                    Three Village Soccer Club, and Middle Country Soccer Club. Our travel
                     teams compete at the highest levels of youth soccer nationwide, while
                     we also provide a full range of programs designed to support players of
                     all ages, skill levels, and interests.{" "}
@@ -152,7 +152,7 @@ const Huddle = () => {
                 <Typography sx={{ mt: 3, mb: 3, fontSize: "18px", fontWeight: 600, fontStyle: "italic" }}>
                     Atlantic United Soccer Club brings together the proud
                     traditions of three long-standing Long Island programs - LGN Soccer Club,
-                    Stony Brook Soccer Club, and Middle Country Soccer Club. Our travel
+                    Three Village Soccer Club, and Middle Country Soccer Club. Our travel
                     teams compete at the highest levels of youth soccer nationwide, while
                     we also provide a full range of programs designed to support players of
                     all ages, skill levels, and interests.{" "}

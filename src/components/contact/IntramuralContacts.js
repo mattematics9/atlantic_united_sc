@@ -47,8 +47,8 @@ const IntramuralContacts = () => {
             <TableRow>
               <TableCell>LGN</TableCell>
               <TableCell>Selden</TableCell>
-              <TableCell>Dave Hickman</TableCell>
-              <TableCell>davidhickman886@yahoo.com</TableCell>
+              <TableCell>Kim Onek</TableCell>
+              <TableCell>Bav2828@yahoo.com</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Middle Country</TableCell>

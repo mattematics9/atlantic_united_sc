@@ -6,13 +6,12 @@ import {
   Stack,
   Button,
   ThemeProvider,
-  createTheme,
-  Grid,
+  createTheme
 } from "@mui/material";
 
 import wildlingsCelebration1 from '../../images/wildlings_celebration_national_league.jpg'
 import wildlingsCelebration2 from '../../images/test3.png'
-import LeagueLogos from "./LeagueLogos";
+import LeagueLogos from "../logos/LeagueLogos";
 
 const theme = createTheme({
   palette: {
@@ -37,8 +36,8 @@ export default function Header() {
     <ThemeProvider theme={theme}>
         <Box
             sx={{
-                pt: {xs: '210px', sm: '170px'},
-                pb: {xs: '140px'},
+                pt: {xs: '235px', sm: '200px', md: '270px'},
+                pb: {xs: '100px', sm: '100px', md: '170px'},
                 color: "#e9eef6",
                 backgroundImage: {
                     xs: `linear-gradient(45deg, rgba(0, 0, 49, 0.85) 0%, rgba(255, 0, 0, 0.38) 100%), url(${wildlingsCelebration2})`,
@@ -47,12 +46,12 @@ export default function Header() {
                     sm: `linear-gradient(225deg, rgba(0, 0, 49, 0.85) 0%, rgba(255, 0, 0, 0.3) 100%), url(${wildlingsCelebration1})`
 
                 },
-                backgroundPosition: "center 65px",
+                backgroundPosition: {xs: "center 65px", sm: "center 0px"},
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}
         >
-            <Grid container spacing={2} sx={{display: 'flex', alignItems: 'center'}}>
+            {/* <Grid container spacing={2} sx={{display: 'flex', alignItems: 'center'}}>
                 <Grid size={{xs: 12, md: 7}} sx={{pl:{sm: '0px', md:'100px', lg: '150px'}}}>
                     <Typography variant="h2" sx={{fontSize: {xs: '40px', md: '50px', lg: '60px'}, display: 'flex', justifyContent: 'center'}}>
                         Atlantic United
@@ -64,7 +63,19 @@ export default function Header() {
                 <Grid size={{xs: 12, md: 5}} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'inherit'}}}>
                     <LeagueLogos/>
                 </Grid>
-            </Grid>
+            </Grid> */}
+
+            <Box>
+                <Typography variant="h2" sx={{fontSize: {xs: '40px', md: '50px', lg: '60px'}, textAlign: 'center'}}>
+                    Atlantic United
+                </Typography>
+            </Box>
+
+            <Box sx={{ mt: '20px'}}>
+                <Typography variant="h4" sx={{fontSize: {xs: '20px', sm: '26px', md: '33px', lg: '40px'}, textAlign: 'center', mt: '20px'}}>
+                    The Highest Achieving, Fastest Growing Soccer Club in NY.
+                </Typography>
+            </Box>
 
             <Box sx={{display: {xs: 'none', sm: 'block'}, mt: '20px'}}>
                 <Typography variant="h6" sx={{pl: {xs: '20px', sm: '40px', md: '100px', lg: '140px'}, pr: {xs: '20px', sm: '70px', md: '100px', lg: '140px'}}}>
@@ -80,6 +91,12 @@ export default function Header() {
                     See Our Programs
                 </Button>
             </Stack>
+
+            {/* <Box sx={{ mt: '20px'}}>
+                <Box sx={{display: 'flex', justifyContent: 'center'}}>
+                    <LeagueLogos/>
+                </Box>
+            </Box> */}
 
         </Box>
     </ThemeProvider>
