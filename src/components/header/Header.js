@@ -25,6 +25,7 @@ const theme = createTheme({
     h1: { fontWeight: 800 },
     h2: { fontWeight: 800 },
     h3: { fontWeight: 700 },
+    h4: { fontWeight: 700 },
     button: { fontWeight: 700, textTransform: "none" },
   },
 });
@@ -37,7 +38,7 @@ export default function Header() {
         <Box
             sx={{
                 pt: {xs: '235px', sm: '200px', md: '270px'},
-                pb: {xs: '100px', sm: '100px', md: '170px'},
+                pb: {xs: '180px', sm: '100px', md: '170px'},
                 color: "#e9eef6",
                 backgroundImage: {
                     xs: `linear-gradient(45deg, rgba(0, 0, 49, 0.85) 0%, rgba(255, 0, 0, 0.38) 100%), url(${wildlingsCelebration2})`,
