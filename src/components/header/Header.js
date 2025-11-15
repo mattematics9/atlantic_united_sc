@@ -73,8 +73,8 @@ export default function Header() {
             </Box>
 
             <Box sx={{ mt: '20px'}}>
-                <Typography variant="h4" sx={{fontSize: {xs: '20px', sm: '26px', md: '33px', lg: '40px'}, textAlign: 'center', mt: '20px'}}>
-                    The Highest Achieving, Fastest Growing Soccer Club in NY.
+                <Typography variant="h4" sx={{fontSize: {xs: '20px', sm: '26px', md: '33px', lg: '35px'}, textAlign: 'center', mt: '20px'}}>
+                    The Highest Achieving, Fastest Growing Soccer Club on Long Island.
                 </Typography>
             </Box>
 

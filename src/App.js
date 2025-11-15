@@ -17,6 +17,8 @@ import Fields from './components/about/fields/Fields';
 import College from './components/college/College';
 import Intramural from './components/programs/intramural/Intramural';
 import Grassroots from './components/programs/grassroots/Grassroots';
+import RegisterPreTravel from './components/register/RegisterPreTravel'
+import RegisterIntramural from './components/register/RegisterIntramural';
 
 
 
@@ -42,6 +44,8 @@ function App() {
             <Route path='/programs/intramural' element={ <Intramural/> }/>    
             <Route path='/programs/grassroots' element={ <Grassroots/> }/>    
             <Route path='/college' element={ <College/> }/>    
+            <Route path='/programs/pre-travel-academy/registration' element={ <RegisterPreTravel/> }/>
+            <Route path='/programs/intramural/registration' element={ <RegisterIntramural/> }/>
           </Routes>
         <Footer/>
       </BrowserRouter>

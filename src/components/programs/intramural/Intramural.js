@@ -16,9 +16,8 @@ export default function Intramural() {
         <Header/>
         <About/>
         <Highlights/>
-        <Contacts/>
-        <CallToAction/>
         <IntramuralPrograms/>
+        <Contacts/>
       </Box>
   );
 }

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material/styles";
 import {
   Box,
@@ -10,6 +11,7 @@ import {
   Tab,
   Tabs,
   Typography,
+  Button
 } from "@mui/material";
 
 
@@ -47,7 +49,7 @@ function ClubTabs() {
   const clubs = [
     { name: "LGN", location: "Selden, NY", contact: "Dave Hickman", email: "davidhickman886@yahoo.com" },
     { name: "Three Village", location: "Stony Brook, NY", contact: "Leigh Pilkington", email: "trainasap@yahoo.com" },
-    { name: "Middle Country", location: "Centereach, NY", contact: "Middle Country players looking to join the Pre-Travel Academy will register through LGN or Three Village", email: "See LGN or Three Village Contacts" },
+    // { name: "Middle Country", location: "Centereach, NY", contact: "Middle Country players looking to join the Pre-Travel Academy will register through LGN or Three Village", email: "See LGN or Three Village Contacts" },
   ];
 
   return (
@@ -75,9 +77,14 @@ function ClubTabs() {
             Contact: {clubs[tab].contact}<br/>
             Email: {clubs[tab].email}
           </Typography>
+          <Box sx={{display: 'flex', justifyContent: 'center', my: '20px'}}>
+            <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" }}} component={Link} to={clubs[tab].name == "Three Village"? "https://system.gotsport.com/programs/366339K13?reg_role=player": "https://system.gotsport.com/programs/8546A5778?reg_role=player"} target="_blank" size="large" variant="contained" color="secondary">
+              REGISTER
+            </Button>
+          </Box>
           <Divider sx={{ my: 2 }} />
           <Typography variant="body2" color="text.secondary">
-            Each family is enouraged to participate within their town while following the united unified curriculum that spans across all community clubs operating under the Atlantic United umbrella.          
+            Each family is enouraged to participate within their town while following the unified curriculum that spans across all community clubs operating under the Atlantic United umbrella.          
           </Typography>
         </CardContent>
       </Card>
@@ -89,13 +96,13 @@ function ClubTabs() {
 export default function Contacts({ images }) {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{
+      <Box id="pre-travel-contacts" sx={{
         background: (t) => `linear-gradient(90deg, rgba(0,0,31,1) 0%, ${t.palette.secondary.main} 100%)`, color: "common.white",
         py: { xs: 5, sm: 10 },
       }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" gutterBottom sx={{ my: '30px', textAlign: 'center', color: "white"}}>
-            Pre-Travel Academy Contacts
+          <Typography variant="h3" gutterBottom sx={{ my: '60px', textAlign: 'center', color: "white"}}>
+            Pre-Travel Academy Contacts and Registration
           </Typography>
           <Typography variant="body1" sx={{ my: '30px', color: "white"}}>
             Choose a club/location that is convenient for you geographically.  Atlantic United Pre-Travel Academy operates out of LGN (Selden) and Three Village (Stony Brook).  Middle Country families will choose either LGN or Three Village.

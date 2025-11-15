@@ -1,5 +1,4 @@
 import React from "react";
-import {programs} from './Data'
 import {
   Box,
   Typography,
@@ -9,9 +8,44 @@ import {
   CardContent,
   ThemeProvider,
   createTheme,
-  Link,
   Button
 } from "@mui/material";
+import { Link } from "react-router-dom";
+
+import travelImage from '../../../images/force_espn_wwos.jpg'
+import preTravelImage from '../../../images/stony-brook-pre-travel.png'
+import intramuralImage from '../../../images/sharks2.png'
+
+const programs = [
+  {
+    id: "travel",
+    title: "Travel Academy",
+    grade: "Grades 3 - 12",
+    image: travelImage,
+    description: "Offers advanced training and competition, helping players maximize their potential on and off the field.",
+    registerUrl:
+      "https://system.gotsport.com/programs/D45748060?reg_role=player",
+    learnMoreUrl: "/programs/travel-academy",
+  },
+  {
+    id: "pre-travel-academy",
+    title: "Pre-Travel Academy",
+    grade: "Grades 1 - 2",
+    image: preTravelImage,
+    description: "Prepares players for higher levels of play, bridging the gap between recreational and competitive soccer.",
+    registerUrl: "/programs/pre-travel-academy/registration",
+    learnMoreUrl: "/programs/pre-travel-academy",
+  },
+  {
+    id: "intramural",
+    title: "Intramural",
+    grade: "Ages 2-14",
+    image: intramuralImage,
+    description: "Provides a recreational environment where players can develop their skills and enjoy the game in a team setting.",
+    registerUrl: "/programs/intramural/registration",
+    learnMoreUrl: "/programs/intramural",
+  }
+];
 
 
 const theme = createTheme({
@@ -31,16 +65,14 @@ const theme = createTheme({
 });
 
 
-
 export default function Cards() {
   return (
     <ThemeProvider theme={theme}>
       <Box id="programs-cards" sx={{ py: '50px', bgcolor: "background.default", color: "#e9eef6" }}>
 
-        {/* <Container sx={{ py: 8 }}> */}
           <Grid container spacing={2} justifyContent={'center'}>
-            {programs.map((cardData) => (
-              <Grid item xs={12} md={4} key={cardData.title}>
+            {programs.map((program) => (
+              <Grid item xs={12} md={4} key={program.title}>
                 <Card
                   sx={{
                     height: "100%",
@@ -51,20 +83,20 @@ export default function Cards() {
                     color: 'white',
                   }}
                 >
-                  <CardMedia component="img" height="200" image={cardData.image} alt={cardData.description} />
+                  <CardMedia component="img" height="200" image={program.image} alt={program.description} />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography variant="h5" gutterBottom sx={{textAlign: 'center'}}>
-                      {cardData.title}
+                      {program.title}
                     </Typography>
                     <Typography variant="h6" gutterBottom sx={{textAlign: 'center'}}>
-                      {`(${cardData.grade})`}
+                      {`(${program.grade})`}
                     </Typography>
-                    <Typography variant="body1" sx={{ maxWidth: {xs: '300px', sm: '270px'}, opacity: 0.9 }}>{cardData.description}</Typography>
+                    <Typography variant="body1" sx={{ maxWidth: '320px', opacity: 0.9 }}>{program.description}</Typography>
                     <Box sx={{display: 'flex', justifyContent: 'center', mt: '20px'}}>
                         <Button
                             component={Link}
-                            href='/'
-                            target="_blank"
+                            to={`${program.registerUrl}`}
+                            target={program.id === "travel"? "_blank": ""}
                             variant="contained"
                             sx={{
                                 fontSize: 15,
@@ -76,8 +108,7 @@ export default function Cards() {
                         </Button>
                         <Button
                             component={Link}
-                            href='/'
-                            target="_blank"
+                            to={`${program.learnMoreUrl}`}
                             variant="contained"
                             sx={{
                                 fontSize: 15,
@@ -96,7 +127,6 @@ export default function Cards() {
               </Grid>
             ))}
           </Grid>
-        {/* </Container> */}
 
       </Box>
     </ThemeProvider>

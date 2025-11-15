@@ -81,17 +81,19 @@ function levelSortKey(value) {
   return nums.length ? Math.min(...nums) : 0;
 }
 
-/** Group programs by their exact Ages/Grades string, and sort by levelSortKey (youngest/lowest first) */
+/** Group programs by their exact Ages/Grades string, preserving the order they
+ *  appear in the JSON (which you’ve listed youngest → oldest).
+ *  The UI uses flexDirection: "column-reverse" to put the first level at the bottom.
+ */
 function buildLevels(rows) {
-  const map = new Map();
+  const map = new Map(); // insertion order is preserved
   for (const r of rows) {
     const raw = (r["Ages/Grades"] || "").toString().trim();
-    const key = levelSortKey(raw);
-    const k = `${key}|${raw}`;
-    if (!map.has(k)) map.set(k, { key, raw, programs: [] });
-    map.get(k).programs.push(r);
+    if (!map.has(raw)) map.set(raw, { raw, programs: [] });
+    map.get(raw).programs.push(r);
   }
-  return Array.from(map.values()).sort((a, b) => a.key - b.key);
+  // return in insertion order (JSON order)
+  return Array.from(map.values());
 }
 
 /** Label logic:
@@ -179,13 +181,17 @@ export default function IntramuralPyramids() {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Box sx={{ minHeight: "100vh", py: { xs: 3, md: 6 } }}>
-        <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 }, pt: '50px', maxWidth: "100%" }}>
-          <Stack spacing={3}>
+      {/* <CssBaseline /> */}
+      <Box id="intramural-programs" sx={{ minHeight: "100vh", py: { xs: 10, md: 15 } }}>
+        <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 }, maxWidth: "100%" }}>
+          {/* <Stack spacing={13}> */}
             {/* Title in BLACK */}
-            <Typography variant="h2" textAlign="center" sx={{ color: "#000" }}>
-              Intramural Programs by Club
+            <Typography variant="h3" textAlign="center" sx={{ mb: '40px', color: "#010033ff" }}>
+              Intramural Programs by Community Club
+            </Typography>
+
+            <Typography variant="h6" textAlign="center" sx={{ mb: '30px', color: "#010033ff" }}>
+              Atlantic United runs intramural through the member community clubs operating under it.  We encourage parents to choose programs within their town, but parents are free to choose from any one of the three member community clubs.
             </Typography>
 
             {/* Exact thirds on md+ */}
@@ -217,7 +223,7 @@ export default function IntramuralPyramids() {
                         <Stack spacing={0.25} sx={{ color: "#000" }}>
                           {info.town && (
                             <Typography variant="body2" sx={{ color: "#000" }}>
-                              {info.town}
+                              Location: {info.town}
                             </Typography>
                           )}
                           {info.contact && (
@@ -317,7 +323,7 @@ export default function IntramuralPyramids() {
                 );
               })}
             </Box>
-          </Stack>
+          {/* </Stack> */}
         </Container>
       </Box>
     </ThemeProvider>

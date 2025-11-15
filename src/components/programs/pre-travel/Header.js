@@ -64,7 +64,7 @@ export default function Header() {
                 The Atlantic United Pre-Travel Academy is a fun, skill-focused bridge to travel soccer from intramurals for 1st & 2nd graders.
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
-                <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" },}} component={Link} to="https://system.gotsport.com/programs/D45748060?reg_role=player" target="_blank" size="large" variant="contained" color="secondary">
+                <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" },}} href="#pre-travel-contacts" size="large" variant="contained" color="secondary">
                   Join Our Pre-Travel Program
                 </Button>
                 <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" },}} href="#about-pre-travel" size="large" variant="outlined" color="inherit">

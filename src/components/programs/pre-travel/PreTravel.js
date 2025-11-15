@@ -16,7 +16,6 @@ export default function TravelAcademy() {
         <About/>
         <Highlights/>
         <Contacts/>
-        <CallToAction/>
       </Box>
   );
 }

@@ -17,7 +17,8 @@ import PublicIcon from "@mui/icons-material/Public";
 import StarIcon from "@mui/icons-material/Star";
 
 //Images
-import img1 from '../../../images/lucas_nate_shane.png'
+import img1 from '../../../images/pre-travel-old.jpg'
+import img2 from '../../../images/lucas_nate_shane.png'
 import img3 from '../../../images/tsunami3.png'
 
 
@@ -41,7 +42,7 @@ const defaultImages = {
   img1:
     img1,
   img2:
-    img1,
+    img2,
   img3:
     img3,
 };

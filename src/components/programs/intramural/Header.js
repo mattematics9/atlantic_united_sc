@@ -64,7 +64,7 @@ export default function Header() {
                 The Atlantic United Intramural program is a fun-focused program that helps players spark their love and understanding of soccer.   
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
-                <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" },}} component={Link} to="https://system.gotsport.com/programs/D45748060?reg_role=player" target="_blank" size="large" variant="contained" color="secondary">
+                <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" },}} href="#intramural-programs" size="large" variant="contained" color="secondary">
                   Join Our Intramural Program
                 </Button>
                 <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" },}} href="#about-intramural" size="large" variant="outlined" color="inherit">
