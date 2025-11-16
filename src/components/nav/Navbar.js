@@ -1,4 +1,4 @@
-// NavbarMUI.js — mobile drawer now includes dropdown items (collapsible About & Programs)
+// NavbarMUI.js — desktop hover menus + mobile collapsible drawer
 import React from 'react';
 import {
   AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemButton,
@@ -17,22 +17,28 @@ const pages = [
   { label: 'PROGRAMS', path: '/programs' },
   { label: 'CONTACT', path: '/contact' },
   { label: 'REGISTER', path: '/register' },
+  {
+    label: 'CLUB STORE',
+    path: 'https://www.soccer.com/club/#/3160623/fanwear?category=Shirts',
+    external: true,
+  },
 ];
 
 const aboutMenuItems = [
   { label: 'College', path: '/college' },
   { label: 'Fields', path: '/fields' },
-  { label: 'Testimonials', path: '/testimonials' }
+  { label: 'Testimonials', path: '/testimonials' },
 ];
 
 const programMenuItems = [
   { label: 'Travel Academy', path: '/programs/travel-academy' },
   { label: 'Pre-Travel Academy', path: '/programs/pre-travel-academy' },
-  { label: 'Intramural', path: '/programs/intramural' }
+  { label: 'Intramural', path: '/programs/intramural' },
 ];
 
 export default function Navbar() {
   const { pathname } = useLocation();
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const toggleMobile = () => setMobileOpen((v) => !v);
 
@@ -44,16 +50,34 @@ export default function Navbar() {
   const [aboutOpen, setAboutOpen] = React.useState(false);
   const [programsOpen, setProgramsOpen] = React.useState(false);
 
-  // NEW: mobile collapses for About & Programs
+  // Mobile collapses
   const [mobileAboutOpen, setMobileAboutOpen] = React.useState(false);
   const [mobileProgramsOpen, setMobileProgramsOpen] = React.useState(false);
 
+  const closeAllMobile = () => {
+    setAboutOpen(false);
+    setProgramsOpen(false);
+    setMobileAboutOpen(false);
+    setMobileProgramsOpen(false);
+  };
+
   const HoverMenu = ({ open, anchorRef, onClose, items, overviewPath }) => (
-    <Popper open={open} anchorEl={anchorRef.current} placement="bottom" disablePortal style={{ zIndex: 1300 }}>
+    <Popper
+      open={open}
+      anchorEl={anchorRef.current}
+      placement="bottom"
+      disablePortal
+      style={{ zIndex: 1300 }}
+    >
       <Paper elevation={3} onMouseLeave={onClose} sx={{ mt: 0.5, minWidth: 180 }}>
         <MenuList autoFocusItem={false} sx={{ py: 0 }}>
           {overviewPath && (
-            <MenuItem component={Link} to={overviewPath} onClick={onClose} sx={{ fontSize: '0.9rem', fontWeight: 500 }}>
+            <MenuItem
+              component={Link}
+              to={overviewPath}
+              onClick={onClose}
+              sx={{ fontSize: '0.9rem', fontWeight: 500 }}
+            >
               {overviewPath === '/about' ? 'About Overview' : 'Programs Overview'}
             </MenuItem>
           )}
@@ -73,16 +97,23 @@ export default function Navbar() {
     </Popper>
   );
 
+  // --- Mobile drawer content
   const drawer = (
     <Box sx={{ width: 280, bgcolor: 'rgba(248, 251, 255, 1)', height: '100%' }}>
       <List>
-        {/* HOME first */}
+        {/* HOME */}
         <ListItem key="/" disablePadding>
           <ListItemButton
             component={Link}
             to="/"
-            onClick={() => { setAboutOpen(false); setProgramsOpen(false); setMobileAboutOpen(false); setMobileProgramsOpen(false); toggleMobile(); }}
-            sx={{ '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' }, bgcolor: isActive('/') ? 'rgba(238, 245, 255, 1)' : 'inherit' }}
+            onClick={() => {
+              closeAllMobile();
+              toggleMobile();
+            }}
+            sx={{
+              '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' },
+              bgcolor: isActive('/') ? 'rgba(238, 245, 255, 1)' : 'inherit',
+            }}
           >
             <ListItemText primary="HOME" primaryTypographyProps={{ fontWeight: 500 }} />
           </ListItemButton>
@@ -91,8 +122,16 @@ export default function Navbar() {
         {/* ABOUT with collapse */}
         <ListItem disablePadding>
           <ListItemButton
-            onClick={() => setMobileAboutOpen((v) => { setMobileProgramsOpen(false); return !v; })}
-            sx={{ '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' }, bgcolor: pathname.startsWith('/about') ? 'rgba(238, 245, 255, 1)' : 'inherit' }}
+            onClick={() =>
+              setMobileAboutOpen((v) => {
+                setMobileProgramsOpen(false);
+                return !v;
+              })
+            }
+            sx={{
+              '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' },
+              bgcolor: pathname.startsWith('/about') ? 'rgba(238, 245, 255, 1)' : 'inherit',
+            }}
             aria-expanded={mobileAboutOpen ? 'true' : 'false'}
             aria-controls="mobile-about-collapse"
           >
@@ -102,15 +141,19 @@ export default function Navbar() {
         </ListItem>
         <Collapse in={mobileAboutOpen} timeout="auto" unmountOnExit id="mobile-about-collapse">
           <List component="div" disablePadding>
-            {/* Overview link */}
             <ListItem disablePadding>
               <ListItemButton
                 component={Link}
                 to="/about"
-                onClick={() => { toggleMobile(); setMobileAboutOpen(false); }}
+                onClick={() => {
+                  toggleMobile();
+                  setMobileAboutOpen(false);
+                }}
                 sx={{ pl: 4 }}
               >
-                <ListItemIcon sx={{ minWidth: 28 }}><ArrowRightIcon fontSize="small" /></ListItemIcon>
+                <ListItemIcon sx={{ minWidth: 28 }}>
+                  <ArrowRightIcon fontSize="small" />
+                </ListItemIcon>
                 <ListItemText primary="About Overview" />
               </ListItemButton>
             </ListItem>
@@ -119,10 +162,15 @@ export default function Navbar() {
                 <ListItemButton
                   component={Link}
                   to={item.path}
-                  onClick={() => { toggleMobile(); setMobileAboutOpen(false); }}
+                  onClick={() => {
+                    toggleMobile();
+                    setMobileAboutOpen(false);
+                  }}
                   sx={{ pl: 4 }}
                 >
-                  <ListItemIcon sx={{ minWidth: 28 }}><ArrowRightIcon fontSize="small" /></ListItemIcon>
+                  <ListItemIcon sx={{ minWidth: 28 }}>
+                    <ArrowRightIcon fontSize="small" />
+                  </ListItemIcon>
                   <ListItemText primary={item.label} />
                 </ListItemButton>
               </ListItem>
@@ -133,8 +181,16 @@ export default function Navbar() {
         {/* PROGRAMS with collapse */}
         <ListItem disablePadding>
           <ListItemButton
-            onClick={() => setMobileProgramsOpen((v) => { setMobileAboutOpen(false); return !v; })}
-            sx={{ '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' }, bgcolor: pathname.startsWith('/programs') ? 'rgba(238, 245, 255, 1)' : 'inherit' }}
+            onClick={() =>
+              setMobileProgramsOpen((v) => {
+                setMobileAboutOpen(false);
+                return !v;
+              })
+            }
+            sx={{
+              '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' },
+              bgcolor: pathname.startsWith('/programs') ? 'rgba(238, 245, 255, 1)' : 'inherit',
+            }}
             aria-expanded={mobileProgramsOpen ? 'true' : 'false'}
             aria-controls="mobile-programs-collapse"
           >
@@ -144,15 +200,19 @@ export default function Navbar() {
         </ListItem>
         <Collapse in={mobileProgramsOpen} timeout="auto" unmountOnExit id="mobile-programs-collapse">
           <List component="div" disablePadding>
-            {/* Overview link */}
             <ListItem disablePadding>
               <ListItemButton
                 component={Link}
                 to="/programs"
-                onClick={() => { toggleMobile(); setMobileProgramsOpen(false); }}
+                onClick={() => {
+                  toggleMobile();
+                  setMobileProgramsOpen(false);
+                }}
                 sx={{ pl: 4 }}
               >
-                <ListItemIcon sx={{ minWidth: 28 }}><ArrowRightIcon fontSize="small" /></ListItemIcon>
+                <ListItemIcon sx={{ minWidth: 28 }}>
+                  <ArrowRightIcon fontSize="small" />
+                </ListItemIcon>
                 <ListItemText primary="Programs Overview" />
               </ListItemButton>
             </ListItem>
@@ -161,10 +221,15 @@ export default function Navbar() {
                 <ListItemButton
                   component={Link}
                   to={item.path}
-                  onClick={() => { toggleMobile(); setMobileProgramsOpen(false); }}
+                  onClick={() => {
+                    toggleMobile();
+                    setMobileProgramsOpen(false);
+                  }}
                   sx={{ pl: 4 }}
                 >
-                  <ListItemIcon sx={{ minWidth: 28 }}><ArrowRightIcon fontSize="small" /></ListItemIcon>
+                  <ListItemIcon sx={{ minWidth: 28 }}>
+                    <ArrowRightIcon fontSize="small" />
+                  </ListItemIcon>
                   <ListItemText primary={item.label} />
                 </ListItemButton>
               </ListItem>
@@ -172,73 +237,276 @@ export default function Navbar() {
           </List>
         </Collapse>
 
-        {/* Remaining top-level items */}
-        {pages.filter(p => !['HOME', 'ABOUT', 'PROGRAMS'].includes(p.label)).map((p) => (
-          <ListItem key={p.path} disablePadding>
-            <ListItemButton
-              component={Link}
-              to={p.path}
-              onClick={() => { setAboutOpen(false); setProgramsOpen(false); setMobileAboutOpen(false); setMobileProgramsOpen(false); toggleMobile(); }}
-              sx={{ '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' }, bgcolor: isActive(p.path) ? 'rgba(238, 245, 255, 1)' : 'inherit' }}
-            >
-              <ListItemText primary={p.label} primaryTypographyProps={{ fontWeight: 500 }} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {/* Remaining top-level items (RESOURCES, CONTACT, REGISTER, CLUB STORE, etc.) */}
+        {pages
+          .filter((p) => !['HOME', 'ABOUT', 'PROGRAMS'].includes(p.label))
+          .map((p) => (
+            <ListItem key={p.path} disablePadding>
+              {p.external ? (
+                <ListItemButton
+                  component="a"
+                  href={p.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    // Just close the drawer; let the new tab open
+                    toggleMobile();
+                  }}
+                  sx={{ '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' } }}
+                >
+                  <ListItemText
+                    primary={p.label}
+                    primaryTypographyProps={{ fontWeight: 500 }}
+                  />
+                </ListItemButton>
+              ) : (
+                <ListItemButton
+                  component={Link}
+                  to={p.path}
+                  onClick={() => {
+                    closeAllMobile();
+                    toggleMobile();
+                  }}
+                  sx={{
+                    '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' },
+                    bgcolor: isActive(p.path) ? 'rgba(238, 245, 255, 1)' : 'inherit',
+                  }}
+                >
+                  <ListItemText
+                    primary={p.label}
+                    primaryTypographyProps={{ fontWeight: 500 }}
+                  />
+                </ListItemButton>
+              )}
+            </ListItem>
+          ))}
       </List>
     </Box>
   );
 
   return (
     <>
-      <AppBar position="fixed" sx={{ bgcolor: 'rgba(248, 251, 255, 1)', color: 'black', zIndex: 998 }}>
+      <AppBar
+        position="fixed"
+        sx={{ bgcolor: 'rgba(248, 251, 255, 1)', color: 'black', zIndex: 998 }}
+      >
         <Toolbar disableGutters sx={{ height: 64, px: 0, alignItems: 'stretch' }}>
           {/* Mobile menu button */}
           <IconButton
             color="inherit"
             edge="start"
             onClick={toggleMobile}
-            sx={{ display: { md: 'none' }, mx: 1, '&:focus, &:active': { color: 'black', backgroundColor: 'transparent' }, '& .MuiTouchRipple-root': { color: 'transparent' } }}
+            sx={{
+              display: { md: 'none' },
+              mx: 1,
+              '&:focus, &:active': { color: 'black', backgroundColor: 'transparent' },
+              '& .MuiTouchRipple-root': { color: 'transparent' },
+            }}
             aria-label="Open navigation menu"
           >
             <MenuIcon />
           </IconButton>
 
           {/* Desktop nav */}
-          <Box component="nav" sx={{ backgroundColor: 'transparent !important', display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'center', alignItems: 'stretch', height: '100%' }}>
+          <Box
+            component="nav"
+            sx={{
+              backgroundColor: 'transparent !important',
+              display: { xs: 'none', md: 'flex' },
+              flexGrow: 1,
+              justifyContent: 'center',
+              alignItems: 'stretch',
+              height: '100%',
+            }}
+          >
             <Box sx={{ display: 'flex', alignItems: 'stretch' }}>
               {/* HOME */}
-              <ButtonBase component={Link} to="/" disableRipple onMouseEnter={() => { setAboutOpen(false); setProgramsOpen(false); }} sx={{ height: '100%', display: 'flex', alignItems: 'center', px: 1.5, mx: 0.25, fontWeight: 550, fontSize: '0.9rem', color: 'black', textDecoration: 'none', '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' }, ...(isActive('/') && { bgcolor: 'rgba(244, 249, 255, 1)', borderLeft: '1px solid rgb(0,0,40)', borderRight: '1px solid rgb(0,0,40)' }) }}>HOME</ButtonBase>
+              <ButtonBase
+                component={Link}
+                to="/"
+                disableRipple
+                onMouseEnter={() => {
+                  setAboutOpen(false);
+                  setProgramsOpen(false);
+                }}
+                sx={{
+                  height: '100%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  px: 1.5,
+                  mx: 0.25,
+                  fontWeight: 550,
+                  fontSize: '0.9rem',
+                  color: 'black',
+                  textDecoration: 'none',
+                  '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' },
+                  ...(isActive('/') && {
+                    bgcolor: 'rgba(244, 249, 255, 1)',
+                    borderLeft: '1px solid rgb(0,0,40)',
+                    borderRight: '1px solid rgb(0,0,40)',
+                  }),
+                }}
+              >
+                HOME
+              </ButtonBase>
 
               {/* ABOUT */}
-              <Box onMouseEnter={() => setAboutOpen(true)} onMouseLeave={() => setAboutOpen(false)} sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-                <ButtonBase ref={aboutRef} disableRipple sx={{ height: '100%', display: 'flex', alignItems: 'center', px: 1.5, mx: 0.25, fontWeight: 550, fontSize: '0.9rem', color: 'black', textDecoration: 'none', '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' }, ...(isActive('/about') && { bgcolor: 'rgba(244, 249, 255, 1)', borderLeft: '1px solid rgb(0,0,40)', borderRight: '1px solid rgb(0,0,40)' }) }}>
+              <Box
+                onMouseEnter={() => setAboutOpen(true)}
+                onMouseLeave={() => setAboutOpen(false)}
+                sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}
+              >
+                <ButtonBase
+                  ref={aboutRef}
+                  disableRipple
+                  sx={{
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    px: 1.5,
+                    mx: 0.25,
+                    fontWeight: 550,
+                    fontSize: '0.9rem',
+                    color: 'black',
+                    textDecoration: 'none',
+                    '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' },
+                    ...(pathname.startsWith('/about') && {
+                      bgcolor: 'rgba(244, 249, 255, 1)',
+                      borderLeft: '1px solid rgb(0,0,40)',
+                      borderRight: '1px solid rgb(0,0,40)',
+                    }),
+                  }}
+                >
                   ABOUT
                   <ExpandMoreIcon sx={{ ml: 0.5, fontSize: '1rem' }} />
                 </ButtonBase>
-                <HoverMenu open={aboutOpen} anchorRef={aboutRef} onClose={() => setAboutOpen(false)} items={aboutMenuItems} overviewPath="/about" />
+                <HoverMenu
+                  open={aboutOpen}
+                  anchorRef={aboutRef}
+                  onClose={() => setAboutOpen(false)}
+                  items={aboutMenuItems}
+                  overviewPath="/about"
+                />
               </Box>
 
               {/* PROGRAMS */}
-              <Box onMouseEnter={() => setProgramsOpen(true)} onMouseLeave={() => setProgramsOpen(false)} sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-                <ButtonBase ref={programsRef} disableRipple sx={{ height: '100%', display: 'flex', alignItems: 'center', px: 1.5, mx: 0.25, fontWeight: 550, fontSize: '0.9rem', color: 'black', textDecoration: 'none', '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' }, ...(isActive('/programs') && { bgcolor: 'rgba(244, 249, 255, 1)', borderLeft: '1px solid rgb(0,0,40)', borderRight: '1px solid rgb(0,0,40)' }) }}>
+              <Box
+                onMouseEnter={() => setProgramsOpen(true)}
+                onMouseLeave={() => setProgramsOpen(false)}
+                sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}
+              >
+                <ButtonBase
+                  ref={programsRef}
+                  disableRipple
+                  sx={{
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    px: 1.5,
+                    mx: 0.25,
+                    fontWeight: 550,
+                    fontSize: '0.9rem',
+                    color: 'black',
+                    textDecoration: 'none',
+                    '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' },
+                    ...(pathname.startsWith('/programs') && {
+                      bgcolor: 'rgba(244, 249, 255, 1)',
+                      borderLeft: '1px solid rgb(0,0,40)',
+                      borderRight: '1px solid rgb(0,0,40)',
+                    }),
+                  }}
+                >
                   PROGRAMS
                   <ExpandMoreIcon sx={{ ml: 0.5, fontSize: '1rem' }} />
                 </ButtonBase>
-                <HoverMenu open={programsOpen} anchorRef={programsRef} onClose={() => setProgramsOpen(false)} items={programMenuItems} overviewPath="/programs" />
+                <HoverMenu
+                  open={programsOpen}
+                  anchorRef={programsRef}
+                  onClose={() => setProgramsOpen(false)}
+                  items={programMenuItems}
+                  overviewPath="/programs"
+                />
               </Box>
 
-              {/* Remaining links */}
-              {pages.filter(p => !['HOME', 'ABOUT', 'PROGRAMS'].includes(p.label)).map((p) => (
-                <ButtonBase key={p.path} component={Link} to={p.path} disableRipple onMouseEnter={() => { setAboutOpen(false); setProgramsOpen(false); }} sx={{ height: '100%', display: 'flex', alignItems: 'center', px: 1.5, mx: 0.25, fontWeight: 550, fontSize: '0.9rem', color: 'black', textDecoration: 'none', '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' }, ...(isActive(p.path) && { bgcolor: 'rgba(244, 249, 255, 1)', borderLeft: '1px solid rgb(0,0,40)', borderRight: '1px solid rgb(0,0,40)' }) }}>{p.label}</ButtonBase>
-              ))}
+              {/* Remaining links (internal vs external) */}
+              {pages
+                .filter((p) => !['HOME', 'ABOUT', 'PROGRAMS'].includes(p.label))
+                .map((p) =>
+                  p.external ? (
+                    <ButtonBase
+                      key={p.path}
+                      component="a"
+                      href={p.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      disableRipple
+                      onMouseEnter={() => {
+                        setAboutOpen(false);
+                        setProgramsOpen(false);
+                      }}
+                      sx={{
+                        height: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        px: 1.5,
+                        mx: 0.25,
+                        fontWeight: 550,
+                        fontSize: '0.9rem',
+                        color: 'black',
+                        textDecoration: 'none',
+                        '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' },
+                      }}
+                    >
+                      {p.label}
+                    </ButtonBase>
+                  ) : (
+                    <ButtonBase
+                      key={p.path}
+                      component={Link}
+                      to={p.path}
+                      disableRipple
+                      onMouseEnter={() => {
+                        setAboutOpen(false);
+                        setProgramsOpen(false);
+                      }}
+                      sx={{
+                        height: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        px: 1.5,
+                        mx: 0.25,
+                        fontWeight: 550,
+                        fontSize: '0.9rem',
+                        color: 'black',
+                        textDecoration: 'none',
+                        '&:hover': { bgcolor: 'rgba(238, 245, 255, 1)' },
+                        ...(isActive(p.path) && {
+                          bgcolor: 'rgba(244, 249, 255, 1)',
+                          borderLeft: '1px solid rgb(0,0,40)',
+                          borderRight: '1px solid rgb(0,0,40)',
+                        }),
+                      }}
+                    >
+                      {p.label}
+                    </ButtonBase>
+                  )
+                )}
             </Box>
           </Box>
         </Toolbar>
       </AppBar>
 
       {/* Mobile drawer */}
-      <Drawer anchor="left" open={mobileOpen} onClose={() => { setAboutOpen(false); setProgramsOpen(false); setMobileAboutOpen(false); setMobileProgramsOpen(false); toggleMobile(); }} ModalProps={{ keepMounted: true }} sx={{ display: { xs: 'block', md: 'none' } }}>
+      <Drawer
+        anchor="left"
+        open={mobileOpen}
+        onClose={() => {
+          closeAllMobile();
+          toggleMobile();
+        }}
+        ModalProps={{ keepMounted: true }}
+        sx={{ display: { xs: 'block', md: 'none' } }}
+      >
         {drawer}
       </Drawer>
     </>
