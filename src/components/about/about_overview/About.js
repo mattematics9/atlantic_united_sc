@@ -7,12 +7,12 @@ import ExpertsInSoccerAndEducation from './ExpertsInSoccerAndEducation'
 import Achievements from "../../achievements/Achievements";
 import CallToAction from "../../call_to_action/CallToAction";
 import StrongerTogether from "./StrongerTogether";
-import BuiltOnSuccessOnTheField from "./BuiltOnSuccessOnTheField";
+import Header from "./Header";
 
 const About = () => {
   return (
     <Box sx={{ pt: "65px" }}>
-      <BuiltOnSuccessOnTheField/>
+      <Header/>
       <PicturesAndText2 />
       <Achievements/>
       <ExpertsInSoccerAndEducation/>

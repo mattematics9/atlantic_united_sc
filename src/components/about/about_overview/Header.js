@@ -31,7 +31,7 @@ let theme = createTheme({
 
 theme = responsiveFontSizes(theme);
 
-const BuiltOnSuccessOnTheField = () => {
+const Header = () => {
 
   return (
     <ThemeProvider theme={theme}>
@@ -54,7 +54,7 @@ const BuiltOnSuccessOnTheField = () => {
                     sx={{
                         textAlign: 'center', 
                     }}>
-                    A Club Built on Success
+                    History of Success
                 </Typography>
             </Box>
         </Box>
@@ -62,4 +62,4 @@ const BuiltOnSuccessOnTheField = () => {
   )
 }
 
-export default BuiltOnSuccessOnTheField
+export default Header

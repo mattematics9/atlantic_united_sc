@@ -17,7 +17,6 @@ export default function TravelAcademy() {
       <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
         <Header/>
         <Achievements/>
-        <NowWePlay/>
         <About/>
         <Highlights/>
         <CollegeHeader/>
@@ -25,6 +24,7 @@ export default function TravelAcademy() {
         <StonyBrookUniversityPlayers/>
         <Leagues/>
         <CallToAction/>
+        <NowWePlay/>
       </Box>
   );
 }

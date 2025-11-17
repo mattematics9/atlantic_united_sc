@@ -72,7 +72,7 @@ export default function Header() {
             <Box sx={{mt: '30px'}}>
                 <Typography variant="body1" 
                     sx={{
-                        fontSize: {xs: '16px', sm: '20px'}, 
+                        fontSize: {xs: '16px', sm: '20px', md: '24px'}, 
                         px: {xs: '20px', sm: '40px', md: '100px', lg: '140px'},
                     }}>
                         Atlantic United Soccer Club provides a full range of programs designed to support players of all ages, skill levels, and interests.  From the "weekend warrior" to the "soccer is life" player, we have something for everyone.                
