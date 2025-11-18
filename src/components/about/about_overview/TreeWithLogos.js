@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useEffect } from "react";
 import * as d3 from "d3";
 
@@ -7,6 +7,7 @@ import LGNLogo from "../../../images/logos/lgn-logo-no-whitespace.png";
 import MiddleCountryLogo from "../../../images/logos/middle-country-logo.avif";
 import ThreeVillageLogo from "../../../images/logos/three-village-logo-no-white-space.png";
 import AtlanticUnitedLogo from "../../../images/logos/atlantic-united-logo-no-white-space.webp";
+
 
 
 const TreeWithLogos = () => {
@@ -80,7 +81,6 @@ const TreeWithLogos = () => {
 
   return (
     <Box
-      id="tree-with-logos"
       sx={{
         position: "relative",
         pt: { xs: "30px", md: "30px" },
@@ -97,6 +97,17 @@ const TreeWithLogos = () => {
           pb: { xs: 6, md: 12 },
         }}
       />
+
+      {/* <Box 
+        sx={{
+          position: 'absolute',
+          top: '100px',
+          left: '130px',
+          color: 'white',
+        }}>
+        <Typography variant="h2">Stronger</Typography>
+        <Typography variant="h2" sx={{ml: '30px', mt: '-20px'}}>Together</Typography>
+      </Box> */}
     </Box>
   );
 };

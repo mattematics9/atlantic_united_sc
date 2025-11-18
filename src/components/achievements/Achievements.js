@@ -69,16 +69,16 @@ export default function Achievements() {
               <Stat icon={<EmojiEventsIcon />} label="National Stage" value="3 National Champions" chipColor="secondary"/>
             </Grid>
             <Grid item xs={12} md={3} sx={{maxWidth: '350px'}}>
-              <Stat icon={<EmojiEventsIcon />} label="National Stage" value="8 National Finalists"/>
+              <Stat icon={<EmojiEventsIcon />} label="National Stage" value="6 National Finalists"/>
             </Grid>
             <Grid item xs={12} md={3} sx={{maxWidth: '350px'}}>
-              <Stat icon={<EmojiEventsIcon />} label="Eastern Regionals" value="11 Regional Champions" chipColor="secondary"/>
+              <Stat icon={<EmojiEventsIcon />} label="Eastern Regionals" value="8 Regional Champions" chipColor="secondary"/>
             </Grid>
             <Grid item xs={12} md={3} sx={{maxWidth: '350px'}}>
-              <Stat icon={<EmojiEventsIcon />} label="State Dominance" value="22 NY State Champions"/>
+              <Stat icon={<EmojiEventsIcon />} label="State Dominance" value="26 NY State Champions"/>
             </Grid>
             <Grid item xs={12} md={3} sx={{maxWidth: '350px'}}>
-              <Stat icon={<EmojiEventsIcon />} label="State Dominance" value="11 NY State Finalists" chipColor="secondary"/>
+              <Stat icon={<EmojiEventsIcon />} label="State Dominance" value="13 NY State Finalists" chipColor="secondary"/>
             </Grid>
           </Grid>
         </Box>

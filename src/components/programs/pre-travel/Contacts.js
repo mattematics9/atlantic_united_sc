@@ -47,8 +47,8 @@ theme = responsiveFontSizes(theme);
 function ClubTabs() {
   const [tab, setTab] = React.useState(0);
   const clubs = [
-    { name: "LGN", location: "Selden, NY", contact: "Dave Hickman", email: "davidhickman886@yahoo.com" },
     { name: "Three Village", location: "Stony Brook, NY", contact: "Leigh Pilkington", email: "trainasap@yahoo.com" },
+    { name: "LGN", location: "Selden, NY", contact: "Dave Hickman", email: "davidhickman886@yahoo.com" },
     // { name: "Middle Country", location: "Centereach, NY", contact: "Middle Country players looking to join the Pre-Travel Academy will register through LGN or Three Village", email: "See LGN or Three Village Contacts" },
   ];
 
