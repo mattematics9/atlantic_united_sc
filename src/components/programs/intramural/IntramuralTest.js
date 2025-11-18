@@ -8,17 +8,16 @@ import Highlights from "./Highlights";
 import CallToAction from "../../call_to_action/CallToAction";
 import About from "./About";
 import Contacts from "./Contacts";
-// import IntramuralPrograms from "./IntramuralPrograms";
+import IntramuralPrograms from "./IntramuralPrograms";
 
-export default function Intramural() {
+export default function IntramuralTest() {
   return (
       <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
         <Header/>
         <About/>
         <Highlights/>
-        {/* <IntramuralPrograms/> */}
+        <IntramuralPrograms/>
         <Contacts/>
       </Box>
   );
 }
-

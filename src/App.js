@@ -19,6 +19,7 @@ import Intramural from './components/programs/intramural/Intramural';
 import Grassroots from './components/programs/grassroots/Grassroots';
 import RegisterPreTravel from './components/register/RegisterPreTravel'
 import RegisterIntramural from './components/register/RegisterIntramural';
+import IntramuralTest from './components/programs/intramural/IntramuralTest'
 
 
 
@@ -46,6 +47,7 @@ function App() {
             <Route path='/college' element={ <College/> }/>    
             <Route path='/programs/pre-travel-academy/registration' element={ <RegisterPreTravel/> }/>
             <Route path='/programs/intramural/registration' element={ <RegisterIntramural/> }/>
+            <Route path='/programs/intramural/test' element={ <IntramuralTest/> }/>
           </Routes>
         <Footer/>
       </BrowserRouter>
