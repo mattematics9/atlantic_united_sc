@@ -50,14 +50,6 @@ const PicturesAndText2 = () => {
                     fontWeight: 600,
                     textAlign: 'center', 
                     mt: '50px',
-                    "&::after": {
-                        display: "block",
-                        height: "2px",
-                        backgroundColor: "red",
-                        content: '" "',
-                        width: "80px",
-                        margin: "10px auto",
-                    },
                 }}>
                 Recent Titles
             </Typography>
