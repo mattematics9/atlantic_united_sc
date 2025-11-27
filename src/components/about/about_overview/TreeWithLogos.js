@@ -14,10 +14,10 @@ const TreeWithLogos = () => {
   useEffect(() => {
     const dims = { height: 300, width: 1100 };
     const data = [
-      { name: "Portal", parent: "", logo: AtlanticUnitedLogo },
-      { name: "Physical Therapy", parent: "Portal", logo: ThreeVillageLogo },
-      { name: "Dental", parent: "Portal", logo: LGNLogo },
-      { name: "Eye Care", parent: "Portal", logo: MiddleCountryLogo },
+      { name: "AtlanticUnitedLogo", parent: "", logo: AtlanticUnitedLogo },
+      { name: "ThreeVillageLogo", parent: "AtlanticUnitedLogo", logo: ThreeVillageLogo },
+      { name: "LGNLogo", parent: "AtlanticUnitedLogo", logo: LGNLogo },
+      { name: "MiddleCountryLogo", parent: "AtlanticUnitedLogo", logo: MiddleCountryLogo },
     ];
 
     // Clear old SVG if re-rendered
@@ -101,13 +101,46 @@ const TreeWithLogos = () => {
       {/* <Box 
         sx={{
           position: 'absolute',
-          top: '100px',
-          left: '130px',
+          top: '70px',
+          left: '40px',
           color: 'white',
-        }}>
-        <Typography variant="h2">Stronger</Typography>
-        <Typography variant="h2" sx={{ml: '30px', mt: '-20px'}}>Together</Typography>
+        }}
+      >
+        <Typography
+          variant="h1"
+          sx={{
+            background: "linear-gradient(90deg,#fff,#90caf9)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            fontWeight: 900,
+            fontFamily: "'Playfair Display', serif",
+            fontStyle: 'italic',
+            letterSpacing: "2px",
+            textShadow: "0px 0px 12px rgba(255,255,255,0.35)"
+          }}
+        >
+          Stronger
+        </Typography>
+
+        <Typography
+          variant="h1"
+          sx={{
+            ml: "30px",
+            mt: "-20px",
+            background: "linear-gradient(90deg,#fff,#90caf9)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            fontWeight: 900,
+            fontFamily: "'Playfair Display', serif",
+            fontStyle: 'italic',
+            letterSpacing: "2px",
+            textShadow: "0px 0px 12px rgba(255,255,255,0.35)"
+          }}
+        >
+          Together
+        </Typography>
       </Box> */}
+
     </Box>
   );
 };

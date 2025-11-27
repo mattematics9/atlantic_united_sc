@@ -21,37 +21,41 @@ import RegisterPreTravel from './components/register/RegisterPreTravel'
 import RegisterIntramural from './components/register/RegisterIntramural';
 import IntramuralTest from './components/programs/intramural/IntramuralTest'
 
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
 
 
 function App() {
   return (
-    <div className="App">
-      <CssBaseline />
-      <BrowserRouter>
-        <AtlanticUnitedLogo/>
-        <SocialMedia/>
-        <Navbar/>
-          <Routes>
-            <Route path='/' exact element={ <Home/> }/>
-            <Route path='/about' element={ <About/> }/>    
-            <Route path='/contact' element={ <Contact/> }/>  
-            <Route path='/programs' element={ <Programs/> }/>  
-            <Route path='/resources' element={ <Resources/> }/>    
-            <Route path='/register' element={ <Register/> }/>    
-            <Route path='/testimonials' element={ <Testimonials/> }/>    
-            <Route path='/fields' element={ <Fields/> }/>    
-            <Route path='/programs/pre-travel-academy' element={ <PreTravel/> }/>    
-            <Route path='/programs/travel-academy' element={ <Travel/> }/>    
-            <Route path='/programs/intramural' element={ <Intramural/> }/>    
-            <Route path='/programs/grassroots' element={ <Grassroots/> }/>    
-            <Route path='/college' element={ <College/> }/>    
-            <Route path='/programs/pre-travel-academy/registration' element={ <RegisterPreTravel/> }/>
-            <Route path='/programs/intramural/registration' element={ <RegisterIntramural/> }/>
-            <Route path='/programs/intramural/test' element={ <IntramuralTest/> }/>
-          </Routes>
-        <Footer/>
-      </BrowserRouter>
-    </div>
+    // <ThemeProvider theme={theme}>
+      <div className="App">
+        <CssBaseline />
+        <BrowserRouter>
+          <AtlanticUnitedLogo/>
+          <SocialMedia/>
+          <Navbar/>
+            <Routes>
+              <Route path='/' exact element={ <Home/> }/>
+              <Route path='/about' element={ <About/> }/>    
+              <Route path='/contact' element={ <Contact/> }/>  
+              <Route path='/programs' element={ <Programs/> }/>  
+              <Route path='/resources' element={ <Resources/> }/>    
+              <Route path='/register' element={ <Register/> }/>    
+              <Route path='/testimonials' element={ <Testimonials/> }/>    
+              <Route path='/fields' element={ <Fields/> }/>    
+              <Route path='/programs/pre-travel-academy' element={ <PreTravel/> }/>    
+              <Route path='/programs/travel-academy' element={ <Travel/> }/>    
+              <Route path='/programs/intramural' element={ <Intramural/> }/>    
+              <Route path='/programs/grassroots' element={ <Grassroots/> }/>    
+              <Route path='/college' element={ <College/> }/>    
+              <Route path='/programs/pre-travel-academy/registration' element={ <RegisterPreTravel/> }/>
+              <Route path='/programs/intramural/registration' element={ <RegisterIntramural/> }/>
+              <Route path='/programs/intramural/test' element={ <IntramuralTest/> }/>
+            </Routes>
+          <Footer/>
+        </BrowserRouter>
+      </div>
+    // </ThemeProvider>
   );
 }
 

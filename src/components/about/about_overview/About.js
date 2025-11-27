@@ -19,8 +19,8 @@ const About = () => {
       <UnifyingLongIsland/>
       <StrongerTogether/>
       <TreeWithLogos/>
-      <NowWePlay />
       <CallToAction/>
+      <NowWePlay />
     </Box>
   );
 };

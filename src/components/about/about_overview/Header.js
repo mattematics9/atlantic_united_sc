@@ -64,8 +64,7 @@ const Header = () => {
                     History of Success
                 </Typography>
                 <Typography variant="h6" gutterBottom 
-                    sx={{
-                        textAlign: 'center', 
+                    sx={{ 
                         px: '17px'
                     }}>
                     AUSC has a extensive track record of accomplishment at the highest levels of youth soccer in the nation.
