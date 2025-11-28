@@ -7,27 +7,9 @@ import {
   Stack,
   Divider,
   Paper,
-  ThemeProvider,
-  createTheme,
 } from "@mui/material";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import StarIcon from "@mui/icons-material/Star";
-
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, // Atlantic Blue
-    secondary: { main: "#C62828" }, // Atlantic Red
-    background: { default: "#0a0d14" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
 
 const Stat = ({ icon, label, value, chipColor = "primary" }) => (
   <Paper
@@ -56,8 +38,7 @@ const Stat = ({ icon, label, value, chipColor = "primary" }) => (
 
 export default function Achievements() {
   return (
-    <ThemeProvider theme={theme}>
-      <Box id="achievements" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
+      <Box id="achievements" sx={{ bgcolor: "#0a0d14", color: "#e9eef6" }}>
 
         {/* ACHIEVEMENTS STRIP */}
         <Box sx={{ py: 6 }}>
@@ -86,6 +67,5 @@ export default function Achievements() {
         <Divider sx={{ opacity: 0.1 }} />
 
       </Box>
-    </ThemeProvider>
   );
 }

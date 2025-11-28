@@ -18,9 +18,9 @@ const ContactTabs = () => {
       sx={{
         pt: { xs: 10, sm: 15 },
         pb: "30px",
-        px: { xs: 2, md: 0 },
         color: "black",
         overflowX: "auto",
+        backgroundColor: 'white'
       }}
     >
       <Container>
@@ -45,15 +45,14 @@ const ContactTabs = () => {
         </Typography>
 
         <Typography
+          variant="h6"
           id="contact-page-description"
-          align="center"
           sx={{ 
-            fontSize: { xs: "16px", md: "20px" }, 
-            fontWeight: 600,
-            mb: 4 
+            mb: 4,
+            textAlign: "center"
           }}
         >
-          There are different contacts for the various programs offered.  Select the program below you are interested in to see the contacts. If you would like to see more details about the programs we have to offer, visits our <Link component={RouterLink} to='/programs' sx={{fontSize: '20px', textDecoration: 'none', color: 'blue', '&:hover': {opacity: '.7', cursor: 'pointer'}}}>PROGRAMS OVERVIEW</Link> page.
+          There are different contacts for the various programs offered.  Select the program below you are interested in to see the contacts. If you would like to see more details about the programs we have to offer, visits our <Link component={RouterLink} to='/programs' sx={{fontSize: '20px', textDecoration: 'none', color: 'rgba(24, 136, 255, 1)', '&:hover': {opacity: '.7', cursor: 'pointer'}}}>PROGRAMS OVERVIEW</Link> page.
         </Typography>
 
         <Tabs
@@ -77,7 +76,7 @@ const ContactTabs = () => {
               paddingX: { xs: 0.5, sm: 1, md: 2 }, // ✅ less padding on small screens
             },
             "& .Mui-selected": {
-              backgroundColor: "rgba(255, 241, 241, 1)",
+              backgroundColor: "rgba(255, 246, 246, 1)",
               border: "1px solid red"
             },
           }}

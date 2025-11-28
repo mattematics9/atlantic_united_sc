@@ -5,36 +5,17 @@ import {
   Typography,
   Stack,
   Button,
-  ThemeProvider,
-  createTheme,
   Chip,
   Container
 } from "@mui/material";
+
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 
 import stonyBrookPreTravel from '../../../images/stony-brook-pre-travel.png'
 
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, 
-    secondary: { main: "#C62828" }, 
-    background: { default: "#0a0d14" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
-
-
 
 export default function Header() {
   return (
-    <ThemeProvider theme={theme}>
         <Box
             sx={{
                 pt: {xs: '70px', sm: '100px'},
@@ -75,6 +56,5 @@ export default function Header() {
           </Container>
 
         </Box>
-    </ThemeProvider>
   );
 }

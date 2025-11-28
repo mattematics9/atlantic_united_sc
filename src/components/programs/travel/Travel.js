@@ -8,7 +8,7 @@ import Highlights from "./Highlights";
 import CollegeServices from "../../college/CollegeServices";
 import CallToAction from "../../call_to_action/CallToAction";
 import NowWePlay from "../../about/about_overview/NowWePlay";
-import About from "./About"
+import RecentAccomplishments from "./RecentAccomplishments"
 import CollegeHeader from "../../college/Header"
 import StonyBrookUniversityPlayers from "../../college/StonyBrookUniversityPlayers";
 
@@ -17,7 +17,7 @@ export default function TravelAcademy() {
       <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
         <Header/>
         <Achievements/>
-        <About/>
+        <RecentAccomplishments/>
         <Highlights/>
         <CollegeHeader/>
         <CollegeServices/>

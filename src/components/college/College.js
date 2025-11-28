@@ -9,7 +9,7 @@ import StonyBrookUniversityPlayers from "./StonyBrookUniversityPlayers";
 
 const College = () => {
   return (
-    <Box id="college-page" sx={{pt: '65px'}}>
+    <Box id="college-page" sx={{pt: '64px'}}>
       <Header/>
       <CollegeServices/>
       <StonyBrookUniversityPlayers/>

@@ -5,13 +5,12 @@ import {
 
 import Header from "./Header";
 import Highlights from "./Highlights";
-import CallToAction from "../../call_to_action/CallToAction";
 import About from "./About";
 import Contacts from "./Contacts";
 
-export default function TravelAcademy() {
+export default function PreTravelAcademy() {
   return (
-      <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
+      <Box>
         <Header/>
         <About/>
         <Highlights/>

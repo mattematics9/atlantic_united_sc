@@ -1,8 +1,5 @@
 import * as React from "react";
 import {
-  ThemeProvider,
-  createTheme,
-  CssBaseline,
   Container,
   Box,
   Typography,
@@ -20,24 +17,6 @@ import MiddleCountryLogo from "../../../images/logos/middle-country-logo.avif";
 
 // Use the NEW Excel-derived JSON (first-row headers as keys)
 import sheetRows from "./intramural_programs.json";
-
-// ---- THEME ----
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, // Atlantic Blue
-    secondary: { main: "#C62828" }, // Atlantic Red
-    background: { default: "#000716ff" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily:
-      "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
 
 // ---- CLUB META (colors + logos) ----
 const CLUB_META = {
@@ -180,9 +159,9 @@ export default function IntramuralPyramids() {
   );
 
   return (
-    <ThemeProvider theme={theme}>
+    <Box id="intramural-programs" sx={{backgroundColor: "white"}}>
       {/* <CssBaseline /> */}
-      <Box id="intramural-programs" sx={{ minHeight: "100vh", py: { xs: 10, md: 15 } }}>
+      <Box sx={{ minHeight: "100vh", py: { xs: 10, md: 15 } }}>
         <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 }, maxWidth: "100%" }}>
           {/* <Stack spacing={13}> */}
             {/* Title in BLACK */}
@@ -202,7 +181,7 @@ export default function IntramuralPyramids() {
               alignItems="start"
             >
               {clubEntries.map(({ name, levels, info }) => {
-                const meta = CLUB_META[name] || { color: theme.palette.primary.main, logoUrl: undefined };
+                const meta = CLUB_META[name] || { color: "primary.main", logoUrl: undefined };
                 const total = Math.max(levels.length, 1);
 
                 const borderCol = alpha(meta.color, 0.6);
@@ -326,6 +305,6 @@ export default function IntramuralPyramids() {
           {/* </Stack> */}
         </Container>
       </Box>
-    </ThemeProvider>
+    </Box>
   );
 }

@@ -212,14 +212,14 @@ export default function FieldsPage({ fields = FieldsData }) {
   }, [fields, query]);
 
   return (
-    <Container maxWidth="lg" sx={{ py: {xs: '140px', sm: '180px'} }}>
+    <Container maxWidth="lg" sx={{ backgroundColor: "white", pt: {xs: '140px', sm: '180px'}, pb: {xs: '50px', sm: '100px'} }}>
       <Stack spacing={4}>
         {/* Centered Heading */}
         <Stack alignItems="center" textAlign="center" spacing={0.5}>
-          <Typography variant="h4" sx={{ fontWeight: 800 }}>
+          <Typography variant="h4" sx={{ color: "rgba(0,0,31,1)", fontWeight: 800 }}>
             Club Fields
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1" sx={{ color: "rgba(0,0,31,1)"}}>
             Find addresses and field details.
           </Typography>
         </Stack>
@@ -253,7 +253,7 @@ export default function FieldsPage({ fields = FieldsData }) {
         </Grid>
 
         <Divider sx={{ my: 1 }} />
-        <Typography variant="caption" color="text.secondary" textAlign="center">
+        <Typography variant="caption" color="rgba(0,0,31,1)" textAlign="center">
           Tip: Click “Directions” to get driving routes, or “Open Map” to just
           view the field location.
         </Typography>

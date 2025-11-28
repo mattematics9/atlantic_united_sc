@@ -1,12 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   Box,
   Typography,
   Stack,
   Button,
-  ThemeProvider,
-  createTheme,
   Chip,
   Container
 } from "@mui/material";
@@ -14,28 +11,11 @@ import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 
 import sharks from '../../../images/sharks.jpg'
 
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, 
-    secondary: { main: "#C62828" }, 
-    background: { default: "#0a0d14" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
-
 
 
 export default function Header() {
   return (
-    <ThemeProvider theme={theme}>
-        <Box
+        <Box id="intramural-header"
             sx={{
                 pt: {xs: '70px', sm: '100px'},
                 pb: {xs: '100px'},
@@ -60,7 +40,7 @@ export default function Header() {
               <Typography variant="h2" component="h1" gutterBottom sx={{fontSize: {xs: "32px", sm: "40px", lg: "60px"}}}>
                 Fun. <br/> Friends.  <br/>Fundamentals.  
               </Typography>
-              <Typography variant="h6" sx={{ fontSize: {xs: '17px'}, opacity: 0.95, lineHeight: 1.6 }}>
+              <Typography variant="h6" sx={{ opacity: 0.95, lineHeight: 1.6 }}>
                 The Atlantic United Intramural program is a fun-focused program that helps players spark their love and understanding of soccer.   
               </Typography>
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
@@ -73,8 +53,6 @@ export default function Header() {
               </Stack>
             </Stack>
           </Container>
-
         </Box>
-    </ThemeProvider>
   );
 }

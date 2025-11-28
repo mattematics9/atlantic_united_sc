@@ -21,39 +21,18 @@ import threeVillageIntramural1 from '../../../images/three_village_intramural_1.
 import threeVillageIntramural2 from '../../../images/three_village_intramural_2.png'
 import threeVillageIntramural3 from '../../../images/three_village_intramural_3.jpg'
 
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, // Atlantic Blue
-    secondary: { main: "#C62828" }, // Atlantic Red
-    background: { default: "#000716ff" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
 
-const defaultImages = {
-  img1:
-    threeVillageIntramural1,
-  img2:
-    threeVillageIntramural3,
-  img3:
-    threeVillageIntramural2
+const IntramuralImages = {
+  img1: threeVillageIntramural1,
+  img2: threeVillageIntramural3,
+  img3: threeVillageIntramural2
 };
 
 
 
-export default function Highlights({ images = defaultImages }) {
+export default function Highlights({ images = IntramuralImages }) {
   return (
-    <ThemeProvider theme={theme}>
       <Box id="travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
-
-        {/* HIGHLIGHTS / IMAGES */}
         <Container sx={{ py: {xs: 6, sm: 8 }}}>
           <Grid container spacing={4} justifyContent={'center'}>
             {[{
@@ -103,8 +82,6 @@ export default function Highlights({ images = defaultImages }) {
             ))}
           </Grid>
         </Container>
-
       </Box>
-    </ThemeProvider>
   );
 }

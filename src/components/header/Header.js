@@ -5,36 +5,13 @@ import {
   Typography,
   Stack,
   Button,
-  ThemeProvider,
-  createTheme
 } from "@mui/material";
 
 import wildlingsCelebration1 from '../../images/wildlings_celebration_national_league.jpg'
 import wildlingsCelebration2 from '../../images/test3.png'
-import LeagueLogos from "../logos/LeagueLogos";
-
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, 
-    secondary: { main: "#C62828" }, 
-    background: { default: "#0a0d14" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    h4: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
-
-
 
 export default function Header() {
   return (
-    <ThemeProvider theme={theme}>
         <Box
             sx={{
                 pt: {xs: '235px', sm: '200px', md: '270px'},
@@ -42,8 +19,6 @@ export default function Header() {
                 color: "#e9eef6",
                 backgroundImage: {
                     xs: `linear-gradient(45deg, rgba(0, 0, 49, 0.85) 0%, rgba(255, 0, 0, 0.38) 100%), url(${wildlingsCelebration2})`,
-                    // sm: `linear-gradient(120deg, rgba(0, 0, 49, 0.75) 0%, rgba(255, 0, 0, 0.4) 100%), url(${wildlingsCelebration1})`                
-                    // xs: `linear-gradient(180deg,rgba(0, 0, 49, 0.55) 0%, rgba(0, 0, 49, 0.55) 100%), url(${wildlingsCelebration2})`,
                     sm: `linear-gradient(225deg, rgba(0, 0, 49, 0.85) 0%, rgba(255, 0, 0, 0.3) 100%), url(${wildlingsCelebration1})`
 
                 },
@@ -52,20 +27,6 @@ export default function Header() {
                 backgroundRepeat: "no-repeat",
             }}
         >
-            {/* <Grid container spacing={2} sx={{display: 'flex', alignItems: 'center'}}>
-                <Grid size={{xs: 12, md: 7}} sx={{pl:{sm: '0px', md:'100px', lg: '150px'}}}>
-                    <Typography variant="h2" sx={{fontSize: {xs: '40px', md: '50px', lg: '60px'}, display: 'flex', justifyContent: 'center'}}>
-                        Atlantic United
-                    </Typography>
-                    <Typography variant="h2" sx={{fontSize: {xs: '40px', md: '50px', lg: '60px'}, display: 'flex', justifyContent: 'center'}}>
-                        Soccer Club
-                    </Typography>
-                </Grid>
-                <Grid size={{xs: 12, md: 5}} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'inherit'}}}>
-                    <LeagueLogos/>
-                </Grid>
-            </Grid> */}
-
             <Box>
                 <Typography variant="h2" sx={{fontSize: {xs: '40px', md: '50px', lg: '60px'}, textAlign: 'center'}}>
                     Atlantic United
@@ -92,14 +53,6 @@ export default function Header() {
                     See Our Programs
                 </Button>
             </Stack>
-
-            {/* <Box sx={{ mt: '20px'}}>
-                <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                    <LeagueLogos/>
-                </Box>
-            </Box> */}
-
         </Box>
-    </ThemeProvider>
   );
 }

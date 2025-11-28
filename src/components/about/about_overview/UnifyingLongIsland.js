@@ -1,40 +1,11 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
-import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material/styles";
+import { Box, Typography, Card, CardContent } from '@mui/material'
 
 import backgroundImage from '../../../images/ward_melville_hs2.png'
-
-// ---- THEME ----
-let theme = createTheme({
-  palette: {
-    mode: "light",
-    primary: { main: "#002c7dff" }, // Blue
-    secondary: { main: "#e21d2b" }, // Red
-  },
-  typography: {
-    fontFamily: [
-      "Inter",
-      "-apple-system",
-      "BlinkMacSystemFont",
-      "Segoe UI",
-      "Roboto",
-      "Helvetica",
-      "Arial",
-      "sans-serif",
-    ].join(","),
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    subtitle1: { fontWeight: 600 },
-  },
-});
-
-theme = responsiveFontSizes(theme);
 
 const UnifyingLongIsland = () => {
 
   return (
-    <ThemeProvider theme={theme}>
         <Box id='unifying-long-island'>
             <Box 
                 sx={{ 
@@ -49,15 +20,22 @@ const UnifyingLongIsland = () => {
                     justifyContent: 'center',
                 }}
             >
-                <Typography variant="h3" gutterBottom 
+                <Typography variant="h3"
                     sx={{
                         textAlign: 'center', 
+                        fontSize: {xs: "32px", sm: "40px", lg: "55px"}
                     }}>
                     Unifying Long Island Soccer
                 </Typography>
             </Box>
+            <Card sx={{ p: { xs: 1, md: 2 } }}>
+                <CardContent>
+                    <Typography variant="h6">
+                        Atlantic United Soccer Club brings together the proud traditions of three long-standing Long Island programs - LGN Soccer Club, Three Village Soccer Club, and Middle Country Soccer Club. While maintaining the customs and community feel amongst our constituent clubs, we strategically come together to better serve our families with one unified pathway and curriculum that produces teams that compete at the state, regional, and national levels.
+                    </Typography>
+                </CardContent>
+            </Card>
         </Box>
-    </ThemeProvider>
   )
 }
 

@@ -3,34 +3,13 @@ import {
   Box,
   Typography,
   Grid,
-  ThemeProvider,
-  createTheme,
-  Container
 } from "@mui/material";
 
 import wildlingsCones from "../../../images/wildlings_cones.png"
 
 
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, // Atlantic Blue
-    secondary: { main: "#C62828" }, // Atlantic Red
-    background: { default: "rgb(0, 0, 31)" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
-
-
 export default function ExpertsInSoccerAndEducation() {
   return (
-    <ThemeProvider theme={theme}>
       <Box sx={{ bgcolor: "rgba(246, 246, 255, 1)", color: "#000f26ff" }}>
         <Box>
             <Grid container>
@@ -40,8 +19,6 @@ export default function ExpertsInSoccerAndEducation() {
                         color: "#00054aff", 
                         textAlign: 'center', 
                         fontSize: {xs: "32px", sm: "40px", lg: "60px"},
-                        // border: '1px dotted red',
-                        // backgroundColor: 'rgba(248, 248, 255, 1)',
                         p: '10px'
                     }}>
                         Experts in Soccer and <span style={{color: 'rgba(83, 169, 255, 1)'}}>Education</span>
@@ -62,6 +39,5 @@ export default function ExpertsInSoccerAndEducation() {
         </Box>
 
       </Box>
-    </ThemeProvider>
   );
 }

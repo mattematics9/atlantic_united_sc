@@ -8,31 +8,28 @@ import {
   Stack,
   Button,
   Paper,
-  ThemeProvider,
-  createTheme,
 } from "@mui/material";
 
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, // Atlantic Blue
-    secondary: { main: "#C62828" }, // Atlantic Red
-    background: { default: "rgba(0,0,31,1)" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
+// const theme = createTheme({
+//   palette: {
+//     primary: { main: "#0D47A1" }, // Atlantic Blue
+//     secondary: { main: "#C62828" }, // Atlantic Red
+//     background: { default: "rgba(0,0,31,1)" },
+//   },
+//   shape: { borderRadius: 16 },
+//   typography: {
+//     fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
+//     h1: { fontWeight: 800 },
+//     h2: { fontWeight: 800 },
+//     h3: { fontWeight: 700 },
+//     button: { fontWeight: 700, textTransform: "none" },
+//   },
+// });
 
 
 
 export default function CallToAction() {
   return (
-    <ThemeProvider theme={theme}>
       <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
 
         {/* CTA */}
@@ -51,7 +48,7 @@ export default function CallToAction() {
                 <Typography variant="h4" gutterBottom>
                   Ready to elevate your game?
                 </Typography>
-                <Typography variant="body1" sx={{ opacity: 0.95 }}>
+                <Typography variant="body1">
                   Trials run year round. Contact us to attend an open practice and be evaluated by one of our coaches.  
                 </Typography>
               </Grid>
@@ -70,6 +67,5 @@ export default function CallToAction() {
         </Container>
 
       </Box>
-    </ThemeProvider>
   );
 }

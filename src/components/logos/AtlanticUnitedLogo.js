@@ -19,7 +19,7 @@ export default function Logo() {
           sx={() => ({
             position: 'fixed',
             top: '0px',
-            left: {xs: '42%', sm: '45%', md: '0px'},
+            left: {xs: '41%', sm: '44%', md: '0px'},
             zIndex: 999,
             width: {xs: '65px', sm: '90px', md: '125px'}
           })}

@@ -6,8 +6,6 @@ import {
   Card,
   CardMedia,
   CardContent,
-  ThemeProvider,
-  createTheme,
   Button
 } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -48,26 +46,8 @@ const programs = [
 ];
 
 
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, // Atlantic Blue
-    secondary: { main: "#C62828" }, // Atlantic Red
-    background: { default: "#000716ff" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
-
-
 export default function Cards() {
   return (
-    <ThemeProvider theme={theme}>
       <Box id="programs-cards" sx={{ py: '50px', bgcolor: "background.default", color: "#e9eef6" }}>
 
           <Grid container spacing={2} justifyContent={'center'}>
@@ -129,6 +109,5 @@ export default function Cards() {
           </Grid>
 
       </Box>
-    </ThemeProvider>
   );
 }

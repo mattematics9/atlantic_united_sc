@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material/styles";
 import {
   Box,
   Card,
@@ -13,35 +12,6 @@ import {
   Typography,
   Button
 } from "@mui/material";
-
-
-// ---- THEME ----
-let theme = createTheme({
-  palette: {
-    mode: "light",
-    primary: { main: "#002c7dff" }, // Blue
-    secondary: { main: "#e21d2b" }, // Red
-  },
-  typography: {
-    fontFamily: [
-      "Inter",
-      "-apple-system",
-      "BlinkMacSystemFont",
-      "Segoe UI",
-      "Roboto",
-      "Helvetica",
-      "Arial",
-      "sans-serif",
-    ].join(","),
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    subtitle1: { fontWeight: 600 },
-  },
-  shape: { borderRadius: 16 },
-});
-
-theme = responsiveFontSizes(theme);
 
 // ---- CLUB TABS ----
 function ClubTabs() {
@@ -95,13 +65,12 @@ function ClubTabs() {
 // ---- MAIN COMPONENT ----
 export default function Contacts({ images }) {
   return (
-    <ThemeProvider theme={theme}>
       <Box id="pre-travel-contacts" sx={{
         background: (t) => `linear-gradient(90deg, rgba(0,0,31,1) 0%, ${t.palette.secondary.main} 100%)`, color: "common.white",
         py: { xs: 5, sm: 10 },
       }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" gutterBottom sx={{ my: '60px', textAlign: 'center', color: "white"}}>
+          <Typography variant="h3" gutterBottom sx={{ mt: '40px', mb: '20px', textAlign: 'center', color: "white", fontSize: {xs: "32px", sm: "40px", lg: "55px"}}}>
             Pre-Travel Academy Contacts and Registration
           </Typography>
           <Typography variant="body1" sx={{ my: '30px', color: "white"}}>
@@ -115,6 +84,5 @@ export default function Contacts({ images }) {
           </Grid>
         </Container>
       </Box>
-    </ThemeProvider>
   );
 }

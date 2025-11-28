@@ -1,40 +1,15 @@
 import React from "react";
 import {
   Box,
-  Typography,
-  ThemeProvider,
-  createTheme,
+  Typography
 } from "@mui/material";
 
-import wildlingsVsHotaStartersFront1 from '../../../images/wildlings_vs_hota_state_cup_finals_starters_front.png'
-import wildlingsVsHotaStartersFront2 from '../../../images/test5.png'
 import test from '../../../images/test7.png'
-import test2 from '../../../images/test8.png'
-import brandon from '../../../images/brandon-lopez.png'
-import dylan from '../../../images/dylan2.png'
 import force from '../../../images/test9.png'
-
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, 
-    secondary: { main: "#C62828" }, 
-    background: { default: "#0a0d14" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
-
 
 
 export default function Header() {
   return (
-    <ThemeProvider theme={theme}>
         <Box
             sx={{
                 pt: {xs: '170px'},
@@ -70,7 +45,7 @@ export default function Header() {
             </Box>
 
             <Box sx={{mt: '30px'}}>
-                <Typography variant="body1" 
+                <Typography variant="h6" 
                     sx={{
                         fontSize: {xs: '16px', sm: '20px', md: '24px'}, 
                         px: {xs: '20px', sm: '40px', md: '100px', lg: '140px'},
@@ -80,6 +55,5 @@ export default function Header() {
             </Box>
 
         </Box>
-    </ThemeProvider>
   );
 }

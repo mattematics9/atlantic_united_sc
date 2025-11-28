@@ -7,8 +7,6 @@ import {
   Card,
   CardMedia,
   CardContent,
-  Chip,
-  Stack,
   ThemeProvider,
   createTheme,
 } from "@mui/material";
@@ -21,30 +19,8 @@ import caso from '../../../images/caso2.png'
 import force from '../../../images/force_espn_wwos.jpg'
 import force2 from '../../../images/force_training.png'
 
-
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, // Atlantic Blue
-    secondary: { main: "#C62828" }, // Atlantic Red
-    background: { default: "#000716ff" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
-
-
-
-
-
 export default function Highlights() {
   return (
-    <ThemeProvider theme={theme}>
       <Box id="travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
 
         {/* HIGHLIGHTS / IMAGES */}
@@ -88,17 +64,12 @@ export default function Highlights() {
                       {card.title}
                     </Typography>
                     <Typography variant="body1" sx={{ maxWidth: '320px', opacity: 0.9 }}>{card.text}</Typography>
-                    {/* <Stack direction="row" spacing={1.5} alignItems="center" justifyContent="center" sx={{ my: 2 }}>
-                      <Chip icon={card.icon} color="secondary" label="Travel Feature" size="small" />
-                    </Stack> */}
                   </CardContent>
                 </Card>
               </Grid>
             ))}
           </Grid>
         </Container>
-
       </Box>
-    </ThemeProvider>
   );
 }

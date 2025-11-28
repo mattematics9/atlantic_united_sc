@@ -9,8 +9,6 @@ import {
   CardContent,
   Chip,
   Stack,
-  ThemeProvider,
-  createTheme,
 } from "@mui/material";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 import PublicIcon from "@mui/icons-material/Public";
@@ -22,36 +20,15 @@ import img2 from '../../../images/lucas_nate_shane.png'
 import img3 from '../../../images/tsunami3.png'
 
 
-const theme = createTheme({
-  palette: {
-    primary: { main: "#0D47A1" }, 
-    secondary: { main: "#C62828" },
-    background: { default: "#000716ff" },
-  },
-  shape: { borderRadius: 16 },
-  typography: {
-    fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-    h1: { fontWeight: 800 },
-    h2: { fontWeight: 800 },
-    h3: { fontWeight: 700 },
-    button: { fontWeight: 700, textTransform: "none" },
-  },
-});
-
-const defaultImages = {
-  img1:
-    img1,
-  img2:
-    img2,
-  img3:
-    img3,
+const PreTravelImages = {
+  img1: img1,
+  img2: img2,
+  img3: img3,
 };
 
 
-
-export default function Highlights({ images = defaultImages }) {
+export default function Highlights({ images = PreTravelImages }) {
   return (
-    <ThemeProvider theme={theme}>
       <Box id="pre-travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
 
         {/* HIGHLIGHTS / IMAGES */}
@@ -104,8 +81,6 @@ export default function Highlights({ images = defaultImages }) {
             ))}
           </Grid>
         </Container>
-
       </Box>
-    </ThemeProvider>
   );
 }

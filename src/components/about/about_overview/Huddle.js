@@ -38,6 +38,8 @@ const Huddle = () => {
                     p: 3,
                     borderTopRightRadius: "20px",
                     borderBottomRightRadius: "20px",
+                    borderTopLeftRadius: '0px',
+                    borderBottomLeftRadius: '0px',
                     border: "1px solid grey",
                     color: "rgb(0,0,31)",
                     bgcolor: "white",
@@ -57,12 +59,11 @@ const Huddle = () => {
                             margin: "10px auto"
                         },
                         color: "#002c7dff",
-                        fontWeight: 600
                     }}
                 >
                     ABOUT US
                 </Typography>
-                <Typography sx={{ mt: 3, mb: 3, fontSize: "18px", fontStyle: "italic", fontWeight: 600 }}>
+                <Typography variant="body1" sx={{ mt: 3, mb: 3, fontSize: "18px", fontStyle: "italic" }}>
                     Atlantic United Soccer Club brings together the proud
                     traditions of three long-standing Long Island programs - LGN Soccer Club,
                     Three Village Soccer Club, and Middle Country Soccer Club. Our travel
@@ -71,7 +72,7 @@ const Huddle = () => {
                     all ages, skill levels, and interests.{" "}
                 </Typography>
                 <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                    <Button component={Link} to='/about' sx={{fontSize: '20px', '&:hover': {textDecoration: 'underline'}}}>
+                    <Button component={Link} to='/about' sx={{fontSize: '20px', fontWeight: 500, '&:hover': {opacity: '.8'}}}>
                         MORE ABOUT US
                     </Button>
                 </Box>
@@ -95,7 +96,6 @@ const Huddle = () => {
                     align="center"
                     sx={{
                     fontStyle: "italic",
-                    fontWeight: 600,
                     mt: "30px",
                     "&::after": {
                         display: "block",
@@ -109,10 +109,10 @@ const Huddle = () => {
                 >
                     PATHWAY TO COLLEGE SOCCER
                 </Typography>
-                <Typography sx={{ fontSize: "24px", fontStyle: "italic", fontWeight: 600 }}>
+                <Typography variant="h4" sx={{ fontSize: "24px", fontStyle: "italic" }}>
                     90% college placement track record
                 </Typography>
-                <Button component={Link} to='/college' sx={{fontSize: '20px', fontWeight: 600, color: 'rgba(183, 213, 255, 1)', '&:hover': {opacity: '.8'}}}>
+                <Button component={Link} to='/college' sx={{fontSize: '20px', color: 'rgba(183, 213, 255, 1)', '&:hover': {opacity: '.8'}}}>
                     *MORE ON COLLEGE RECRUITMENT*
                 </Button>
             </Box>
@@ -129,27 +129,28 @@ const Huddle = () => {
                     p: 3,
                     color: "rgb(0,0,31)",
                     bgcolor: "white",
+                    borderRadius: '0px'
                 }}
                 >
                 <Typography
                     variant="h4"
                     align="center"
                     sx={{
-                    mt: "30px",
-                    "&::after": {
-                        display: "block",
-                        height: "2px",
-                        backgroundColor: "red",
-                        content: '" "',
-                        width: "80px",
-                        margin: "10px auto"
-                    },
-                    fontWeight: 600
+                        mt: "30px",
+                        "&::after": {
+                            display: "block",
+                            height: "2px",
+                            backgroundColor: "red",
+                            content: '" "',
+                            width: "80px",
+                            margin: "10px auto"
+                        },
+                        color: "#002c7dff",
                     }}
                 >
                     ABOUT US
                 </Typography>
-                <Typography sx={{ mt: 3, mb: 3, fontSize: "18px", fontWeight: 600, fontStyle: "italic" }}>
+                <Typography variant="body1" sx={{ mt: 3, mb: 3, fontSize: "18px", fontStyle: "italic" }}>
                     Atlantic United Soccer Club brings together the proud
                     traditions of three long-standing Long Island programs - LGN Soccer Club,
                     Three Village Soccer Club, and Middle Country Soccer Club. Our travel
@@ -158,7 +159,7 @@ const Huddle = () => {
                     all ages, skill levels, and interests.{" "}
                 </Typography>
                 <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                    <Button component={Link} to='/about' sx={{fontSize: '20px', fontWeight: 600, '&:hover': {opacity: .8}}}>
+                    <Button component={Link} to='/about' sx={{fontSize: '20px', '&:hover': {opacity: .8}}}>
                         MORE ABOUT US
                     </Button>
                 </Box>
@@ -168,7 +169,6 @@ const Huddle = () => {
             <Box
                 sx={{
                     height: "500px",
-                    // backgroundImage: `linear-gradient(45deg, rgba(0, 0, 49, 0.3) 0%, rgba(255, 0, 0, 0.3) 100%), url(${huddle})`,
                     backgroundImage: `linear-gradient(45deg, rgba(255, 0, 0, 0.15) 0%, rgba(255, 0, 0, 0.15) 100%), url(${huddle})`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
@@ -178,18 +178,6 @@ const Huddle = () => {
                     justifyContent: 'center'
                 }}
             >
-                {/* <Typography component="p" 
-                    sx={{ 
-                        display: {xs: 'block', sm: 'none'},
-                        fontSize: "40px", 
-                        border: "2px dotted white",
-                        padding: 2,
-                        backgroundColor: 'transparent',
-                        color: 'white',
-                        fontStyle: 'italic'
-                    }}>
-                        "NOW WE PLAY"
-                </Typography> */}
             </Box>
       </Box>
 

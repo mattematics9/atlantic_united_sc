@@ -24,10 +24,9 @@ import IntramuralTest from './components/programs/intramural/IntramuralTest'
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 
-
 function App() {
   return (
-    // <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <div className="App">
         <CssBaseline />
         <BrowserRouter>
@@ -55,7 +54,7 @@ function App() {
           <Footer/>
         </BrowserRouter>
       </div>
-    // </ThemeProvider>
+    </ThemeProvider>
   );
 }
 
