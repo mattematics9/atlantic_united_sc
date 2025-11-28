@@ -15,10 +15,9 @@ const About = () => {
       <PicturesAndText2 />
       <Achievements/>
       <ExpertsInSoccerAndEducation/>
-      <UnifyingLongIsland/>
       <TreeWithLogos/>
+      <UnifyingLongIsland/>
       <CallToAction/>
-      <NowWePlay />
     </Box>
   );
 };

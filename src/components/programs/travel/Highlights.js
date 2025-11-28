@@ -21,7 +21,7 @@ import force2 from '../../../images/force_training.png'
 
 export default function Highlights() {
   return (
-      <Box id="travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
+      <Box id="travel-highlights" sx={{ bgcolor: "#0a0d14", color: "#e9eef6" }}>
 
         {/* HIGHLIGHTS / IMAGES */}
         <Container sx={{ py: {xs: 6, sm: 8 }}}>
@@ -53,7 +53,7 @@ export default function Highlights() {
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    bgcolor: "rgba(255,255,255,0.04)",
+                    bgcolor: "#0a111eff",
                     border: (t) => `1px solid ${t.palette.primary.main}22`,
                     color: 'white',
                   }}

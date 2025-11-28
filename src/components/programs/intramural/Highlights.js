@@ -32,7 +32,7 @@ const IntramuralImages = {
 
 export default function Highlights({ images = IntramuralImages }) {
   return (
-      <Box id="travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
+      <Box id="travel-highlights" sx={{ bgcolor: "#0a0d14", color: "#e9eef6" }}>
         <Container sx={{ py: {xs: 6, sm: 8 }}}>
           <Grid container spacing={4} justifyContent={'center'}>
             {[{
@@ -62,7 +62,7 @@ export default function Highlights({ images = IntramuralImages }) {
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    bgcolor: "rgba(255,255,255,0.04)",
+                    bgcolor: "#0a111eff",
                     border: (t) => `1px solid ${t.palette.primary.main}22`,
                     color: 'white',
                   }}

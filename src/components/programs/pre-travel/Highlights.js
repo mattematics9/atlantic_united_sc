@@ -29,7 +29,7 @@ const PreTravelImages = {
 
 export default function Highlights({ images = PreTravelImages }) {
   return (
-      <Box id="pre-travel-highlights" sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
+      <Box id="pre-travel-highlights" sx={{ bgcolor: "#0a0d14", color: "#e9eef6" }}>
 
         {/* HIGHLIGHTS / IMAGES */}
         <Container sx={{ py: 8 }}>
@@ -61,7 +61,7 @@ export default function Highlights({ images = PreTravelImages }) {
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    bgcolor: "rgba(255,255,255,0.04)",
+                    bgcolor: "#0a111eff",
                     border: (t) => `1px solid ${t.palette.primary.main}22`,
                     color: 'white',
                   }}

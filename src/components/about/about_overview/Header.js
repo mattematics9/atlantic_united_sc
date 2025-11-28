@@ -21,6 +21,7 @@ const Header = () => {
                     sx={{
                         mt: '50px',
                         textAlign: 'center', 
+                        fontFamily: 'Playfair Display',
                           "&::after": {
                           display: "block",
                           height: "2px",
@@ -57,7 +58,8 @@ const Header = () => {
                 <Typography variant="h3" gutterBottom 
                     sx={{
                         textAlign: 'center', 
-                        display: {xs: 'none', sm: 'block'}
+                        display: {xs: 'none', sm: 'block'},
+                        fontFamily: 'Playfair Display'
                     }}>
                     History of Success
                 </Typography>

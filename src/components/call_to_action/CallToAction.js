@@ -10,30 +10,13 @@ import {
   Paper,
 } from "@mui/material";
 
-// const theme = createTheme({
-//   palette: {
-//     primary: { main: "#0D47A1" }, // Atlantic Blue
-//     secondary: { main: "#C62828" }, // Atlantic Red
-//     background: { default: "rgba(0,0,31,1)" },
-//   },
-//   shape: { borderRadius: 16 },
-//   typography: {
-//     fontFamily: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`,
-//     h1: { fontWeight: 800 },
-//     h2: { fontWeight: 800 },
-//     h3: { fontWeight: 700 },
-//     button: { fontWeight: 700, textTransform: "none" },
-//   },
-// });
-
-
 
 export default function CallToAction() {
   return (
       <Box sx={{ bgcolor: "background.default", color: "#e9eef6" }}>
 
         {/* CTA */}
-        <Container sx={{ py: 8 }}>
+        <Container sx={{ py: {xs: 3, sm: 8} }}>
           <Paper
             elevation={0}
             sx={{

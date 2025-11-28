@@ -48,7 +48,7 @@ const programs = [
 
 export default function Cards() {
   return (
-      <Box id="programs-cards" sx={{ py: '50px', bgcolor: "background.default", color: "#e9eef6" }}>
+      <Box id="programs-cards" sx={{ py: '50px', bgcolor: "#0a0d14", color: "#e9eef6" }}>
 
           <Grid container spacing={2} justifyContent={'center'}>
             {programs.map((program) => (
@@ -58,7 +58,8 @@ export default function Cards() {
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    bgcolor: "rgba(255,255,255,0.04)",
+                    // bgcolor: "rgba(255,255,255,0.04)",
+                    bgcolor: "#0a111eff",
                     border: (t) => `1px solid ${t.palette.primary.main}22`,
                     color: 'white',
                   }}

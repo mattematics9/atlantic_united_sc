@@ -79,13 +79,12 @@ const PicturesAndText2 = () => {
                   justifyContent: "center",
                   bgcolor: "rgb(250, 250, 250)",
                   color: "rgb(0, 0, 31)",
-                  fontSize: "30px",
                   p: 3,
                   textAlign: "center",
                   fontStyle: "italic",
                 }}
               >
-                <Typography component="p" sx={{ fontSize: "inherit", m: 0 }}>
+                <Typography variant="h4" sx={{ fontWeight: 500, m: 0 }}>
                   WINNING CULTURE
                 </Typography>
               </Box>
@@ -140,13 +139,12 @@ const PicturesAndText2 = () => {
                   justifyContent: "center",
                   bgcolor: "rgb(250, 250, 250)",
                   color: "rgb(0, 0, 31)",
-                  fontSize: "30px",
                   p: 3,
                   textAlign: "center",
                   fontStyle: "italic",
                 }}
               >
-                <Typography component="p" sx={{ fontSize: "inherit", m: 0 }}>
+                <Typography variant="h4" sx={{ fontWeight: 500, m: 0 }}>
                   ACHIEVE AS A TEAM
                 </Typography>
               </Box>
@@ -173,13 +171,12 @@ const PicturesAndText2 = () => {
                   justifyContent: "center",
                   bgcolor: "rgb(250, 250, 250)",
                   color: "rgb(0, 0, 31)",
-                  fontSize: "30px",
                   p: 3,
                   textAlign: "center",
                   fontStyle: "italic",
                 }}
               >
-                <Typography component="p" sx={{ fontSize: "inherit", m: 0 }}>
+                <Typography variant="h4" sx={{ fontWeight: 500, m: 0 }}>
                   ACHIEVE AS A TEAM
                 </Typography>
               </Box>

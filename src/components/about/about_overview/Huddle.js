@@ -28,6 +28,7 @@ const Huddle = () => {
           bgcolor: "rgb(0,0,31)",
         }}
       >
+            {/*About Us*/}
             <Paper
                 id="about-us-display-1"
                 sx={{
@@ -72,12 +73,13 @@ const Huddle = () => {
                     all ages, skill levels, and interests.{" "}
                 </Typography>
                 <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                    <Button component={Link} to='/about' sx={{fontSize: '20px', fontWeight: 500, '&:hover': {opacity: '.8'}}}>
+                    <Button component={Link} to='/about' sx={{color: 'rgba(50, 146, 255, 1)', fontSize: '20px', fontWeight: 500, '&:hover': {opacity: '.8'}}}>
                         MORE ABOUT US
                     </Button>
                 </Box>
             </Paper>
 
+            {/*Pathway to College Soccer*/}
             <Box
                 id="pathway-to-college-soccer-panel-home-page"
                 sx={{
@@ -115,6 +117,52 @@ const Huddle = () => {
                 <Button component={Link} to='/college' sx={{fontSize: '20px', color: 'rgba(183, 213, 255, 1)', '&:hover': {opacity: '.8'}}}>
                     *MORE ON COLLEGE RECRUITMENT*
                 </Button>
+            </Box>
+
+            {/*Stronger Together*/}
+            <Box 
+                sx={{
+                    position: 'absolute',
+                    top: '60px',
+                    right: '60px',
+                    color: 'white',
+                }}
+            >
+                <Typography
+                    variant="h1"
+                    sx={{
+                    background: "linear-gradient(90deg,#fff,#90caf9)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    fontWeight: 900,
+                    fontFamily: "'Playfair Display', serif",
+                    fontStyle: 'italic',
+                    letterSpacing: "2px",
+                    textShadow: "0px 0px 12px rgba(255,255,255,0.35)",
+                    fontSize: {xs: '40px', sm: '50px', md: '60px', lg: '80px'}
+                    }}
+                >
+                    Stronger
+                </Typography>
+        
+                <Typography
+                    variant="h1"
+                    sx={{
+                    ml: "30px",
+                    mt: {xs: "-10px", md: "-20px"},
+                    background: "linear-gradient(90deg,#fff,#90caf9)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    fontWeight: 900,
+                    fontFamily: "'Playfair Display', serif",
+                    fontStyle: 'italic',
+                    letterSpacing: "2px",
+                    textShadow: "0px 0px 12px rgba(255,255,255,0.35)",
+                    fontSize: {xs: '40px', sm: '50px', md: '60px', lg: '80px'}
+                    }}
+                >
+                    Together
+                </Typography>
             </Box>
       </Box>
 
@@ -159,7 +207,7 @@ const Huddle = () => {
                     all ages, skill levels, and interests.{" "}
                 </Typography>
                 <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                    <Button component={Link} to='/about' sx={{fontSize: '20px', '&:hover': {opacity: .8}}}>
+                    <Button component={Link} to='/about' sx={{color: 'rgba(50, 146, 255, 1)', fontSize: '20px', '&:hover': {opacity: .8}}}>
                         MORE ABOUT US
                     </Button>
                 </Box>
@@ -169,7 +217,7 @@ const Huddle = () => {
             <Box
                 sx={{
                     height: "500px",
-                    backgroundImage: `linear-gradient(45deg, rgba(255, 0, 0, 0.15) 0%, rgba(255, 0, 0, 0.15) 100%), url(${huddle})`,
+                    backgroundImage: `linear-gradient(45deg, rgba(255, 0, 0, 0.2) 0%, rgba(255, 0, 0, 0.2) 100%), url(${huddle})`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
@@ -178,6 +226,51 @@ const Huddle = () => {
                     justifyContent: 'center'
                 }}
             >
+                {/*Stronger Together*/}
+                <Box 
+                    sx={{
+                        // position: 'absolute',
+                        // top: '60px',
+                        // right: '60px',
+                        color: 'white',
+                    }}
+                >
+                    <Typography
+                        variant="h1"
+                        sx={{
+                        background: "linear-gradient(90deg,#fff,#90caf9)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        fontWeight: 900,
+                        fontFamily: "'Playfair Display', serif",
+                        fontStyle: 'italic',
+                        letterSpacing: "2px",
+                        textShadow: "0px 0px 12px rgba(255,255,255,0.35)",
+                        fontSize: {xs: '60px', lg: '80px'}
+                        }}
+                    >
+                        Stronger
+                    </Typography>
+            
+                    <Typography
+                        variant="h1"
+                        sx={{
+                        ml: "30px",
+                        mt: {xs: "-10px", md: "-20px"},
+                        background: "linear-gradient(90deg,#fff,#90caf9)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        fontWeight: 900,
+                        fontFamily: "'Playfair Display', serif",
+                        fontStyle: 'italic',
+                        letterSpacing: "2px",
+                        textShadow: "0px 0px 12px rgba(255,255,255,0.35)",
+                        fontSize: {xs: '60px', lg: '80px'}
+                        }}
+                    >
+                        Together
+                    </Typography>
+                </Box>
             </Box>
       </Box>
 

@@ -93,7 +93,7 @@ const PicturesAndText1 = () => {
                   fontStyle: "italic",
                 }}
               >
-                <Typography variant="body1" sx={{ fontSize: "inherit", m: 0 }}>
+                <Typography variant="body1" sx={{ fontWeight: 500, fontSize: "inherit", m: 0 }}>
                   CREATING UNFORGETTABLE MOMENTS
                 </Typography>
               </Box>
@@ -154,7 +154,7 @@ const PicturesAndText1 = () => {
                   fontStyle: "italic",
                 }}
               >
-                <Typography variant="body1" sx={{ fontSize: "inherit", m: 0 }}>
+                <Typography variant="body1" sx={{ fontWeight: 500, fontSize: "inherit", m: 0 }}>
                   DEVELOPING ELITE PLAYERS
                 </Typography>
               </Box>
@@ -187,7 +187,7 @@ const PicturesAndText1 = () => {
                   fontStyle: "italic",
                 }}
               >
-                <Typography variant="body1" sx={{ fontSize: "inherit", m: 0 }}>
+                <Typography variant="body1" sx={{ fontWeight: 500, fontSize: "inherit", m: 0 }}>
                   DEVELOPING ELITE PLAYERS
                 </Typography>
               </Box>
