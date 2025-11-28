@@ -19,7 +19,7 @@ function Feature({ label }) {
 
   return (
         <Box id='about-travel'>
-            <Card sx={{ p: { xs: 1, md: 2 } }}>
+            <Card sx={{ borderRadius: '0px', p: { xs: 1, md: 2 } }}>
                 <CardContent>
                     <Typography variant="h4" color="primary" gutterBottom 
                       sx={{
