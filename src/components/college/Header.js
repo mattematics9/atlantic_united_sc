@@ -28,13 +28,13 @@ export default function Header() {
                                 height: "2px",
                                 backgroundColor: "red",
                                 content: '" "',
-                                width: "80px",
+                                width: {xs: "50px", sm: "80px"},
                                 margin: "10px auto"
                             }
                         }}>
                             Pathway to College Soccer
                     </Typography>
-                    <Typography variant="h6" sx={{ opacity: 0.95, lineHeight: 1.6 }}>
+                    <Typography variant="h6" sx={{ opacity: 0.95, lineHeight: {xs: 1.3, sm: 1.6} }}>
                         Our graduates consistently earn roster spots at elite NCAA programs and beyond. With dedicated recruiting support, showcase exposure, and relationships nationwide, Atlantic United players take the next step prepared and confident.
                     </Typography>
                 </Container>

@@ -12,7 +12,6 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 // Images
-import field from "../../images/ward_melville_hs2.png";
 import AndrewTinari from "../../images/andrew-tinari-2.png";
 import Telma from "../../images/telma2.png";
 import Jillian from "../../images/jillian.jpg";
@@ -50,6 +49,7 @@ const testimonials = [
       stopAutoPlay();
       if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
     };
+    // eslint-disable-next-line
   }, [current]);
 
   const startAutoPlay = () => {

@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import PicturesAndText2 from "./PicturesAndText2";
-import NowWePlay from "./NowWePlay";
 import TreeWithLogos from "./TreeWithLogos";
 import UnifyingLongIsland from './UnifyingLongIsland'
 import ExpertsInSoccerAndEducation from './ExpertsInSoccerAndEducation'

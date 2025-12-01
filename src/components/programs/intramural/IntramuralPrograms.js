@@ -39,26 +39,26 @@ function normalizeClub(name) {
  *    - If contains "grade": K→0, then take the smallest number found (1..12).
  *    - Else treat as ages: U6→6, numbers list/range → smallest number.
  */
-function levelSortKey(value) {
-  if (!value) return 0;
-  const s = String(value).trim().toLowerCase();
+// function levelSortKey(value) {
+//   if (!value) return 0;
+//   const s = String(value).trim().toLowerCase();
 
-  // Grades
-  if (s.includes("grade")) {
-    // K maps to 0; pull all numbers too
-    const hasK = /(?:^|[^a-z])k(?:[^a-z]|$)/i.test(s);
-    const nums = (s.match(/\d+/g) || []).map((n) => parseInt(n, 10)).filter(Number.isFinite);
-    let min = nums.length ? Math.min(...nums) : Infinity;
-    if (hasK) min = Math.min(0, min);
-    return Number.isFinite(min) ? min : 0;
-  }
+//   // Grades
+//   if (s.includes("grade")) {
+//     // K maps to 0; pull all numbers too
+//     const hasK = /(?:^|[^a-z])k(?:[^a-z]|$)/i.test(s);
+//     const nums = (s.match(/\d+/g) || []).map((n) => parseInt(n, 10)).filter(Number.isFinite);
+//     let min = nums.length ? Math.min(...nums) : Infinity;
+//     if (hasK) min = Math.min(0, min);
+//     return Number.isFinite(min) ? min : 0;
+//   }
 
-  // Ages
-  const u = s.match(/u\s*(\d+)/i); // U6 → 6
-  if (u) return parseInt(u[1], 10) || 0;
-  const nums = (s.match(/\d+/g) || []).map((n) => parseInt(n, 10)).filter(Number.isFinite);
-  return nums.length ? Math.min(...nums) : 0;
-}
+//   // Ages
+//   const u = s.match(/u\s*(\d+)/i); // U6 → 6
+//   if (u) return parseInt(u[1], 10) || 0;
+//   const nums = (s.match(/\d+/g) || []).map((n) => parseInt(n, 10)).filter(Number.isFinite);
+//   return nums.length ? Math.min(...nums) : 0;
+// }
 
 /** Group programs by their exact Ages/Grades string, preserving the order they
  *  appear in the JSON (which you’ve listed youngest → oldest).

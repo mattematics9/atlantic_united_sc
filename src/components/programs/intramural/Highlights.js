@@ -9,8 +9,6 @@ import {
   CardContent,
   Chip,
   Stack,
-  ThemeProvider,
-  createTheme,
 } from "@mui/material";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 import PublicIcon from "@mui/icons-material/Public";

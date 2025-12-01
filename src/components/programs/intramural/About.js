@@ -1,21 +1,7 @@
 import React from 'react'
-import { Box, Card, CardContent, Typography, Chip } from '@mui/material'
-import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
+import { Box, Card, CardContent, Typography } from '@mui/material'
 
 const About = () => {
-
-// ---- FEATURE CHIP ----
-function Feature({ label }) {
-  return (
-    <Chip
-      icon={<SportsSoccerIcon />}
-      label={label}
-      color="primary"
-      variant="outlined"
-      sx={{ fontWeight: 600 }}
-    />
-  );
-}
 
   return (
         <Box id="about-intramural">

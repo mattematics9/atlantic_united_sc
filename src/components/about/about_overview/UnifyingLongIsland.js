@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography, Card, CardContent } from '@mui/material'
 
-import backgroundImage from '../../../images/ward_melville_hs2.png'
+// import backgroundImage from '../../../images/ward_melville_hs2.png'
 
 const UnifyingLongIsland = () => {
 

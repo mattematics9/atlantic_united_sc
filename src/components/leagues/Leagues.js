@@ -8,8 +8,6 @@ import {
   Stack,
   Avatar,
   Paper,
-  ThemeProvider,
-  createTheme,
 } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
 
@@ -42,7 +40,7 @@ export default function Leagues() {
         <Container sx={{ py: 8 }}>
           <Stack spacing={2} alignItems="center" textAlign="center" sx={{ mb: 4 }}>
             <Chip icon={<PublicIcon />} color="primary" label="Multi-League" />
-            <Typography variant="h3">Teams Across Many Leagues</Typography>
+            <Typography variant="h3" sx={{fontSize: {xs: '33px', sm: '40px'}}}>Teams Across Many Leagues</Typography>
             <Typography variant="h6" sx={{ maxWidth: 800, opacity: 0.9 }}>
               Atlantic United forms travel teams for every level and league, catering to all players of variaying ages, skill levels, and interests.
             </Typography>

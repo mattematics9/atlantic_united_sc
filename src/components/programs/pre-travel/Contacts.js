@@ -48,7 +48,7 @@ function ClubTabs() {
             Email: {clubs[tab].email}
           </Typography>
           <Box sx={{display: 'flex', justifyContent: 'center', my: '20px'}}>
-            <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" }}} component={Link} to={clubs[tab].name == "Three Village"? "https://system.gotsport.com/programs/366339K13?reg_role=player": "https://system.gotsport.com/programs/8546A5778?reg_role=player"} target="_blank" size="large" variant="contained" color="secondary">
+            <Button sx={{transition: "opacity 0.3s, transform 0.3s", "&:hover": { opacity: 0.85, transform: "scale(1.05)" }}} component={Link} to={clubs[tab].name === "Three Village"? "https://system.gotsport.com/programs/366339K13?reg_role=player": "https://system.gotsport.com/programs/8546A5778?reg_role=player"} target="_blank" size="large" variant="contained" color="secondary">
               REGISTER
             </Button>
           </Box>

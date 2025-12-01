@@ -7,7 +7,7 @@ const Huddle = () => {
 
   return (
 
-    // Separate displays for lg-xl and xs-lg
+    // Separate displays for larger and smaller screens
     <Box id="huddle">
 
     {/* Display 1: Larger Screens.  Huddle pic with About and College text overlapped */}
@@ -229,9 +229,6 @@ const Huddle = () => {
                 {/*Stronger Together*/}
                 <Box 
                     sx={{
-                        // position: 'absolute',
-                        // top: '60px',
-                        // right: '60px',
                         color: 'white',
                     }}
                 >
